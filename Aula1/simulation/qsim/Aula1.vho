@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "09/01/2021 20:05:04"
+-- DATE "09/01/2021 23:16:02"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -100,14 +100,14 @@ SIGNAL \ULA1|Add0~13_sumout\ : std_logic;
 SIGNAL \SW[3]~input_o\ : std_logic;
 SIGNAL \REG_MEF|DOUT\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \REG1|DOUT\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \ROM1|ALT_INV_memROM~2_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
-SIGNAL \REG1|ALT_INV_DOUT\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \REG_MEF|ALT_INV_DOUT\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \ALT_INV_SW[9]~input_o\ : std_logic;
 SIGNAL \ALT_INV_SW[8]~input_o\ : std_logic;
 SIGNAL \ALT_INV_SW[7]~input_o\ : std_logic;
 SIGNAL \ALT_INV_SW[6]~input_o\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~2_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
+SIGNAL \REG_MEF|ALT_INV_DOUT\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \REG1|ALT_INV_DOUT\ : std_logic_vector(3 DOWNTO 0);
 
 BEGIN
 
@@ -118,19 +118,19 @@ LEDR <= ww_LEDR;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ROM1|ALT_INV_memROM~2_combout\ <= NOT \ROM1|memROM~2_combout\;
-\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
-\REG1|ALT_INV_DOUT\(3) <= NOT \REG1|DOUT\(3);
-\REG_MEF|ALT_INV_DOUT\(0) <= NOT \REG_MEF|DOUT\(0);
-\REG1|ALT_INV_DOUT\(2) <= NOT \REG1|DOUT\(2);
-\REG_MEF|ALT_INV_DOUT\(1) <= NOT \REG_MEF|DOUT\(1);
-\REG1|ALT_INV_DOUT\(1) <= NOT \REG1|DOUT\(1);
-\REG1|ALT_INV_DOUT\(0) <= NOT \REG1|DOUT\(0);
-\REG_MEF|ALT_INV_DOUT\(2) <= NOT \REG_MEF|DOUT\(2);
 \ALT_INV_SW[9]~input_o\ <= NOT \SW[9]~input_o\;
 \ALT_INV_SW[8]~input_o\ <= NOT \SW[8]~input_o\;
 \ALT_INV_SW[7]~input_o\ <= NOT \SW[7]~input_o\;
 \ALT_INV_SW[6]~input_o\ <= NOT \SW[6]~input_o\;
+\ROM1|ALT_INV_memROM~2_combout\ <= NOT \ROM1|memROM~2_combout\;
+\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
+\REG_MEF|ALT_INV_DOUT\(0) <= NOT \REG_MEF|DOUT\(0);
+\REG_MEF|ALT_INV_DOUT\(1) <= NOT \REG_MEF|DOUT\(1);
+\REG_MEF|ALT_INV_DOUT\(2) <= NOT \REG_MEF|DOUT\(2);
+\REG1|ALT_INV_DOUT\(3) <= NOT \REG1|DOUT\(3);
+\REG1|ALT_INV_DOUT\(2) <= NOT \REG1|DOUT\(2);
+\REG1|ALT_INV_DOUT\(1) <= NOT \REG1|DOUT\(1);
+\REG1|ALT_INV_DOUT\(0) <= NOT \REG1|DOUT\(0);
 
 \LEDR[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
