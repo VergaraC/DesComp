@@ -68,10 +68,6 @@ ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
 ROM1 : entity work.memoriaROM   generic map (dataWidth => 8, addrWidth => 4)
           port map (Endereco => Estado_Atual, Dado(7 downto 4) => Sinais_Controle, Dado(3 downto 0) => Proximo_Estado);
 
--- ESTA ERRADO, FALTA VER
-RAM1 : entity work.memoriaRAM   generic map (dataWidth => larguraDados, addrWidth => larguraDados)
-          port map (addr => sinalLocal, we => sinalLocal, dado_in => REG1_ULA_A, dado_out => sinalLocal, clk => sinalLocal);
-
 
 selMUX <= Sinais_Controle(3);
 Habilita_A <= Sinais_Controle(2);
