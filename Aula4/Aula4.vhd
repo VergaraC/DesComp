@@ -3,7 +3,13 @@ use ieee.std_logic_1164.all;
 
 entity Aula4 is
   -- Total de bits das entradas e saidas
-  generic ( larguraDados : natural := 4;
+  generic ( 
+		  larguraDados : natural := 8;
+		  larguraROM: natural := 13;
+		  larguraAddROM: natural := 9;
+		  larguraPCROM: natural := 9;
+		  larguraRAM: natural := 8;
+		  larguraAddRAM: natural := 8;
         simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
   );
   port   (
@@ -11,27 +17,30 @@ entity Aula4 is
     KEY: in std_logic_vector(3 downto 0);
     SW: in std_logic_vector(9 downto 0);
     LEDR  : out std_logic_vector(9 downto 0)
+		 SEL_MUX: out std_logic;
+		 HABILITA: out std_logic;
+		 OPERACAO: out std_logic_vector(1 downto 0);
+		 SAIDA_MUX: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 
 
 architecture arquitetura of Aula4 is
 
--- Faltam alguns sinais:
-  signal chavesX_ULA_B : std_logic_vector (larguraDados-1 downto 0);
-  signal chavesY_MUX_A : std_logic_vector (larguraDados-1 downto 0);
-  signal MUX_REG1 : std_logic_vector (larguraDados-1 downto 0);
+  signal MUX_ULA : std_logic_vector(larguraDados-1 downto 0);
   signal REG1_ULA_A : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (3 downto 0);
-  signal Proximo_Estado : std_logic_vector (3 downto 0);
-  signal Estado_Atual : std_logic_vector (3 downto 0);
-  signal Chave_Operacao_ULA : std_logic;
+  signal Sinais_Controle : std_logic_vector (5 downto 0);
   signal CLK : std_logic;
   signal SelMUX : std_logic;
   signal Habilita_A : std_logic;
   signal Reset_A : std_logic;
   signal Operacao_ULA : std_logic;
+  signal Instrucao : std_logic_vector (larguraDadosROM-1 downto 0);
+  signal RAM_MUX : std_logic_vector (larguraDadosRAM-1 downto 0);
+  signal PCROM : std_logic_vector (larguraAddrROM-1 downto 0);
+  signal SomaUmPC : std_logic_vector (larguraAddrROM-1 downto 0);
+
 
 begin
 
@@ -60,6 +69,14 @@ REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDad
 REG_MEF : entity work.registradorGenerico   generic map (larguraDados => 4)
           port map (DIN => Proximo_Estado, DOUT => Estado_Atual, ENABLE => '1', CLK => CLK, RST => not(KEY(3)));
 
+			 
+PC : entity work.registradorGenerico   generic map (larguraDados => larguraPCROM)
+          port map (DIN => SomaUmPC, DOUT => PCROM, ENABLE => '1', CLK => CLK, RST => '0');
+
+			 
+somaUm :  entity work.somaConstante  generic map (larguraDados => larguraPCROM, constante => 1)
+          port map( entrada => PCROM, saida => SomaUmPC);
+			 
 -- O port map completo da ULA:
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
           port map (entradaA => REG1_ULA_A, entradaB => chavesX_ULA_B, saida => Saida_ULA, seletor => Operacao_ULA);
@@ -68,27 +85,26 @@ ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
 ROM1 : entity work.memoriaROM   generic map (dataWidth => 8, addrWidth => 4)
           port map (Endereco => Estado_Atual, Dado(7 downto 4) => Sinais_Controle, Dado(3 downto 0) => Proximo_Estado);
 
--- ESTA ERRADO, FALTA VER
-RAM1 : entity work.memoriaRAM   generic map (dataWidth => larguraDados, addrWidth => larguraDados)
-          port map (addr => sinalLocal, we => sinalLocal, dado_in => REG1_ULA_A, dado_out => sinalLocal, clk => sinalLocal);
+			 
+Decoder : entity work.Decoder
+          port map (OPCODE => Instrucao(larguraROM-1 downto 9), OUTPUT => Sinais_Controle);
+			
+			
+RAM : entity work.memoriaRAM   generic map (dataWidth => larguraRAM, addrWidth => larguraAddRAM)
+          port map (addr => Instrucao(7 downto 0), we => Sinais_Controle(0), re => Sinais_Controle(1), habilita => Instrucao(8), dado_in => REG1_ULA_A, dado_out => RAM_MUX, clk => CLK);
 
 
-selMUX <= Sinais_Controle(3);
-Habilita_A <= Sinais_Controle(2);
-Reset_A <= Sinais_Controle(1);
-Operacao_ULA <= Sinais_Controle(0);
-
--- I/O
-chavesY_MUX_A <= SW(3 downto 0);
-chavesX_ULA_B <= SW(9 downto 6);
+			 
+selMUX <= Sinais_Controle(5);
+Habilita_A <= Sinais_Controle(4);
+Operacao_ULA <= Sinais_Controle(3 downto 2);
 
 -- A ligacao dos LEDs:
-LEDR (9) <= SelMUX;
-LEDR (8) <= Habilita_A;
-LEDR (7) <= Reset_A;
-LEDR (6) <= Operacao_ULA;
-LEDR (5) <= '0';    -- Apagado.
-LEDR (4) <= '0';    -- Apagado.
-LEDR (3 downto 0) <= REG1_ULA_A;
+
+SEL_MUX <= SelMUX;
+HABILITA <= Habilita_A;
+OPERACAO <= Operacao_ULA;
+SAIDA_MUX <= MUX_ULA;
+LEDR (7 downto 0) <= REG1_ULA_A;
 
 end architecture;
