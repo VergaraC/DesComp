@@ -1,0 +1,25 @@
+Quartus Prime Archive log --	/home/deku/Facul/DesignComputadores/DesComp/Aula4/Aula4.qarlog
+
+Archive:	/home/deku/Facul/DesignComputadores/DesComp/Aula4/Aula4.qar
+Date:		Fri Sep  3 19:15:25 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/Aula4.qpf
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/Aula4.qsf
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/Aula4.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/Decoder.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/EdgeDetector.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/MemoriaRAM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/MemoriaROM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/MuxGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/RegistradorGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/UlaSomaSub.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/Waveform.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/Waveform1.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula4/somaConstante.vhdl
+/home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

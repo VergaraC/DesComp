@@ -60,15 +60,19 @@ set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
 set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE RegistradorGenerico.vhd
 set_global_assignment -name VHDL_FILE Aula4.vhd
 set_global_assignment -name VHDL_FILE MuxGenerico.vhd
 set_global_assignment -name VHDL_FILE UlaSomaSub.vhd
 set_global_assignment -name VHDL_FILE EdgeDetector.vhd
 set_global_assignment -name VHDL_FILE MemoriaROM.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE MemoriaRAM.vhd
 set_global_assignment -name VHDL_FILE Decodificador.vhd
+set_global_assignment -name VHDL_FILE somaConstante.vhdl
+set_global_assignment -name VHDL_FILE Decoder.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
