@@ -7,23 +7,47 @@ entity Decoder is
   port   (
     -- Input [e o opCode output: saida decodificada
 	 opCode: in std_logic_vector(3 downto 0);
-	 output: out std_logic_vector(5 downto 0)
+	 output: out std_logic_vector(11 downto 0)
   );
 end entity;
 
 architecture arch_name of Decoder is
-  constant NOP : std_logic_vector(3 downto 0) := "0000";
-  constant LDA : std_logic_vector(3 downto 0) := "0001";
-  constant SOMA : std_logic_vector(3 downto 0) := "0010";
-  constant SUB : std_logic_vector(3 downto 0) := "0011";
-  constant LDI : std_logic_vector(3 downto 0) := "0100";
-  constant STA : std_logic_vector(3 downto 0) := "0101"; 
+    
+  signal NOP : std_logic := '0';
+  signal LDI : std_logic := '0';
+  signal LDA : std_logic := '0';
+  signal SOMA: std_logic := '0';
+  signal SUB : std_logic := '0';
+  signal STM : std_logic := '0';
+  signal JMP : std_logic := '0';
+  signal JEQ : std_logic := '0';
+  signal CEQ : std_logic := '0';
+  signal JSR : std_logic := '0';
+  signal RET : std_logic := '0';
 
 begin
-	output <= "011010" when opCode = LDA else
-				 "010110" when opCode = SOMA else
-				 "010010" when opCode = SUB else
-				 "111000" when opCode = LDI else
-				 "000001" when opCode = STA else
-				 "000000" when opCode = NOP; --???????
+  NOP <= '1' when opCode = "0000" else '0';
+  LDA <= '1' when opCode = "0001" else '0';
+  SOMA<= '1' when opCode = "0010" else '0';
+  SUB <= '1' when opCode = "0011" else '0';
+  LDI <= '1' when opCode = "0100" else '0';
+  STM <= '1' when opCode = "0101" else '0';
+  JMP <= '1' when opCode = "0110" else '0';
+  JEQ <= '1' when opCode = "0111" else '0';
+  CEQ <= '1' when opCode = "1000" else '0';
+  JSR <= '1' when opCode = "1001" else '0';
+  RET <= '1' when opCode = "1010" else '0';
+  
+  output(11)<= JSR;                       
+  output(10)<= JMP or JEQ or JSR or RET;  
+  output(9) <= RET;                       
+  output(8) <= JSR;                       
+  output(7) <= JEQ;                       
+  output(6) <= CEQ;                       
+  output(5) <= LDI;                       
+  output(4) <= LDA or SOMA or SUB or LDI; 
+  output(3) <= LDA or LDI or CEQ;         
+  output(2) <= SOMA or CEQ;               
+  output(1) <= LDA or SOMA or SUB or CEQ; 
+  output(0) <= STM;                       
 end architecture;
