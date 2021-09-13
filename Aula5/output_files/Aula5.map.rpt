@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Aula5
-Fri Sep 10 18:04:58 2021
+Analysis & Synthesis report for Aula5
+Mon Sep 13 18:16:26 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,10 +7,31 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Aula5
+ 12. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX2x1
+ 13. Parameter Settings for User Entity Instance: muxGenerico4x1:MUX4x1
+ 14. Parameter Settings for User Entity Instance: registradorGenerico:REG1
+ 15. Parameter Settings for User Entity Instance: Registrador1X1:FLAG
+ 16. Parameter Settings for User Entity Instance: registradorGenerico:REG_RET
+ 17. Parameter Settings for User Entity Instance: registradorGenerico:PC
+ 18. Parameter Settings for User Entity Instance: somaConstante:somaUm
+ 19. Parameter Settings for User Entity Instance: ULASomaSub:ULA1
+ 20. Parameter Settings for User Entity Instance: memoriaROM:ROM1
+ 21. Parameter Settings for User Entity Instance: memoriaRAM:RAM1
+ 22. Port Connectivity Checks: "registradorGenerico:PC"
+ 23. Port Connectivity Checks: "muxGenerico4x1:MUX4x1"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -34,42 +55,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Fri Sep 10 18:04:58 2021           ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; Aula5                                       ;
-; Top-level Entity Name         ; Aula5                                       ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Sep 13 18:16:26 2021       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Aula5                                       ;
+; Top-level Entity Name           ; Aula5                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 35                                          ;
+; Total pins                      ; 24                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,64 +166,512 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; MemoriaRAM.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd          ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/Decoder.vhd             ;         ;
+; MuxGenerico.vhd                  ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/MuxGenerico.vhd         ;         ;
+; MemoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaROM.vhd          ;         ;
+; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/RegistradorGenerico.vhd ;         ;
+; UlaSomaSub.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/UlaSomaSub.vhd          ;         ;
+; Aula5.vhd                        ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd               ;         ;
+; SomaConstante.vhd                ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/SomaConstante.vhd       ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/muxGenerico4x1.vhd      ;         ;
+; LogicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/LogicaDesvio.vhd        ;         ;
+; Registrador1X1.vhd               ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula5/Registrador1X1.vhd      ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 48           ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 86           ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 8            ;
+;     -- 5 input functions                    ; 24           ;
+;     -- 4 input functions                    ; 11           ;
+;     -- <=3 input functions                  ; 43           ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 35           ;
+;                                             ;              ;
+; I/O pins                                    ; 24           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 35           ;
+; Total fan-out                               ; 484          ;
+; Average fan-out                             ; 2.86         ;
++---------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name         ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+; |Aula5                           ; 86 (0)              ; 35 (0)                    ; 0                 ; 0          ; 24   ; 0            ; |Aula5                             ; Aula5               ; work         ;
+;    |Decoder:Decoder|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|Decoder:Decoder             ; Decoder             ; work         ;
+;    |Registrador1X1:FLAG|         ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|Registrador1X1:FLAG         ; Registrador1X1      ; work         ;
+;    |ULASomaSub:ULA1|             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|ULASomaSub:ULA1             ; ULASomaSub          ; work         ;
+;    |memoriaRAM:RAM1|             ; 18 (18)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|memoriaRAM:RAM1             ; memoriaRAM          ; work         ;
+;    |memoriaROM:ROM1|             ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|memoriaROM:ROM1             ; memoriaROM          ; work         ;
+;    |muxGenerico2x1:MUX2x1|       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|muxGenerico2x1:MUX2x1       ; muxGenerico2x1      ; work         ;
+;    |muxGenerico4x1:MUX4x1|       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|muxGenerico4x1:MUX4x1       ; muxGenerico4x1      ; work         ;
+;    |registradorGenerico:PC|      ; 2 (2)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|registradorGenerico:PC      ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG1|    ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|registradorGenerico:REG1    ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_RET| ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|registradorGenerico:REG_RET ; registradorGenerico ; work         ;
+;    |somaConstante:somaUm|        ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula5|somaConstante:somaUm        ; somaConstante       ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; memoriaRAM:RAM1|ram~25                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~33                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~41                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~49                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~57                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~65                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~73                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~81                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~89                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~97                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~105                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~113                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~121                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~129                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~137                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~50                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~82                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~114                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~26                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~58                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~90                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~122                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~34                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~66                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~98                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~130                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~42                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~74                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~106                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~138                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~27                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~35                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~43                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~51                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~59                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~67                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~75                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~83                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~91                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~99                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~107                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~115                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~123                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~131                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~139                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~52                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~84                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~116                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~28                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~60                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~92                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~124                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~36                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~68                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~100                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~132                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~44                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~76                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~108                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~140                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~29                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~37                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~45                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~53                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~61                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~69                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~77                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~85                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~93                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~101                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~109                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~117                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~125                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~133                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~141                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~54                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~86                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~118                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~30                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~62                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~94                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~126                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~38                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~70                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~102                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~134                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~46                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~78                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~110                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~142                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~31                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~39                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~47                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~55                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~63                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~71                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~79                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~87                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~95                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~103                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~111                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~119                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~127                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~135                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~143                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~56                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~88                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~120                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~32                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~64                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~96                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~128                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~40                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~72                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~104                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~136                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~48                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~80                  ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~112                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM1|ram~144                 ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 120 ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 35    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Aula5|registradorGenerico:PC|DOUT[5] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Aula5|registradorGenerico:PC|DOUT[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Aula5 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                               ;
+; larguraROM     ; 13    ; Signed Integer                               ;
+; larguraAddROM  ; 9     ; Signed Integer                               ;
+; larguraPCROM   ; 9     ; Signed Integer                               ;
+; larguraRAM     ; 8     ; Signed Integer                               ;
+; larguraAddRAM  ; 8     ; Signed Integer                               ;
+; simulacao      ; true  ; Enumerated                                   ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX2x1 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico4x1:MUX4x1 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG1 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador1X1:FLAG ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; larguradados   ; 8     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_RET ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:PC ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somaConstante:somaUm ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                           ;
+; constante      ; 1     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULASomaSub:ULA1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; larguradados   ; 8     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaROM:ROM1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; datawidth      ; 13    ; Signed Integer                      ;
+; addrwidth      ; 9     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaRAM:RAM1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; datawidth      ; 8     ; Signed Integer                      ;
+; addrwidth      ; 8     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:PC" ;
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; enable ; Input ; Info     ; Stuck at VCC           ;
+; rst    ; Input ; Info     ; Stuck at GND           ;
++--------+-------+----------+------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "muxGenerico4x1:MUX4x1" ;
++--------------+-------+----------+-----------------+
+; Port         ; Type  ; Severity ; Details         ;
++--------------+-------+----------+-----------------+
+; entradad_mux ; Input ; Info     ; Stuck at GND    ;
++--------------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 35                          ;
+;     ENA               ; 17                          ;
+;     ENA SLD           ; 8                           ;
+;     plain             ; 10                          ;
+; arriav_lcell_comb     ; 87                          ;
+;     arith             ; 18                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 7                           ;
+;     normal            ; 69                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 17                          ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 24                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 4.72                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 10 18:04:47 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula5 -c Aula5 --analysis_and_elaboration
+    Info: Processing started: Mon Sep 13 18:16:18 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula5 -c Aula5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaRAM.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/tyr/Desktop/DesComp/DesComp/Aula5/MemoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: /home/tyr/Desktop/DesComp/DesComp/Aula5/MemoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arch_name File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Decoder.vhd Line: 14
-    Info (12023): Found entity 1: Decoder File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arch_name File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Decoder.vhd Line: 14
+    Info (12023): Found entity 1: Decoder File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula5/MuxGenerico.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Aula5/MuxGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MuxGenerico.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MuxGenerico.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file EdgeDetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/tyr/Desktop/DesComp/DesComp/Aula5/EdgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/tyr/Desktop/DesComp/DesComp/Aula5/EdgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: /home/tyr/Desktop/DesComp/DesComp/Aula5/EdgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/EdgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/EdgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/EdgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Aula5/MemoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: memoriaROM File: /home/tyr/Desktop/DesComp/DesComp/Aula5/MemoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula5/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Aula5/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file UlaSomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula5/UlaSomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: /home/tyr/Desktop/DesComp/DesComp/Aula5/UlaSomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/UlaSomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/UlaSomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Aula5.vhd
-    Info (12022): Found design unit 1: Aula5-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 23
-    Info (12023): Found entity 1: Aula5 File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 4
+    Info (12022): Found design unit 1: Aula5-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 25
+    Info (12023): Found entity 1: Aula5 File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file SomaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula5/SomaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/tyr/Desktop/DesComp/DesComp/Aula5/SomaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/SomaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/SomaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula5/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: /home/tyr/Desktop/DesComp/DesComp/Aula5/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file LogicaDesvio.vhd
-    Info (12022): Found design unit 1: LogicaDesvio-arch_name File: /home/tyr/Desktop/DesComp/DesComp/Aula5/LogicaDesvio.vhd Line: 14
-    Info (12023): Found entity 1: LogicaDesvio File: /home/tyr/Desktop/DesComp/DesComp/Aula5/LogicaDesvio.vhd Line: 5
+    Info (12022): Found design unit 1: LogicaDesvio-arch_name File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/LogicaDesvio.vhd Line: 14
+    Info (12023): Found entity 1: LogicaDesvio File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/LogicaDesvio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Registrador1X1.vhd
-    Info (12022): Found design unit 1: Registrador1X1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Registrador1X1.vhd Line: 15
-    Info (12023): Found entity 1: Registrador1X1 File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Registrador1X1.vhd Line: 4
+    Info (12022): Found design unit 1: Registrador1X1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Registrador1X1.vhd Line: 15
+    Info (12023): Found entity 1: Registrador1X1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Registrador1X1.vhd Line: 4
 Info (12127): Elaborating entity "Aula5" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Aula5.vhd(31): used implicit default value for signal "Reset_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 31
-Error (10344): VHDL expression error at Aula5.vhd(68): expression has 2 elements, but must have 9 elements File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 68
-Error (10344): VHDL expression error at Aula5.vhd(71): expression has 8 elements, but must have 9 elements File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 71
-Error (10346): VHDL error at Aula5.vhd(65): formal port or parameter "entradaC_MUX" must have actual or default value File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 65
-Error (10344): VHDL expression error at Aula5.vhd(71): expression has 9 elements, but must have 8 elements File: /home/tyr/Desktop/DesComp/DesComp/Aula5/Aula5.vhd Line: 71
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 5 errors, 2 warnings
-    Error: Peak virtual memory: 784 megabytes
-    Error: Processing ended: Fri Sep 10 18:04:58 2021
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:32
+Warning (10541): VHDL Signal Declaration warning at Aula5.vhd(33): used implicit default value for signal "Reset_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 33
+Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at Aula5.vhd(18) File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 18
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX2x1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 60
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "muxGenerico4x1:MUX4x1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 67
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 76
+Info (12128): Elaborating entity "Registrador1X1" for hierarchy "Registrador1X1:FLAG" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 80
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_RET" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 84
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaUm" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 92
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 96
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 100
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 104
+Warning (10036): Verilog HDL or VHDL warning at Decoder.vhd(16): object "NOP" assigned a value but never read File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Decoder.vhd Line: 16
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 108
+Info (12128): Elaborating entity "LogicaDesvio" for hierarchy "LogicaDesvio:LogicaDesvio" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 112
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaRAM:RAM1|ram" is uninferred due to asynchronous read logic File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 27
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[0]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[1]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[2]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[3]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[4]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[5]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[6]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[7]" feeding internal logic into a wire File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd Line: 17
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 18
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 18
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 17
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 17
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd Line: 17
+Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 103 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Mon Sep 13 18:16:26 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:21
 
 

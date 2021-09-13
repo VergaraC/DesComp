@@ -15,7 +15,9 @@ entity Aula5 is
   port   (
     CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
-    LEDR  : out std_logic_vector(9 downto 0)
+    LEDR  : out std_logic_vector(9 downto 0);
+	 ENDERECO : out std_logic_vector(8 downto 0)
+	 
   );
 end entity;
 
@@ -25,7 +27,7 @@ architecture arquitetura of Aula5 is
   signal MUX_ULA : std_logic_vector(larguraDados-1 downto 0);
   signal REG1_ULA_A : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (5 downto 0);
+  signal Sinais_Controle : std_logic_vector (11 downto 0);
   signal CLK : std_logic;
   signal SelMUX : std_logic;
   signal Reset_A : std_logic;
@@ -38,8 +40,8 @@ architecture arquitetura of Aula5 is
   
   
   signal SelMux4X1 : std_logic_vector (1 downto 0);
-  signal OutputMux4X1 : std_logic_vector ((larguraDados-1) downto 0);
-  signal REG_RET_Output : std_logic_vector (1 downto 0);
+  signal OutputMux4X1 : std_logic_vector (larguraDados downto 0);
+  signal REG_RET_Output : std_logic_vector (larguraDados downto 0);
 
   signal OutputFlagEQ : std_logic;
 begin
@@ -79,8 +81,8 @@ FLAG : entity work.Registrador1X1   generic map (larguraDados => larguraDados)
           port map (DIN => ULA_FLAG, DOUT => OutputFlagEQ, ENABLE => Sinais_Controle(6), CLK => CLK, RST => Reset_A);
 			 
 			 
-REG_RET : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-			 port map (DIN => SomaUmPC, DOUT =>REG_RET_Output , ENABLE => Sinais_Controle(11), CLK => CLK, RST => Reset_A);
+REG_RET : entity work.registradorGenerico   generic map (larguraDados => 9)
+			 port map (DIN => SomaUmPC, DOUT =>REG_RET_Output, ENABLE => Sinais_Controle(11), CLK => CLK, RST => Reset_A);
 
 
 PC : entity work.registradorGenerico   generic map (larguraDados => larguraPCROM)
@@ -106,12 +108,13 @@ Decoder : entity work.Decoder
 RAM1 : entity work.memoriaRAM   generic map (dataWidth => larguraRAM, addrWidth => larguraAddRAM)
           port map (addr => Instrucao(7 downto 0), we => Sinais_Controle(0), re => Sinais_Controle(1), habilita => Instrucao(8), dado_in => REG1_ULA_A, dado_out => RAM_MUX, clk => CLK);
 
-
-LogicaDesvio : entity work.Decoder
-          port map (opCode(0) => Sinais_Controle(10), opCode(1) => Sinais_Controle(9), opCode(2) => Sinais_Controle(8), opCode(3) => Sinais_Controle(7), opCode(4) => OutputFlagEQ  , output => SelMux4X1);
+			 
+LogicaDesvio : entity work.LogicaDesvio
+          port map (JMP => Sinais_Controle(10), RET => Sinais_Controle(9), JSR => Sinais_Controle(8), JEQ => Sinais_Controle(7), FLAG => OutputFlagEQ  , output => SelMux4X1);
 			 --- Sel,RRET,JSR,JEQ, flag
 -- A ligacao dos LEDs:
 
 LEDR (7 downto 0) <= REG1_ULA_A;
+ENDERECO <= PCROM;
 
 end architecture;

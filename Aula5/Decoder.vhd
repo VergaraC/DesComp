@@ -18,7 +18,7 @@ architecture arch_name of Decoder is
   signal LDA : std_logic := '0';
   signal SOMA: std_logic := '0';
   signal SUB : std_logic := '0';
-  signal STM : std_logic := '0';
+  signal STA : std_logic := '0';
   signal JMP : std_logic := '0';
   signal JEQ : std_logic := '0';
   signal CEQ : std_logic := '0';
@@ -31,7 +31,7 @@ begin
   SOMA<= '1' when opCode = "0010" else '0';
   SUB <= '1' when opCode = "0011" else '0';
   LDI <= '1' when opCode = "0100" else '0';
-  STM <= '1' when opCode = "0101" else '0';
+  STA <= '1' when opCode = "0101" else '0';
   JMP <= '1' when opCode = "0110" else '0';
   JEQ <= '1' when opCode = "0111" else '0';
   CEQ <= '1' when opCode = "1000" else '0';
@@ -39,15 +39,15 @@ begin
   RET <= '1' when opCode = "1010" else '0';
   
   output(11)<= JSR;                       
-  output(10)<= JMP or JEQ or JSR or RET;  
+  output(10)<= JMP;  
   output(9) <= RET;                       
   output(8) <= JSR;                       
   output(7) <= JEQ;                       
-  output(6) <= CEQ;                       
-  output(5) <= LDI;                       
-  output(4) <= LDA or SOMA or SUB or LDI; 
-  output(3) <= LDA or LDI or CEQ;         
-  output(2) <= SOMA or CEQ;               
+  output(6) <= LDI;                       
+  output(5) <= LDI or SOMA or SUB or LDA;
+  output(4) <= LDA or LDI or CEQ;
+  output(3) <= SOMA or CEQ;         
+  output(2) <= CEQ;
   output(1) <= LDA or SOMA or SUB or CEQ; 
-  output(0) <= STM;                       
+  output(0) <= STA;                       
 end architecture;
