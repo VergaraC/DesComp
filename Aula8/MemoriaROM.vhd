@@ -4,8 +4,8 @@ use ieee.numeric_std.all;
 
 entity memoriaROM is
    generic (
-          dataWidth: natural := 13;
-          addrWidth: natural := 9
+          dataWidth: natural := 8;
+          addrWidth: natural := 4 
     );
    port (
           Endereco : in std_logic_vector (addrWidth-1 DOWNTO 0);

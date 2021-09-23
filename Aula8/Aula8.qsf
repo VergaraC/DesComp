@@ -78,3 +78,6 @@ set_global_assignment -name VHDL_FILE LogicaDesvio.vhd
 set_global_assignment -name VHDL_FILE Registrador1X1.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VHDL_FILE Decoder3X8.vhd
+set_global_assignment -name VHDL_FILE CPU.vhd
+set_global_assignment -name VHDL_FILE ../Aula5/conversorHex7Seg.vhd
