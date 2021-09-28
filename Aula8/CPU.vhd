@@ -17,7 +17,7 @@ entity CPU is
     CLOCK_50      : in std_logic;
 	 Reset         : in std_logic;
     KEY           : in std_logic_vector(3 downto 0);
-	 Instuction_IN : in std_logic_vector(12 downto 0);
+	 Instruction_IN : in std_logic_vector(12 downto 0);
 	 Data_IN       : in std_logic_vector(7 downto 0);
 	 
 	 Wr            : out std_logic;
@@ -75,7 +75,7 @@ MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 			  saida_MUX => MUX_ULA
 		  );
 
-MUX4x2_PC :  entity work.muxGenerico4x2 generic map (larguraDados => 9)
+MUX4x1_PC :  entity work.muxGenerico4x1 generic map (larguraDados => 9)
         port map( 
 			  entradaA_MUX => SomaUm_MUX_Desvio,
 			  entradaB_MUX =>  Instruction_IN(8 downto 0),

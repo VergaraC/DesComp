@@ -16,8 +16,8 @@ entity Aula8 is
     CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
     LEDR  : out std_logic_vector(9 downto 0); 
-	 ROM_Out   : out std_logic_vector(12 downto 0); 
-	 RAM_Out  : out std_logic_vector(7 downto 0);
+	 ROM_Saida   : out std_logic_vector(12 downto 0); 
+	 RAM_Saida  : out std_logic_vector(7 downto 0);
 	 Address      : out std_logic_vector(7 downto 0)
 	 
   );
@@ -32,7 +32,7 @@ architecture arquitetura of Aula8 is
   signal LED : std_logic_vector (9 downto 0);
 
   signal ROM_out : std_logic_vector (12 downto 0);
-  signal ROM_Address : std_logic_vector(8 downto 0)
+  signal ROM_Address : std_logic_vector(8 downto 0);
 
   signal Reset_A : std_logic;
   signal RAM_out : std_logic_vector(7 downto 0);
@@ -44,6 +44,11 @@ architecture arquitetura of Aula8 is
 
   signal escritaDados: std_logic_vector(7 downto 0);
   signal DataAddress: std_logic_vector(8 downto 0);
+  
+  signal HabilitaLED: std_logic;
+  signal HabilitaLED8: std_logic;  
+  signal HabilitaLED9: std_logic;
+
 
 begin
 
@@ -73,11 +78,11 @@ Decoder1 : entity work.Decoder3X8
           port map (OPCODE => DataAddress(8 downto 6), OUTPUT => SaidaDecoder1);
 
 Decoder2 : entity work.Decoder3X8
-          port map (OPCODE => DataAddress(2 downto 0), OUTPUT => SaidaDecoder2
+          port map (OPCODE => DataAddress(2 downto 0), OUTPUT => SaidaDecoder2);
 			
 -- O port map completo do Acumulador.
 
-LEDR : entity work.registradorGenerico   generic map (larguraDados => 8)
+LEDRP : entity work.registradorGenerico   generic map (larguraDados => 8)
 		 port map (DIN => escritaDados, DOUT => LED(7 downto 0), ENABLE => HabilitaLED, CLK => CLK, RST => '0');
 			 
 LEDR8 : entity work.Registrador1X1  generic map (larguraDados => 1)
@@ -97,10 +102,9 @@ HabilitaLED <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(4) and wr) else '0';
 HabilitaLED8 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(4) and wr) else '0';
 HabilitaLED9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr) else '0';
 
-RAM_Out <=; 
-LEDR	  <=;
-Address <=;
-ROM_Out <= ROM_out;
-LEDR <= LED
+RAM_Saida <= RAM_out; 
+LEDR	  <= LED;
+Address <= ROM_Address;
+ROM_Saida <= ROM_out;
 
 end architecture;

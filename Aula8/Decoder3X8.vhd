@@ -9,8 +9,8 @@ entity Decoder3x8 is
 
   port   (
     -- Input ports
-    entrada  :  in   std_logic_vector(larguraDados-1 downto 0);
-    saida :  out  std_logic_vector(7 downto 0)
+    OPCODE  :  in   std_logic_vector(larguraDados-1 downto 0);
+    OUTPUT :  out  std_logic_vector(7 downto 0)
   );
 end entity;
 
@@ -19,17 +19,17 @@ architecture arquitetura of Decoder3x8 is
 
 
 begin
-	process (entrada) is
+	process (OPCODE) is
 	begin
-		case entrada is
-			when "000" => saida <= "00000001";
-			when "001" => saida <= "00000010";
-			when "010" => saida <= "00000100";
-			when "011" => saida <= "00001000";
-			when "100" => saida <= "00010000";
-			when "101" => saida <= "00100000";
-			when "110" => saida <= "01000000";
-			when "111" => saida <= "10000000";
+		case OPCODE is
+			when "000" => OUTPUT <= "00000001";
+			when "001" => OUTPUT <= "00000010";
+			when "010" => OUTPUT <= "00000100";
+			when "011" => OUTPUT <= "00001000";
+			when "100" => OUTPUT <= "00010000";
+			when "101" => OUTPUT <= "00100000";
+			when "110" => OUTPUT <= "01000000";
+			when "111" => OUTPUT <= "10000000";
 		end case;
 	end process;
 end architecture;

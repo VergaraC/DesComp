@@ -1,0 +1,28 @@
+Quartus Prime Archive log --	/home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.qarlog
+
+Archive:	/home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.qar
+Date:		Mon Sep 13 18:22:02 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.qpf
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.qsf
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Aula5.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Decoder.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/EdgeDetector.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/LogicaDesvio.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaRAM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/MemoriaROM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/MuxGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Registrador1X1.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/RegistradorGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/SomaConstante.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/UlaSomaSub.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Waveform.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/Waveform1.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula5/muxGenerico4x1.vhd
+/home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 17 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
