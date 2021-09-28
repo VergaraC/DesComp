@@ -32,21 +32,18 @@ architecture assincrona of memoriaROM is
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
-      -- CTRL = SelMUX, Habilita_A, Reset_A, Operacao_ULA
-      -- Inicializa os endereços:
-      --                 CTRL   Prox Estado
-        tmp(0)  :=   LDI  & '0' & x"01";
-        tmp(1)  :=   STA  & '0' & x"00";
-        tmp(2)  :=   SOMA & '0' & x"00";
-        tmp(3)  :=   STA  & '0' & x"01";   
-        tmp(4)  :=   LDA  & '1' & x"00";
-		  tmp(5)  :=   STA  & '1' & x"01";
-        tmp(6)  :=   STA  & '1' & x"02";   
-        tmp(7)  :=   LDI  & '0' & x"55";
-        tmp(8)  :=   STA  & '1' & x"00";
-        tmp(9)  :=   LDI  & '0' & x"AA";
-        tmp(10) :=   STA  & '1' & x"00";
-        tmp(11) :=   JMP  & '0' & x"0B"; 
+      tmp(0) := LDI & '0' & x"01";
+		tmp(1) := STA & '1' & x"00";
+		tmp(2) := SOMA & '0' & x"00";
+		tmp(3) := STA & '0' & x"00";
+		tmp(4) := LDA & '1' & x"00";
+		tmp(5) := STA & '1' & x"01";
+		tmp(6) := STA & '1' & x"02";
+		tmp(7) := LDI & '0' & x"55";
+		tmp(8) := STA & '1' & x"FF";
+		tmp(9) := LDI & '0' & x"AA";
+		tmp(10) := STA & '1' & x"FF";
+		tmp(11) := JMP & '0' & x"0B";
         
         return tmp;
     end initMemory;
