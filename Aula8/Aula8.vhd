@@ -32,7 +32,7 @@ architecture arquitetura of Aula8 is
   signal LED : std_logic_vector (9 downto 0);
 
   signal ROM_out : std_logic_vector (12 downto 0);
-  signal ROM_Address : std_logic_vector(8 downto 0);
+  signal ROM_Addr : std_logic_vector(8 downto 0);
 
   signal Reset_A : std_logic;
   signal RAM_out : std_logic_vector(7 downto 0);
@@ -67,7 +67,7 @@ CPU : entity work.CPU
 			Data_IN => RAM_out,
 			Data_Address => DataAddress,
 			Data_OUT => escritaDados,
-			ROM_Address => ROM_Address,
+			ROM_Address => ROM_Addr,
 			CLOCK_50 => CLK,
 			KEY => KEY,
 			RESET => '0',
@@ -93,7 +93,7 @@ LEDR9 :	entity work.Registrador1X1  generic map (larguraDados => 1)
 		 port map (DIN => escritaDados(0), DOUT => LED(9), ENABLE => HabilitaLED9, CLK => CLK, RST => '0');
 			 
 ROM : entity work.MemoriaROM   generic map (dataWidth => larguraROM, addrWidth => larguraAddROM)
-		 port map (Endereco => ROM_Address , Dado => ROM_out);
+		 port map (Endereco => ROM_Addr , Dado => ROM_out);
 		 
 RAM : entity work.MemoriaRAM   generic map (dataWidth => larguraRAM, addrWidth => larguraAddRAM)
 		 port map (addr => DataAddress(5 downto 0), we => wr, re => rd, habilita => SaidaDecoder1(0), dado_in => escritaDados, dado_out => RAM_out, clk => CLK);
@@ -105,7 +105,7 @@ HabilitaLED9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr) else '0'
 
 RAM_Saida <= RAM_out; 
 LEDR	  <= LED;
-Address <= ROM_Address;
+Address <= ROM_Addr;
 ROM_Saida <= ROM_out;
 
 end architecture;

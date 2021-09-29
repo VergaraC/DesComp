@@ -119,13 +119,12 @@ LogicaDesvio : entity work.LogicaDesvio
 			 --- Sel,RRET,JSR,JEQ, flag
 -- A ligacao dos LEDs:
 
-LEDR (7 downto 0) <= REG1_ULA_A;
-ENDERECO <= ROM_Address;
 
 Rd <= Sinais_Controle(1);
 Wr <= Sinais_Controle(0);
 Data_OUT <= REG1_ULA_A;
-Data_Address <= ROM_OUT;
+Data_Address <= Sinais_Controle(8 downto 0);
+ROM_Address <= ROM_OUT;
 
 
 end architecture;

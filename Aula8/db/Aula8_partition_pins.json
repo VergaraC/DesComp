@@ -2,7 +2,128 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ROM_Saida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_Saida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Address[8]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
