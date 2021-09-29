@@ -1,0 +1,1005 @@
+$comment
+	File created using the following command:
+		vcd file Aula8.msim.vcd -direction
+$end
+$date
+	Wed Sep 29 16:30:33 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module aula8_vhd_vec_tst $end
+$var wire 1 ! Address [8] $end
+$var wire 1 " Address [7] $end
+$var wire 1 # Address [6] $end
+$var wire 1 $ Address [5] $end
+$var wire 1 % Address [4] $end
+$var wire 1 & Address [3] $end
+$var wire 1 ' Address [2] $end
+$var wire 1 ( Address [1] $end
+$var wire 1 ) Address [0] $end
+$var wire 1 * CLOCK_50 $end
+$var wire 1 + KEY [3] $end
+$var wire 1 , KEY [2] $end
+$var wire 1 - KEY [1] $end
+$var wire 1 . KEY [0] $end
+$var wire 1 / LEDR [9] $end
+$var wire 1 0 LEDR [8] $end
+$var wire 1 1 LEDR [7] $end
+$var wire 1 2 LEDR [6] $end
+$var wire 1 3 LEDR [5] $end
+$var wire 1 4 LEDR [4] $end
+$var wire 1 5 LEDR [3] $end
+$var wire 1 6 LEDR [2] $end
+$var wire 1 7 LEDR [1] $end
+$var wire 1 8 LEDR [0] $end
+$var wire 1 9 RAM_Saida [7] $end
+$var wire 1 : RAM_Saida [6] $end
+$var wire 1 ; RAM_Saida [5] $end
+$var wire 1 < RAM_Saida [4] $end
+$var wire 1 = RAM_Saida [3] $end
+$var wire 1 > RAM_Saida [2] $end
+$var wire 1 ? RAM_Saida [1] $end
+$var wire 1 @ RAM_Saida [0] $end
+$var wire 1 A ROM_Saida [12] $end
+$var wire 1 B ROM_Saida [11] $end
+$var wire 1 C ROM_Saida [10] $end
+$var wire 1 D ROM_Saida [9] $end
+$var wire 1 E ROM_Saida [8] $end
+$var wire 1 F ROM_Saida [7] $end
+$var wire 1 G ROM_Saida [6] $end
+$var wire 1 H ROM_Saida [5] $end
+$var wire 1 I ROM_Saida [4] $end
+$var wire 1 J ROM_Saida [3] $end
+$var wire 1 K ROM_Saida [2] $end
+$var wire 1 L ROM_Saida [1] $end
+$var wire 1 M ROM_Saida [0] $end
+
+$scope module i1 $end
+$var wire 1 N gnd $end
+$var wire 1 O vcc $end
+$var wire 1 P unknown $end
+$var wire 1 Q devoe $end
+$var wire 1 R devclrn $end
+$var wire 1 S devpor $end
+$var wire 1 T ww_devoe $end
+$var wire 1 U ww_devclrn $end
+$var wire 1 V ww_devpor $end
+$var wire 1 W ww_CLOCK_50 $end
+$var wire 1 X ww_KEY [3] $end
+$var wire 1 Y ww_KEY [2] $end
+$var wire 1 Z ww_KEY [1] $end
+$var wire 1 [ ww_KEY [0] $end
+$var wire 1 \ ww_LEDR [9] $end
+$var wire 1 ] ww_LEDR [8] $end
+$var wire 1 ^ ww_LEDR [7] $end
+$var wire 1 _ ww_LEDR [6] $end
+$var wire 1 ` ww_LEDR [5] $end
+$var wire 1 a ww_LEDR [4] $end
+$var wire 1 b ww_LEDR [3] $end
+$var wire 1 c ww_LEDR [2] $end
+$var wire 1 d ww_LEDR [1] $end
+$var wire 1 e ww_LEDR [0] $end
+$var wire 1 f ww_ROM_Saida [12] $end
+$var wire 1 g ww_ROM_Saida [11] $end
+$var wire 1 h ww_ROM_Saida [10] $end
+$var wire 1 i ww_ROM_Saida [9] $end
+$var wire 1 j ww_ROM_Saida [8] $end
+$var wire 1 k ww_ROM_Saida [7] $end
+$var wire 1 l ww_ROM_Saida [6] $end
+$var wire 1 m ww_ROM_Saida [5] $end
+$var wire 1 n ww_ROM_Saida [4] $end
+$var wire 1 o ww_ROM_Saida [3] $end
+$var wire 1 p ww_ROM_Saida [2] $end
+$var wire 1 q ww_ROM_Saida [1] $end
+$var wire 1 r ww_ROM_Saida [0] $end
+$var wire 1 s ww_RAM_Saida [7] $end
+$var wire 1 t ww_RAM_Saida [6] $end
+$var wire 1 u ww_RAM_Saida [5] $end
+$var wire 1 v ww_RAM_Saida [4] $end
+$var wire 1 w ww_RAM_Saida [3] $end
+$var wire 1 x ww_RAM_Saida [2] $end
+$var wire 1 y ww_RAM_Saida [1] $end
+$var wire 1 z ww_RAM_Saida [0] $end
+$var wire 1 { ww_Address [8] $end
+$var wire 1 | ww_Address [7] $end
+$var wire 1 } ww_Address [6] $end
+$var wire 1 ~ ww_Address [5] $end
+$var wire 1 !! ww_Address [4] $end
+$var wire 1 "! ww_Address [3] $end
+$var wire 1 #! ww_Address [2] $end
+$var wire 1 $! ww_Address [1] $end
+$var wire 1 %! ww_Address [0] $end
+$var wire 1 &! \CLOCK_50~input_o\ $end
+$var wire 1 '! \KEY[1]~input_o\ $end
+$var wire 1 (! \KEY[2]~input_o\ $end
+$var wire 1 )! \KEY[3]~input_o\ $end
+$var wire 1 *! \KEY[0]~input_o\ $end
+$var wire 1 +! \RAM_Saida[0]~output_o\ $end
+$var wire 1 ,! \RAM_Saida[1]~output_o\ $end
+$var wire 1 -! \RAM_Saida[2]~output_o\ $end
+$var wire 1 .! \RAM_Saida[3]~output_o\ $end
+$var wire 1 /! \RAM_Saida[4]~output_o\ $end
+$var wire 1 0! \RAM_Saida[5]~output_o\ $end
+$var wire 1 1! \RAM_Saida[6]~output_o\ $end
+$var wire 1 2! \RAM_Saida[7]~output_o\ $end
+$var wire 1 3! \LEDR[0]~output_o\ $end
+$var wire 1 4! \LEDR[1]~output_o\ $end
+$var wire 1 5! \LEDR[2]~output_o\ $end
+$var wire 1 6! \LEDR[3]~output_o\ $end
+$var wire 1 7! \LEDR[4]~output_o\ $end
+$var wire 1 8! \LEDR[5]~output_o\ $end
+$var wire 1 9! \LEDR[6]~output_o\ $end
+$var wire 1 :! \LEDR[7]~output_o\ $end
+$var wire 1 ;! \LEDR[8]~output_o\ $end
+$var wire 1 <! \LEDR[9]~output_o\ $end
+$var wire 1 =! \ROM_Saida[0]~output_o\ $end
+$var wire 1 >! \ROM_Saida[1]~output_o\ $end
+$var wire 1 ?! \ROM_Saida[2]~output_o\ $end
+$var wire 1 @! \ROM_Saida[3]~output_o\ $end
+$var wire 1 A! \ROM_Saida[4]~output_o\ $end
+$var wire 1 B! \ROM_Saida[5]~output_o\ $end
+$var wire 1 C! \ROM_Saida[6]~output_o\ $end
+$var wire 1 D! \ROM_Saida[7]~output_o\ $end
+$var wire 1 E! \ROM_Saida[8]~output_o\ $end
+$var wire 1 F! \ROM_Saida[9]~output_o\ $end
+$var wire 1 G! \ROM_Saida[10]~output_o\ $end
+$var wire 1 H! \ROM_Saida[11]~output_o\ $end
+$var wire 1 I! \ROM_Saida[12]~output_o\ $end
+$var wire 1 J! \Address[0]~output_o\ $end
+$var wire 1 K! \Address[1]~output_o\ $end
+$var wire 1 L! \Address[2]~output_o\ $end
+$var wire 1 M! \Address[3]~output_o\ $end
+$var wire 1 N! \Address[4]~output_o\ $end
+$var wire 1 O! \Address[5]~output_o\ $end
+$var wire 1 P! \Address[6]~output_o\ $end
+$var wire 1 Q! \Address[7]~output_o\ $end
+$var wire 1 R! \Address[8]~output_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+0N
+1O
+xP
+1Q
+1R
+1S
+1T
+1U
+1V
+0W
+0&!
+0'!
+0(!
+0)!
+0*!
+z+!
+z,!
+z-!
+z.!
+z/!
+z0!
+z1!
+z2!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+1=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+1H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+05
+06
+07
+08
+0A
+1B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+1M
+z9
+z:
+z;
+z<
+z=
+z>
+z?
+z@
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+1g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+1r
+zs
+zt
+zu
+zv
+zw
+zx
+zy
+zz
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+$end
+#10000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#20000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#30000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#40000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#50000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#60000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#70000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#80000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#90000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#100000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#110000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#120000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#130000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#140000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#150000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#160000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#170000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#180000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#190000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#200000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#210000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#220000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#230000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#240000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#250000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#260000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#270000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#280000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#290000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#300000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#310000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#320000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#330000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#340000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#350000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#360000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#370000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#380000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#390000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#400000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#410000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#420000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#430000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#440000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#450000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#460000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#470000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#480000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#490000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#500000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#510000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#520000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#530000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#540000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#550000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#560000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#570000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#580000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#590000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#600000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#610000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#620000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#630000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#640000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#650000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#660000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#670000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#680000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#690000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#700000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#710000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#720000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#730000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#740000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#750000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#760000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#770000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#780000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#790000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#800000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#810000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#820000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#830000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#840000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#850000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#860000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#870000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#880000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#890000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#900000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#910000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#920000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#930000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#940000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#950000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#960000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#970000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#980000
+0*
+0.
+0W
+0[
+0*!
+0&!
+#990000
+1*
+1.
+1W
+1[
+1*!
+1&!
+#1000000

@@ -18,7 +18,7 @@ entity Aula8 is
     LEDR  : out std_logic_vector(9 downto 0); 
 	 ROM_Saida   : out std_logic_vector(12 downto 0); 
 	 RAM_Saida  : out std_logic_vector(7 downto 0);
-	 Address      : out std_logic_vector(7 downto 0)
+	 Address      : out std_logic_vector(8 downto 0)
 	 
   );
 end entity;
@@ -62,7 +62,8 @@ detectorSub0: work.edgeDetector(bordaSubida)
 end generate;
 
 CPU : entity work.CPU
-          port map (Instruction_IN => ROM_out,
+          port map (
+			Instruction_IN => ROM_out,
 			Data_IN => RAM_out,
 			Data_Address => DataAddress,
 			Data_OUT => escritaDados,
@@ -70,8 +71,8 @@ CPU : entity work.CPU
 			CLOCK_50 => CLK,
 			KEY => KEY,
 			RESET => '0',
-			RD => rd,
-			WR => wr 
+			Rd => rd,
+			Wr => wr
 		 );
 			 
 Decoder1 : entity work.Decoder3X8
@@ -97,7 +98,7 @@ ROM : entity work.MemoriaROM   generic map (dataWidth => larguraROM, addrWidth =
 RAM : entity work.MemoriaRAM   generic map (dataWidth => larguraRAM, addrWidth => larguraAddRAM)
 		 port map (addr => DataAddress(5 downto 0), we => wr, re => rd, habilita => SaidaDecoder1(0), dado_in => escritaDados, dado_out => RAM_out, clk => CLK);
 
-		 
+
 HabilitaLED <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(4) and wr) else '0';
 HabilitaLED8 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(4) and wr) else '0';
 HabilitaLED9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr) else '0';
