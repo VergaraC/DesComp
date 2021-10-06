@@ -18,7 +18,14 @@ entity Aula8 is
     LEDR  : out std_logic_vector(9 downto 0); 
 	 ROM_Saida   : out std_logic_vector(12 downto 0); 
 	 RAM_Saida  : out std_logic_vector(7 downto 0);
-	 Address      : out std_logic_vector(8 downto 0)
+	 Address      : out std_logic_vector(8 downto 0);
+	 
+	 HEX0 : out std_logic_vector(6 downto 0);
+	 HEX1 : out std_logic_vector(6 downto 0);
+	 HEX2 : out std_logic_vector(6 downto 0);
+	 HEX3 : out std_logic_vector(6 downto 0);
+	 HEX4 : out std_logic_vector(6 downto 0);
+	 HEX5 : out std_logic_vector(6 downto 0)
 	 
   );
 end entity;
@@ -48,6 +55,21 @@ architecture arquitetura of Aula8 is
   signal HabilitaLED: std_logic;
   signal HabilitaLED8: std_logic;  
   signal HabilitaLED9: std_logic;
+  
+  signal HabilitaHEX0: std_logic;
+  signal HabilitaHEX1: std_logic;  
+  signal HabilitaHEX2: std_logic;
+  signal HabilitaHEX3: std_logic;
+  signal HabilitaHEX4: std_logic;  
+  signal HabilitaHEX5: std_logic;
+  
+  signal REG_OUT_HEX0: std_logic_vector(3 downto 0);
+  signal REG_OUT_HEX1: std_logic_vector(3 downto 0);
+  signal REG_OUT_HEX2: std_logic_vector(3 downto 0);
+  signal REG_OUT_HEX3: std_logic_vector(3 downto 0);
+  signal REG_OUT_HEX4: std_logic_vector(3 downto 0);
+  signal REG_OUT_HEX5: std_logic_vector(3 downto 0);
+
 
 
 begin
@@ -98,10 +120,83 @@ ROM : entity work.MemoriaROM   generic map (dataWidth => larguraROM, addrWidth =
 RAM : entity work.MemoriaRAM   generic map (dataWidth => larguraRAM, addrWidth => larguraAddRAM)
 		 port map (addr => DataAddress(5 downto 0), we => wr, re => rd, habilita => SaidaDecoder1(0), dado_in => escritaDados, dado_out => RAM_out, clk => CLK);
 
+--0		 
+REG_HEX0 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		 port map (DIN => escritaDados(3 downto 0), DOUT => REG_OUT_HEX0, ENABLE => HabilitaHEX0, CLK => CLK, RST => '0');
+		 
+CONV_HEX0 :  entity work.conversorHex7Seg
+        port map(dadoHex => REG_OUT_HEX0,
+                 apaga =>  '0',
+                 negativo => '0',
+                 overFlow =>  '0',
+                 saida7seg => HEX0);
 
-HabilitaLED <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(4) and wr) else '0';
-HabilitaLED8 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(4) and wr) else '0';
-HabilitaLED9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr) else '0';
+--1	
+REG_HEX1 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		 port map (DIN => escritaDados(3 downto 0), DOUT => REG_OUT_HEX1, ENABLE => HabilitaHEX1, CLK => CLK, RST => '0');
+	 
+CONV_HEX1 :  entity work.conversorHex7Seg
+        port map(dadoHex => REG_OUT_HEX1,
+                 apaga =>  '0',
+                 negativo => '0',
+                 overFlow =>  '0',
+                 saida7seg => HEX1);
+					  
+--2
+REG_HEX2 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		 port map (DIN => escritaDados(3 downto 0), DOUT => REG_OUT_HEX2, ENABLE => HabilitaHEX2, CLK => CLK, RST => '0');
+		 
+CONV_HEX2 :  entity work.conversorHex7Seg
+        port map(dadoHex => REG_OUT_HEX2,
+                 apaga =>  '0',
+                 negativo => '0',
+                 overFlow =>  '0',
+                 saida7seg => HEX2);
+
+--3					  
+REG_HEX3 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		 port map (DIN => escritaDados(3 downto 0), DOUT => REG_OUT_HEX3, ENABLE => HabilitaHEX3, CLK => CLK, RST => '0');
+		 
+CONV_HEX3 :  entity work.conversorHex7Seg
+        port map(dadoHex => REG_OUT_HEX3,
+                 apaga =>  '0',
+                 negativo => '0',
+                 overFlow =>  '0',
+                 saida7seg => HEX3);
+					  
+--4
+REG_HEX4 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		 port map (DIN => escritaDados(3 downto 0), DOUT => REG_OUT_HEX4, ENABLE => HabilitaHEX4, CLK => CLK, RST => '0');
+		 
+CONV_HEX4 :  entity work.conversorHex7Seg
+        port map(dadoHex => REG_OUT_HEX4,
+                 apaga =>  '0',
+                 negativo => '0',
+                 overFlow =>  '0',
+                 saida7seg => HEX4);					  
+
+--5
+REG_HEX5 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		 port map (DIN => escritaDados(3 downto 0), DOUT => REG_OUT_HEX5, ENABLE => HabilitaHEX5, CLK => CLK, RST => '0');
+		 
+CONV_HEX5 :  entity work.conversorHex7Seg
+        port map(dadoHex => REG_OUT_HEX5,
+                 apaga =>  '0',
+                 negativo => '0',
+                 overFlow =>  '0',
+                 saida7seg => HEX5);
+					  
+HabilitaLED <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(4) and wr and not(DataAddress(5))) else '0';
+HabilitaLED8 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(4) and wr and not(DataAddress(5))) else '0';
+HabilitaLED9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr and not(DataAddress(5))) else '0';
+
+HabilitaHEX0 <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
+HabilitaHEX1 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
+HabilitaHEX2 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
+HabilitaHEX3 <= '1' when (SaidaDecoder2(3) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
+HabilitaHEX4 <= '1' when (SaidaDecoder2(4) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
+HabilitaHEX5 <= '1' when (SaidaDecoder2(5) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
+
 
 RAM_Saida <= RAM_out; 
 LEDR	  <= LED;
