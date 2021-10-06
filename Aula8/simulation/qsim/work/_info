@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/deku/Facul/DesignComputadores/DesComp/Aula8/simulation/qsim
 Eaula8
-Z1 w1632946013
+Z1 w1633556542
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 12
+!i122 14
 R0
 Z11 8Aula8.vho
 Z12 FAula8.vho
 l0
 L39 1
-VefDe0Un<:LjQXZim[1MjG0
-!s100 9BLA5zI>Ka=5P=VZ9]9EF0
+VeH^K9mcOT=UPZzCO1b1Qm1
+!s100 ?UD^:<F]75R1W6AYdZl5H3
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1632946014
+Z14 !s110 1633556543
 !i10b 1
-Z15 !s108 1632946014.000000
+Z15 !s108 1633556543.000000
 Z16 !s90 -work|work|Aula8.vho|
 Z17 !s107 Aula8.vho|
 !i113 1
@@ -48,12 +48,12 @@ R7
 R8
 R9
 R10
-DEx4 work 5 aula8 0 22 efDe0Un<:LjQXZim[1MjG0
-!i122 12
-l303
-L50 2878
-V1DGF4H1kHn[l44mOeUVEf2
-!s100 4Z3TRHlJMH;oK2`KjEVHZ2
+DEx4 work 5 aula8 0 22 eH^K9mcOT=UPZzCO1b1Qm1
+!i122 14
+l279
+L58 3276
+V?^^MAZn[VgC=LLFOUDJQ>0
+!s100 d^o0JBUlQ@8JKG``lcKQ33
 R13
 32
 R14
@@ -65,24 +65,24 @@ R17
 R18
 R19
 Eaula8_vhd_vec_tst
-Z20 w1632946012
+Z20 w1633556541
 R8
 R9
-!i122 13
+!i122 15
 R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
 l0
 L32 1
 VL?zeFMFBH222zJYjHHdIO2
 !s100 WMV=KT>7NooM`bd0@b8g;3
 R13
 32
-R14
+Z23 !s110 1633556544
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform.vwf.vht|
-Z24 !s107 Waveform.vwf.vht|
+Z24 !s90 -work|work|Waveform1.vwf.vht|
+!s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
@@ -90,18 +90,18 @@ Aaula8_arch
 R8
 R9
 Z25 DEx4 work 17 aula8_vhd_vec_tst 0 22 L?zeFMFBH222zJYjHHdIO2
-!i122 13
-l53
-Z26 L34 91
-VN[Rk]W`Q?7gCd8;XeAWPh3
-!s100 DWjUb9T>d3?o<BVfoab1@1
+!i122 15
+l69
+L34 158
+VF19gG=Y_97SoFXjKZNk7[0
+!s100 P<L7z<X7ZdlEi[LeI`6`32
 R13
 32
-R14
+R23
 !i10b 1
 R15
-R23
 R24
+Z26 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19

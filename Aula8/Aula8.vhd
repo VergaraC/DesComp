@@ -14,8 +14,12 @@ entity Aula8 is
   );
   port   (
     CLOCK_50 : in std_logic;
+	 
+	 SW: in std_logic_vector(9 downto 0);
     KEY: in std_logic_vector(3 downto 0);
-    LEDR  : out std_logic_vector(9 downto 0); 
+    LEDR  : out std_logic_vector(9 downto 0);
+	 KEY_RST: in std_logic;
+	
 	 ROM_Saida   : out std_logic_vector(12 downto 0); 
 	 RAM_Saida  : out std_logic_vector(7 downto 0);
 	 Address      : out std_logic_vector(8 downto 0);
@@ -42,7 +46,7 @@ architecture arquitetura of Aula8 is
   signal ROM_Addr : std_logic_vector(8 downto 0);
 
   signal Reset_A : std_logic;
-  signal RAM_out : std_logic_vector(7 downto 0);
+  signal LeituraDados : std_logic_vector(7 downto 0);
   signal SaidaDecoder1: std_logic_vector(7 downto 0);
   signal SaidaDecoder2: std_logic_vector(7 downto 0);
   
@@ -55,6 +59,16 @@ architecture arquitetura of Aula8 is
   signal HabilitaLED: std_logic;
   signal HabilitaLED8: std_logic;  
   signal HabilitaLED9: std_logic;
+  
+  signal HabilitaKEY0: std_logic;
+  signal HabilitaKEY1: std_logic;
+  signal HabilitaKEY2: std_logic;
+  signal HabilitaKEY3: std_logic;
+  signal HabilitaKEY_RST: std_logic;
+  
+  signal HabilitaSW: std_logic;
+  signal HabilitaSW8: std_logic;
+  signal HabilitaSW9: std_logic;
   
   signal HabilitaHEX0: std_logic;
   signal HabilitaHEX1: std_logic;  
@@ -86,7 +100,7 @@ end generate;
 CPU : entity work.CPU
           port map (
 			Instruction_IN => ROM_out,
-			Data_IN => RAM_out,
+			Data_IN => LeituraDados,
 			Data_Address => DataAddress,
 			Data_OUT => escritaDados,
 			ROM_Address => ROM_Addr,
@@ -118,7 +132,7 @@ ROM : entity work.MemoriaROM   generic map (dataWidth => larguraROM, addrWidth =
 		 port map (Endereco => ROM_Addr , Dado => ROM_out);
 		 
 RAM : entity work.MemoriaRAM   generic map (dataWidth => larguraRAM, addrWidth => larguraAddRAM)
-		 port map (addr => DataAddress(5 downto 0), we => wr, re => rd, habilita => SaidaDecoder1(0), dado_in => escritaDados, dado_out => RAM_out, clk => CLK);
+		 port map (addr => DataAddress(5 downto 0), we => wr, re => rd, habilita => SaidaDecoder1(0), dado_in => escritaDados, dado_out => LeituraDados, clk => CLK);
 
 --0		 
 REG_HEX0 : entity work.registradorGenerico   generic map (larguraDados => 4)
@@ -185,7 +199,47 @@ CONV_HEX5 :  entity work.conversorHex7Seg
                  negativo => '0',
                  overFlow =>  '0',
                  saida7seg => HEX5);
-					  
+			
+--buffers KEY			
+					
+BUF3STATE_KEY0 :  entity work.buffer_3state_1bit
+        port map(entrada => KEY(0), habilita =>  HabilitaKEY0, saida => LeituraDados(0));
+
+BUF3STATE_KEY1 :  entity work.buffer_3state_1bit
+        port map(entrada => KEY(1), habilita =>  HabilitaKEY1, saida => LeituraDados(0));
+
+BUF3STATE_KEY2 :  entity work.buffer_3state_1bit
+        port map(entrada => KEY(2), habilita =>  HabilitaKEY2, saida => LeituraDados(0));
+
+BUF3STATE_KEY3 :  entity work.buffer_3state_1bit
+        port map(entrada => KEY(3), habilita =>  HabilitaKEY3, saida => LeituraDados(0));
+		  
+BUF3STATE_KEY_RST :  entity work.buffer_3state_1bit
+        port map(entrada => KEY_RST, habilita =>  HabilitaKEY_RST, saida => LeituraDados(0));
+		  
+--buffers SW		  
+		  
+BUF3STATE_SW :  entity work.buffer_3state_8portas
+        port map(entrada => SW(7 downto 0), habilita =>  HabilitaSW, saida => LeituraDados);
+		  
+BUF3STATE_SW8 :  entity work.buffer_3state_1bit
+        port map(entrada => SW(8), habilita =>  HabilitaSW8, saida => LeituraDados(0));
+		  
+BUF3STATE_SW9 :  entity work.buffer_3state_1bit
+        port map(entrada => SW(9), habilita =>  HabilitaSW9, saida => LeituraDados(0));
+		  
+--ANDs de habilita
+		  
+HabilitaKEY0 <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(5) and rd and DataAddress(5)) else '0';
+HabilitaKEY1 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(5) and rd and DataAddress(5)) else '0';
+HabilitaKEY2 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(5) and rd and DataAddress(5)) else '0';
+HabilitaKEY3 <= '1' when (SaidaDecoder2(3) and SaidaDecoder1(5) and rd and DataAddress(5)) else '0';
+HabilitaKEY_RST <= '1' when (SaidaDecoder2(4) and SaidaDecoder1(5) and rd and DataAddress(5)) else '0';
+
+HabilitaSW <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(5) and rd and not(DataAddress(5))) else '0';
+HabilitaSW8 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(5) and rd and not(DataAddress(5))) else '0';
+HabilitaSW9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(5) and rd and not(DataAddress(5))) else '0';
+
 HabilitaLED <= '1' when (SaidaDecoder2(0) and SaidaDecoder1(4) and wr and not(DataAddress(5))) else '0';
 HabilitaLED8 <= '1' when (SaidaDecoder2(1) and SaidaDecoder1(4) and wr and not(DataAddress(5))) else '0';
 HabilitaLED9 <= '1' when (SaidaDecoder2(2) and SaidaDecoder1(4) and wr and not(DataAddress(5))) else '0';
@@ -198,7 +252,7 @@ HabilitaHEX4 <= '1' when (SaidaDecoder2(4) and SaidaDecoder1(4) and wr and DataA
 HabilitaHEX5 <= '1' when (SaidaDecoder2(5) and SaidaDecoder1(4) and wr and DataAddress(5)) else '0';
 
 
-RAM_Saida <= RAM_out; 
+RAM_Saida <= LeituraDados; 
 LEDR	  <= LED;
 Address <= ROM_Addr;
 ROM_Saida <= ROM_out;
