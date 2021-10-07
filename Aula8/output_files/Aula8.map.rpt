@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8
-Wed Oct  6 19:38:58 2021
+Thu Oct  7 19:09:57 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -54,14 +54,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  46. Port Connectivity Checks: "Registrador1X1:LEDR9"
  47. Port Connectivity Checks: "Registrador1X1:LEDR8"
  48. Port Connectivity Checks: "registradorGenerico:LEDRP"
- 49. Port Connectivity Checks: "Decoder3x8:Decoder2"
- 50. Port Connectivity Checks: "Decoder3x8:Decoder1"
- 51. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 52. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX4x1"
- 53. Port Connectivity Checks: "CPU:CPU"
- 54. Post-Synthesis Netlist Statistics for Top Partition
- 55. Elapsed Time Per Partition
- 56. Analysis & Synthesis Messages
+ 49. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 50. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX4x1"
+ 51. Port Connectivity Checks: "CPU:CPU"
+ 52. Post-Synthesis Netlist Statistics for Top Partition
+ 53. Elapsed Time Per Partition
+ 54. Analysis & Synthesis Messages
 
 
 
@@ -88,14 +86,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct  6 19:38:58 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct  7 19:09:57 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8                                       ;
 ; Top-level Entity Name           ; Aula8                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 26                                          ;
-; Total pins                      ; 98                                          ;
+; Total registers                 ; 25                                          ;
+; Total pins                      ; 125                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -209,7 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -237,51 +236,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 44           ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 82           ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 4            ;
-;     -- 5 input functions                    ; 15           ;
-;     -- 4 input functions                    ; 30           ;
-;     -- <=3 input functions                  ; 33           ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 26           ;
-;                                             ;              ;
-; I/O pins                                    ; 98           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 26           ;
-; Total fan-out                               ; 533          ;
-; Average fan-out                             ; 1.75         ;
-+---------------------------------------------+--------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                       ;
++---------------------------------------------+-------------------------------------+
+; Resource                                    ; Usage                               ;
++---------------------------------------------+-------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 38                                  ;
+;                                             ;                                     ;
+; Combinational ALUT usage for logic          ; 61                                  ;
+;     -- 7 input functions                    ; 0                                   ;
+;     -- 6 input functions                    ; 6                                   ;
+;     -- 5 input functions                    ; 13                                  ;
+;     -- 4 input functions                    ; 15                                  ;
+;     -- <=3 input functions                  ; 27                                  ;
+;                                             ;                                     ;
+; Dedicated logic registers                   ; 25                                  ;
+;                                             ;                                     ;
+; I/O pins                                    ; 125                                 ;
+;                                             ;                                     ;
+; Total DSP Blocks                            ; 0                                   ;
+;                                             ;                                     ;
+; Maximum fan-out node                        ; CPU:CPU|Decoder:Decoder|output[1]~0 ;
+; Maximum fan-out                             ; 25                                  ;
+; Total fan-out                               ; 458                                 ;
+; Average fan-out                             ; 1.36                                ;
++---------------------------------------------+-------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name         ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
-; |Aula8                            ; 82 (1)              ; 26 (0)                    ; 0                 ; 0          ; 98   ; 0            ; |Aula8                                   ; Aula8               ; work         ;
-;    |CPU:CPU|                      ; 36 (0)              ; 18 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                           ; CPU                 ; work         ;
-;       |Decoder:Decoder|           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Decoder:Decoder           ; Decoder             ; work         ;
-;       |LogicaDesvio:LogicaDesvio| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|LogicaDesvio:LogicaDesvio ; LogicaDesvio        ; work         ;
-;       |Registrador1X1:FLAG|       ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Registrador1X1:FLAG       ; Registrador1X1      ; work         ;
-;       |ULASomaSub:ULA1|           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|ULASomaSub:ULA1           ; ULASomaSub          ; work         ;
-;       |muxGenerico2x1:MUX2x1|     ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|muxGenerico2x1:MUX2x1     ; muxGenerico2x1      ; work         ;
-;       |registradorGenerico:PC|    ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:PC    ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG1|  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:REG1  ; registradorGenerico ; work         ;
-;       |somaConstante:somaUm|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|somaConstante:somaUm      ; somaConstante       ; work         ;
-;    |memoriaRAM:RAM|               ; 27 (27)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaRAM:RAM                    ; memoriaRAM          ; work         ;
-;    |memoriaROM:ROM|               ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                    ; memoriaROM          ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name         ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+---------------------+--------------+
+; |Aula8                           ; 61 (0)              ; 25 (0)                    ; 0                 ; 0          ; 125  ; 0            ; |Aula8                                  ; Aula8               ; work         ;
+;    |CPU:CPU|                     ; 26 (0)              ; 17 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                          ; CPU                 ; work         ;
+;       |Decoder:Decoder|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Decoder:Decoder          ; Decoder             ; work         ;
+;       |ULASomaSub:ULA1|          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|ULASomaSub:ULA1          ; ULASomaSub          ; work         ;
+;       |muxGenerico4x1:MUX4x1|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|muxGenerico4x1:MUX4x1    ; muxGenerico4x1      ; work         ;
+;       |registradorGenerico:PC|   ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:PC   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG1| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:REG1 ; registradorGenerico ; work         ;
+;       |somaConstante:somaUm|     ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|somaConstante:somaUm     ; somaConstante       ; work         ;
+;    |memoriaRAM:RAM|              ; 16 (16)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaRAM:RAM                   ; memoriaRAM          ; work         ;
+;    |memoriaROM:ROM|              ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                   ; memoriaROM          ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -300,6 +297,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registradorGenerico:REG_HEX3|DOUT[0..3]        ; Stuck at GND due to stuck port clock_enable ;
 ; registradorGenerico:REG_HEX4|DOUT[0..3]        ; Stuck at GND due to stuck port clock_enable ;
 ; registradorGenerico:REG_HEX5|DOUT[0..3]        ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|Registrador1X1:FLAG|DOUT               ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~47                          ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~48                          ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~49                          ; Lost fanout                                 ;
@@ -556,266 +554,270 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; memoriaRAM:RAM|ram~524                         ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~525                         ; Lost fanout                                 ;
 ; memoriaRAM:RAM|ram~526                         ; Lost fanout                                 ;
-; memoriaRAM:RAM|ram~359                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~343                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~335                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~487                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~471                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~479                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~463                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~103                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~87                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~103                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~79                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~95                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~231                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~215                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~223                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~231                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~207                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~360                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~344                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~336                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~488                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~472                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~480                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~464                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~104                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~223                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~343                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~359                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~335                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~471                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~487                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~463                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~479                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~88                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~104                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~80                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~96                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~232                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~216                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~224                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~232                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~208                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~361                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~345                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~337                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~489                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~473                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~481                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~465                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~105                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~224                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~344                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~360                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~336                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~472                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~488                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~464                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~480                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~89                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~105                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~81                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~97                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~233                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~217                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~225                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~233                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~209                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~362                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~346                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~338                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~490                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~474                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~482                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~466                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~106                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~225                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~345                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~361                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~337                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~473                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~489                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~465                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~481                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~90                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~106                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~82                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~98                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~234                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~218                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~226                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~234                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~210                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~363                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~347                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~339                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~491                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~475                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~483                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~467                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~107                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~226                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~346                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~362                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~338                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~474                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~490                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~466                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~482                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~91                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~107                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~83                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~99                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~235                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~219                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~227                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~235                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~211                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~364                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~348                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~340                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~492                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~476                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~484                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~468                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~108                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~227                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~347                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~363                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~339                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~475                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~491                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~467                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~483                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~92                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~108                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~84                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~100                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~236                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~220                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~228                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~236                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~212                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~365                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~349                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~341                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~493                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~477                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~485                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~469                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~109                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~228                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~348                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~364                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~340                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~476                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~492                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~468                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~484                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~93                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~109                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~85                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~101                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~237                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~221                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~229                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~237                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~213                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~366                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~350                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~342                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~494                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~478                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~486                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~470                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~110                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~229                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~349                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~365                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~341                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~477                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~493                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~469                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~485                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~94                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~110                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~86                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~102                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~238                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~222                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~230                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~238                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~214                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~295                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~423                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~407                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~230                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~350                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~366                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~342                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~478                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~494                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~470                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~486                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~39                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~31                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~167                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~151                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~159                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~296                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~424                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~408                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~40                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~32                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~168                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~152                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~160                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~297                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~425                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~409                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~41                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~33                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~169                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~153                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~161                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~298                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~426                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~410                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~42                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~34                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~170                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~154                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~162                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~299                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~427                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~411                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~43                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~35                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~171                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~155                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~163                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~300                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~428                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~412                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~44                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~36                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~172                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~156                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~164                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~301                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~429                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~413                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~45                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~37                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~173                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~157                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~165                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~302                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~430                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~414                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~46                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~38                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~174                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~158                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~166                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~167                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~143                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~280                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~144                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~281                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~145                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~282                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~146                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~283                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~147                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~284                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~148                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~285                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~149                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~286                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~150                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~79                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~80                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~81                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~82                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~83                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~84                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~85                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~86                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~159                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~279                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~351                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~295                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~271                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~287                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~399                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~415                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~15                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~352                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~407                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~423                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~40                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~32                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~152                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~168                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~144                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~160                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~280                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~296                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~272                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~288                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~400                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~416                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~16                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~353                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~408                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~424                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~41                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~33                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~153                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~169                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~145                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~161                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~281                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~297                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~273                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~289                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~401                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~417                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~17                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~354                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~409                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~425                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~42                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~34                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~154                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~170                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~146                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~162                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~282                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~298                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~274                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~290                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~402                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~418                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~18                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~355                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~410                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~426                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~43                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~35                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~155                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~171                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~147                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~163                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~283                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~299                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~275                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~291                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~403                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~419                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~19                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~356                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~411                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~427                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~44                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~36                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~156                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~172                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~148                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~164                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~284                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~300                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~276                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~292                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~404                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~420                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~20                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~357                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~412                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~428                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~45                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~37                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~157                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~173                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~149                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~165                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~285                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~301                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~277                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~293                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~405                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~421                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~21                          ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~358                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~413                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~429                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~46                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~38                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~158                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~174                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~150                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~166                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~286                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~302                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~278                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~294                         ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~406                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~414                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~430                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~351                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~352                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~353                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~354                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~355                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~356                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~357                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~358                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~415                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~399                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~416                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~400                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~417                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~401                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~418                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~402                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~419                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~403                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~420                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~404                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~421                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~405                         ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~422                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~406                         ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~15                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~16                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~17                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~18                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~19                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~20                          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~21                          ; Stuck at GND due to stuck port clock_enable ;
 ; memoriaRAM:RAM|ram~22                          ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 547        ;                                             ;
+; Total Number of Removed Registers = 548        ;                                             ;
 +------------------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                         ;
-+---------------------------+--------------------------------+----------------------------------------+
-; Register name             ; Reason for Removal             ; Registers Removed due to This Register ;
-+---------------------------+--------------------------------+----------------------------------------+
-; Registrador1X1:LEDR8|DOUT ; Stuck at GND                   ; registradorGenerico:REG_HEX0|DOUT[3]   ;
-;                           ; due to stuck port clock_enable ;                                        ;
-+---------------------------+--------------------------------+----------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++---------------------------------------------+--------------------------------+----------------------------------------+
+; Register name                               ; Reason for Removal             ; Registers Removed due to This Register ;
++---------------------------------------------+--------------------------------+----------------------------------------+
+; CPU:CPU|registradorGenerico:REG_RET|DOUT[0] ; Stuck at GND                   ; CPU:CPU|Registrador1X1:FLAG|DOUT       ;
+;                                             ; due to stuck port clock_enable ;                                        ;
+; registradorGenerico:LEDRP|DOUT[6]           ; Stuck at GND                   ; registradorGenerico:REG_HEX0|DOUT[3]   ;
+;                                             ; due to stuck port clock_enable ;                                        ;
+; Registrador1X1:LEDR8|DOUT                   ; Stuck at GND                   ; registradorGenerico:REG_HEX0|DOUT[2]   ;
+;                                             ; due to stuck port clock_enable ;                                        ;
++---------------------------------------------+--------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -823,9 +825,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 25    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
@@ -1225,25 +1227,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Decoder3x8:Decoder2"                                                                        ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Decoder3x8:Decoder1"                                                                        ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; output[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC" ;
 +--------+-------+----------+--------------------------------+
@@ -1279,30 +1262,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 26                          ;
+; arriav_ff             ; 25                          ;
 ;     ENA               ; 8                           ;
 ;     ENA SLD           ; 8                           ;
-;     SLD               ; 9                           ;
-;     plain             ; 1                           ;
+;     plain             ; 9                           ;
 ; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 84                          ;
+; arriav_lcell_comb     ; 64                          ;
 ;     arith             ; 18                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 7                           ;
-;     normal            ; 66                          ;
+;     normal            ; 46                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 30                          ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 98                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 14                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 6                           ;
+; boundary_port         ; 125                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 5.50                        ;
+; Max LUT depth         ; 5.50                        ;
+; Average LUT depth     ; 3.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1321,7 +1303,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct  6 19:38:50 2021
+    Info: Processing started: Thu Oct  7 19:09:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1335,7 +1317,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file convers
     Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd Line: 17
     Info (12023): Found entity 1: conversorHex7Seg File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Aula8.vhd
-    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 44
     Info (12023): Found entity 1: Aula8 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaRAM.vhd
     Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 21
@@ -1378,7 +1360,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file CPU.vhd
     Info (12022): Found design unit 1: CPU-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 35
     Info (12023): Found entity 1: CPU File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 4
 Info (12127): Elaborating entity "Aula8" for the top level hierarchy
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 100
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 106
 Warning (10541): VHDL Signal Declaration warning at CPU.vhd(28): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 28
 Warning (10541): VHDL Signal Declaration warning at CPU.vhd(29): used implicit default value for signal "ENDERECO" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 29
 Warning (10541): VHDL Signal Declaration warning at CPU.vhd(43): used implicit default value for signal "Reset_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 43
@@ -1392,14 +1374,14 @@ Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:
 Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 113
 Warning (10036): Verilog HDL or VHDL warning at Decoder.vhd(16): object "NOP" assigned a value but never read File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd Line: 16
 Info (12128): Elaborating entity "LogicaDesvio" for hierarchy "CPU:CPU|LogicaDesvio:LogicaDesvio" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 117
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:Decoder1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 114
-Info (12128): Elaborating entity "Registrador1X1" for hierarchy "Registrador1X1:LEDR8" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 125
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 131
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 134
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 138
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:CONV_HEX0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 141
-Info (12128): Elaborating entity "buffer_3state_1bit" for hierarchy "buffer_3state_1bit:BUF3STATE_KEY0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 205
-Info (12128): Elaborating entity "buffer_3state_8portas" for hierarchy "buffer_3state_8portas:BUF3STATE_SW" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 222
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:Decoder1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 120
+Info (12128): Elaborating entity "Registrador1X1" for hierarchy "Registrador1X1:LEDR8" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 131
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 137
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 140
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 144
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:CONV_HEX0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 147
+Info (12128): Elaborating entity "buffer_3state_1bit" for hierarchy "buffer_3state_1bit:BUF3STATE_KEY0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 211
+Info (12128): Elaborating entity "buffer_3state_8portas" for hierarchy "buffer_3state_8portas:BUF3STATE_SW" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 228
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 27
 Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
@@ -1419,9 +1401,9 @@ Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "buffer_3state_8portas:BUF3STATE_SW|saida[6]" to the node "RAM_Saida[6]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd Line: 8
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "buffer_3state_8portas:BUF3STATE_SW|saida[7]" to the node "RAM_Saida[7]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd Line: 8
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[0]" to the node "CPU:CPU|ULASomaSub:ULA1|Add1" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
-    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[1]" to the node "CPU:CPU|ULASomaSub:ULA1|Add1" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
-    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[2]" to the node "CPU:CPU|ULASomaSub:ULA1|Add1" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
+    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[0]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[0]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
+    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[1]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[1]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
+    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[2]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[2]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
     Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[3]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[3]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
     Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[4]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[4]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
     Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[5]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[5]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
@@ -1440,53 +1422,71 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 20
     Warning (13410): Pin "ROM_Saida[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 23
     Warning (13410): Pin "ROM_Saida[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 23
-    Warning (13410): Pin "ROM_Saida[6]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 23
     Warning (13410): Pin "ROM_Saida[7]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 23
     Warning (13410): Pin "ROM_Saida[12]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 23
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 27
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "A0_A8[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 25
+    Warning (13410): Pin "A0_A8[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 25
+    Warning (13410): Pin "A0_A8[6]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 25
+    Warning (13410): Pin "A0_A8[7]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 25
+    Warning (13410): Pin "A0_A8[8]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 25
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 28
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 29
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 30
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 31
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 32
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 33
+    Warning (13410): Pin "HABILITAREGHEX" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 36
+    Warning (13410): Pin "DECODEREND[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 37
+    Warning (13410): Pin "DECODEREND[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 37
+    Warning (13410): Pin "DECODEREND[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 37
+    Warning (13410): Pin "DECODEREND[6]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 37
+    Warning (13410): Pin "DECODEREND[7]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 37
+    Warning (13410): Pin "DECODERBLOC[0]" is stuck at VCC File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[6]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
+    Warning (13410): Pin "DECODERBLOC[7]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 38
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 256 registers lost all their fanouts during netlist optimizations.
+Info (17049): 257 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 15 input pin(s) that do not drive logic
@@ -1505,14 +1505,14 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[5]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 18
     Warning (15610): No output dependent on input pin "SW[6]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 18
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 18
-Info (21057): Implemented 189 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 202 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 91 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 104 warnings
-    Info: Peak virtual memory: 482 megabytes
-    Info: Processing ended: Wed Oct  6 19:38:58 2021
+    Info (21059): Implemented 109 output pins
+    Info (21061): Implemented 77 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 122 warnings
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Thu Oct  7 19:09:57 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 

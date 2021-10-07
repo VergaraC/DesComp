@@ -39,11 +39,11 @@ begin
   RET <= '1' when opCode = "1010" else '0';
   
   output(11)<= JSR;                       
-  output(10)<= JMP;  
-  output(9) <= RET;                       
-  output(8) <= JSR;                       
+  output(10)<= JMP;
+  output(9) <= RET;
+  output(8) <= JSR;
   output(7) <= JEQ;                       
-  output(6) <= LDI;                       
+  output(6) <= LDI;                      
   output(5) <= LDI or SOMA or SUB or LDA;
   output(4) <= LDA or LDI or CEQ;
   output(3) <= SOMA or CEQ;         

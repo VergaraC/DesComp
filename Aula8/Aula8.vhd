@@ -22,6 +22,7 @@ entity Aula8 is
 	
 	 ROM_Saida   : out std_logic_vector(12 downto 0); 
 	 RAM_Saida  : out std_logic_vector(7 downto 0);
+	 A0_A8: out std_logic_vector(8 downto 0); 
 	 Address      : out std_logic_vector(8 downto 0);
 	 
 	 HEX0 : out std_logic_vector(6 downto 0);
@@ -29,7 +30,12 @@ entity Aula8 is
 	 HEX2 : out std_logic_vector(6 downto 0);
 	 HEX3 : out std_logic_vector(6 downto 0);
 	 HEX4 : out std_logic_vector(6 downto 0);
-	 HEX5 : out std_logic_vector(6 downto 0)
+	 HEX5 : out std_logic_vector(6 downto 0);
+	 
+	 WRTE : out std_logic;
+	 HABILITAREGHEX: out std_logic;
+	 DECODEREND: out std_logic_vector(7 downto 0);
+	 DECODERBLOC: out std_logic_vector(7 downto 0)
 	 
   );
 end entity;
@@ -256,5 +262,10 @@ RAM_Saida <= LeituraDados;
 LEDR	  <= LED;
 Address <= ROM_Addr;
 ROM_Saida <= ROM_out;
+A0_A8 <= DataAddress;
+WRTE <= wr;
+HABILITAREGHEX <= HabilitaKEY3;
+DECODEREND <= SaidaDecoder2;
+DECODERBLOC <= SaidaDecoder1;
 
 end architecture;

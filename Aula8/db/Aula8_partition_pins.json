@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ROM_Saida[6]",
+					"strict" : false
+				},
+				{
 					"name" : "ROM_Saida[8]",
 					"strict" : false
 				},
@@ -68,6 +72,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "A0_A8[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A0_A8[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A0_A8[4]",
+					"strict" : false
+				},
+				{
+					"name" : "A0_A8[5]",
+					"strict" : false
+				},
+				{
 					"name" : "Address[0]",
 					"strict" : false
 				},
@@ -101,6 +121,22 @@
 				},
 				{
 					"name" : "Address[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WRTE",
+					"strict" : false
+				},
+				{
+					"name" : "DECODEREND[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODEREND[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODEREND[2]",
 					"strict" : false
 				},
 				{
