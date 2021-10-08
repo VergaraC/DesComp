@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/08/2021 17:06:31"
+-- Generated on "10/08/2021 16:41:11"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula8
 -- 
@@ -36,8 +36,6 @@ ARCHITECTURE Aula8_arch OF Aula8_vhd_vec_tst IS
 -- signals                                                   
 SIGNAL A0_A8 : STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL Address : STD_LOGIC_VECTOR(8 DOWNTO 0);
-SIGNAL BarramentoDadosIN : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL BarramentoDadosOUT : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CLOCK_50 : STD_LOGIC;
 SIGNAL DECODERBLOC : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL DECODEREND : STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -60,8 +58,6 @@ COMPONENT Aula8
 	PORT (
 	A0_A8 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
 	Address : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-	BarramentoDadosIN : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	BarramentoDadosOUT : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CLOCK_50 : IN STD_LOGIC;
 	DECODERBLOC : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	DECODEREND : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -88,8 +84,6 @@ BEGIN
 -- list connections between master ports and signals
 	A0_A8 => A0_A8,
 	Address => Address,
-	BarramentoDadosIN => BarramentoDadosIN,
-	BarramentoDadosOUT => BarramentoDadosOUT,
 	CLOCK_50 => CLOCK_50,
 	DECODERBLOC => DECODERBLOC,
 	DECODEREND => DECODEREND,

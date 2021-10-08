@@ -296,6 +296,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "HABILITAREGHEX",
+					"strict" : false
+				},
+				{
 					"name" : "DECODEREND[0]",
 					"strict" : false
 				},
@@ -325,6 +329,78 @@
 				},
 				{
 					"name" : "DECODERBLOC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_DEBOUNCE",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosOUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BarramentoDadosIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{

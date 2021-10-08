@@ -9,8 +9,8 @@ entity CPU is
 		  larguraAddROM: natural := 9;
 		  larguraPCROM: natural := 9;
 		  larguraRAM: natural := 8;
-		  larguraAddRAM: natural := 8;
-        simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
+		  larguraAddRAM: natural := 8
+        --simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
   );
   port   (
     CLOCK_50 : in std_logic;
@@ -24,9 +24,9 @@ entity CPU is
 	 ROM_Address : out std_logic_vector(8 downto 0);
 	 DATA_Address : out std_logic_vector(8 downto 0);
 	 
-    KEY: in std_logic_vector(3 downto 0);
-    LEDR  : out std_logic_vector(9 downto 0);
-	 ENDERECO : out std_logic_vector(8 downto 0)
+    KEY: in std_logic_vector(3 downto 0)
+    --LEDR  : out std_logic_vector(9 downto 0);
+	 --ENDERECO : out std_logic_vector(8 downto 0)
 	 
   );
 end entity;
@@ -56,18 +56,13 @@ architecture arquitetura of CPU is
   signal OutputFlagEQ : std_logic;
   
   signal ROM_OUT : std_logic_vector (8 downto 0);
-  
+ 
 begin
 
 -- Instanciando os componentes:
 
--- Para simular, fica mais simples tirar o edgeDetector
-gravar:  if simulacao generate
-CLK <= KEY(0);
-else generate
-detectorSub0: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
-end generate;
+CLK <= CLOCK_50;
+
 
 -- O port map completo do MUX.
 MUX2x1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
@@ -107,7 +102,7 @@ somaUm :  entity work.somaConstante  generic map (larguraDados => larguraPCROM, 
 			 
 -- O port map completo da ULA:
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
-          port map (entradaA => REG1_ULA_A, entradaB => MUX_ULA, saida => Saida_ULA, saida_FLAG => ULA_FLAG , seletor => Sinais_Controle(3 downto 2));
+          port map (entradaA => REG1_ULA_A, entradaB => MUX_ULA, saida => Saida_ULA, saida_FLAG => ULA_FLAG , seletor => Sinais_Controle(4 downto 3));
 
 			 
 Decoder : entity work.Decoder
