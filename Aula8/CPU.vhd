@@ -74,7 +74,7 @@ CLK <= CLOCK_50;
 MUX2x1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
         port map( entradaA_MUX => Data_IN,
                  entradaB_MUX =>  Instruction_IN(larguraDados-1 downto 0),
-                 seletor_MUX => Sinais_Controle(5),
+                 seletor_MUX => Sinais_Controle(6),
                  saida_MUX => MUX_ULA);
 					  				  
 -- Mux aula5 ainda n completo				
@@ -88,11 +88,11 @@ MUX4x1 :  entity work.muxGenerico4x1  generic map (larguraDados => 9)
 					  			  
 -- O port map completo do Acumulador.
 REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-          port map (DIN => SAIDA_ULA, DOUT => REG1_ULA_A, ENABLE => Sinais_Controle(4), CLK => CLK, RST => Reset_A);
+          port map (DIN => SAIDA_ULA, DOUT => REG1_ULA_A, ENABLE => Sinais_Controle(5), CLK => CLK, RST => Reset_A);
 
 
 FLAG : entity work.Registrador1X1   generic map (larguraDados => larguraDados)
-          port map (DIN => ULA_FLAG, DOUT => OutputFlagEQ, ENABLE => Sinais_Controle(6), CLK => CLK, RST => Reset_A);
+          port map (DIN => ULA_FLAG, DOUT => OutputFlagEQ, ENABLE => Sinais_Controle(2), CLK => CLK, RST => Reset_A);
 			 
 			 
 REG_RET : entity work.registradorGenerico   generic map (larguraDados => 9)

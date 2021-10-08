@@ -45,7 +45,7 @@ begin
   output(7) <= JEQ;                       
   output(6) <= LDI;                      
   output(5) <= LDI or SOMA or SUB or LDA;
-  output(4) <= LDA or LDI or CEQ;
+  output(4) <= LDA or LDI or CEQ or STA;
   output(3) <= SOMA or CEQ;         
   output(2) <= CEQ;
   output(1) <= LDA or SOMA or SUB or CEQ; 

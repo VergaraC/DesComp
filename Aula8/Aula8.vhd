@@ -40,12 +40,14 @@ entity Aula8 is
 	 SAIDA_DEBOUNCE: out std_logic;
 	 BarramentoDadosOUT: out std_logic_vector(7 downto 0);
 	 BarramentoDadosIN: out std_logic_vector(7 downto 0);
+	 RESET_KEY: out std_logic;
 	 
 	 --TESTE CPU
 	 ENTRADAA_ULA: out std_logic_vector(7 downto 0);
 	 ENTRADAB_ULA: out std_logic_vector(7 downto 0);
 	 OUT_ULA: out std_logic_vector(7 downto 0);
 	 SELETOR_ULA: out std_logic_vector(1 downto 0)
+	 
 	 
   );
 end entity;
@@ -121,7 +123,7 @@ detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
 		  
 detectorSub1: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY1);
+        port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
 
 --end generate;
 
@@ -234,41 +236,41 @@ CONV_HEX5 :  entity work.conversorHex7Seg
                  overFlow =>  '0',
                  saida7seg => HEX5);
 			
---buffers KEY			
+--buffers KEY
 					
 BUF3STATE_KEY0 :  entity work.buffer_3state_1bit
-        port map(entrada => Debounce_BufferKEY0, habilita =>  HabilitaKEY0, saida => LeituraDados(0));
+        port map(entrada => Debounce_BufferKEY0, habilita =>  HabilitaKEY0, saida => LeituraDados);
 
 BUF3STATE_KEY1 :  entity work.buffer_3state_1bit
-        port map(entrada => Debounce_BufferKEY1, habilita =>  HabilitaKEY1, saida => LeituraDados(0));
+        port map(entrada => Debounce_BufferKEY1, habilita =>  HabilitaKEY1, saida => LeituraDados);
 
 BUF3STATE_KEY2 :  entity work.buffer_3state_1bit
-        port map(entrada => KEY(2), habilita =>  HabilitaKEY2, saida => LeituraDados(0));
+        port map(entrada => KEY(2), habilita =>  HabilitaKEY2, saida => LeituraDados);
 
 BUF3STATE_KEY3 :  entity work.buffer_3state_1bit
-        port map(entrada => KEY(3), habilita =>  HabilitaKEY3, saida => LeituraDados(0));
+        port map(entrada => KEY(3), habilita =>  HabilitaKEY3, saida => LeituraDados);
 		  
 BUF3STATE_KEY_RST :  entity work.buffer_3state_1bit
-        port map(entrada => KEY_RST, habilita =>  HabilitaKEY_RST, saida => LeituraDados(0));
-		  
+        port map(entrada => KEY_RST, habilita =>  HabilitaKEY_RST, saida => LeituraDados);
+
 --buffers SW		  
 		  
 BUF3STATE_SW :  entity work.buffer_3state_8portas
         port map(entrada => SW(7 downto 0), habilita =>  HabilitaSW, saida => LeituraDados);
 		  
 BUF3STATE_SW8 :  entity work.buffer_3state_1bit
-        port map(entrada => SW(8), habilita =>  HabilitaSW8, saida => LeituraDados(0));
+        port map(entrada => SW(8), habilita =>  HabilitaSW8, saida => LeituraDados);
 		  
 BUF3STATE_SW9 :  entity work.buffer_3state_1bit
-        port map(entrada => SW(9), habilita =>  HabilitaSW9, saida => LeituraDados(0));
+        port map(entrada => SW(9), habilita =>  HabilitaSW9, saida => LeituraDados);
 		  
 --Debounce KEY0
 
 DEBOUNCE_KEY0 : entity work.DebounceMemorizacao
-		  port map(entrada => KEY(0), saida => Debounce_BufferKEY0, clk => CLK_KEY0, rst => RST_KEY0);
+		  port map(entrada => '1', saida => Debounce_BufferKEY0, clk => CLK_KEY0, rst => RST_KEY0);
 
 DEBOUNCE_KEY1 : entity work.DebounceMemorizacao
-		  port map(entrada => KEY(1), saida => Debounce_BufferKEY1, clk => CLK_KEY1, rst => RST_KEY1);
+		  port map(entrada => '1', saida => Debounce_BufferKEY1, clk => CLK_KEY1, rst => RST_KEY1);
 		  
 RST_KEY0 <= (rd and DataAddress(0) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
 RST_KEY1 <= (rd and not(DataAddress(0)) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
@@ -303,12 +305,13 @@ Address <= ROM_Addr;
 ROM_Saida <= ROM_out;
 A0_A8 <= DataAddress;
 WRTE <= wr;
-HABILITAREGHEX <= HabilitaHEX0;
+HABILITAREGHEX <= HabilitaKEY0;
 DECODEREND <= SaidaDecoder2;
 DECODERBLOC <= SaidaDecoder1;
 SAIDA_DEBOUNCE <= Debounce_BufferKEY0;
 BarramentoDadosOUT <= escritaDados;
 BarramentoDadosIN <= leituraDados;
+RESET_KEY <= CLK_KEY0;
 
 end architecture;
 

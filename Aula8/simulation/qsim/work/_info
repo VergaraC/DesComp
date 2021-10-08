@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/deku/Facul/DesignComputadores/DesComp/Aula8/simulation/qsim
 Eaula8
-Z1 w1633723592
+Z1 w1633734215
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,24 +20,24 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 74
+!i122 126
 R0
 Z11 8Aula8.vho
 Z12 FAula8.vho
 l0
 Z13 L39 1
-VzI^:SBGkzd>gQXUXgEDPF2
-!s100 >z0NfPEU:Xf[0;7AiQf7U1
+Vk:e:m[0majCYAzamH^_fi1
+!s100 h4z^HTWJeGhzK[ka8UZ?91
 Z14 OV;C;2020.1;71
 32
-Z15 !s110 1633723592
+!s110 1633734215
 !i10b 1
-Z16 !s108 1633723592.000000
-Z17 !s90 -work|work|Aula8.vho|
-Z18 !s107 Aula8.vho|
+Z15 !s108 1633734215.000000
+Z16 !s90 -work|work|Aula8.vho|
+Z17 !s107 Aula8.vho|
 !i113 1
-Z19 o-work work
-Z20 tExplicit 1 CvgOpt 0
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -48,27 +48,27 @@ R7
 R8
 R9
 R10
-DEx4 work 5 aula8 0 22 zI^:SBGkzd>gQXUXgEDPF2
-!i122 74
-l366
-L66 5143
-VLe>>I`bOCTnCCaK3e>iR10
-!s100 UV6`K:f5JQmN2MBhQZSjS1
+DEx4 work 5 aula8 0 22 k:e:m[0majCYAzamH^_fi1
+!i122 126
+l2220
+L71 22829
+Vl;n08f[oY2`mUS?<5g`:32
+!s100 36<:okGh2LJ[1lXilj=I`0
 R14
 32
-R15
+Z20 !s110 1633734216
 !i10b 1
+R15
 R16
 R17
-R18
 !i113 1
+R18
 R19
-R20
 Eaula8_vhd_vec_tst
-Z21 w1633723591
+Z21 w1633734214
 R8
 R9
-!i122 75
+!i122 127
 R0
 Z22 8Waveform3.vwf.vht
 Z23 FWaveform3.vwf.vht
@@ -78,35 +78,35 @@ VL?zeFMFBH222zJYjHHdIO2
 !s100 WMV=KT>7NooM`bd0@b8g;3
 R14
 32
-R15
-!i10b 1
-R16
-Z25 !s90 -work|work|Waveform3.vwf.vht|
-Z26 !s107 Waveform3.vwf.vht|
-!i113 1
-R19
 R20
+!i10b 1
+Z25 !s108 1633734216.000000
+Z26 !s90 -work|work|Waveform3.vwf.vht|
+Z27 !s107 Waveform3.vwf.vht|
+!i113 1
+R18
+R19
 Aaula8_arch
 R8
 R9
-DEx4 work 17 aula8_vhd_vec_tst 0 22 L?zeFMFBH222zJYjHHdIO2
-!i122 75
-l85
-L34 119
-VzK6Kc7fQh675ooCWGajjo1
-!s100 oCLMR0]IhEV<Q;[:;>YRZ3
+Z28 DEx4 work 17 aula8_vhd_vec_tst 0 22 L?zeFMFBH222zJYjHHdIO2
+!i122 127
+l95
+L34 215
+V8HhZi`=0@F1X[]MPET?cd2
+!s100 XS1bWTEd[:5<7169cdHh32
 R14
 32
-R15
+R20
 !i10b 1
-R16
 R25
 R26
+R27
 !i113 1
+R18
 R19
-R20
 Ecpu
-Z27 w1633724804
+Z29 w1633724804
 R2
 R3
 R4
@@ -126,14 +126,14 @@ Vf`4A5MWB=<704lb3b587^2
 !s100 R2QXXFJJ=JFdz42IRZLZE1
 R14
 32
-Z28 !s110 1633724805
+Z30 !s110 1633724805
 !i10b 1
-Z29 !s108 1633724805.000000
+Z31 !s108 1633724805.000000
+R16
 R17
-R18
 !i113 1
+R18
 R19
-R20
 Astructure
 R2
 R3
@@ -152,52 +152,52 @@ VYmAW>a6:O4OSeni_Q>O`W1
 !s100 aQ[zNQ7;M3]BfVzebDn_13
 R14
 32
-R28
+R30
 !i10b 1
-R29
+R31
+R16
 R17
-R18
 !i113 1
+R18
 R19
-R20
 Ecpu_vhd_vec_tst
-Z30 w1633724803
+Z32 w1633724803
 R8
 R9
 !i122 79
 R0
-Z31 8Waveform6.vwf.vht
-Z32 FWaveform6.vwf.vht
+Z33 8Waveform6.vwf.vht
+Z34 FWaveform6.vwf.vht
 l0
 R24
 VWH5;nYiB6@7gZK<F=?2KH2
 !s100 MT_2[ECbSh>ONUcARUP8c0
 R14
 32
-R28
+R30
 !i10b 1
-R29
-Z33 !s90 -work|work|Waveform6.vwf.vht|
-Z34 !s107 Waveform6.vwf.vht|
+R31
+Z35 !s90 -work|work|Waveform6.vwf.vht|
+Z36 !s107 Waveform6.vwf.vht|
 !i113 1
+R18
 R19
-R20
 Acpu_arch
 R8
 R9
-Z35 DEx4 work 15 cpu_vhd_vec_tst 0 22 WH5;nYiB6@7gZK<F=?2KH2
+DEx4 work 15 cpu_vhd_vec_tst 0 22 WH5;nYiB6@7gZK<F=?2KH2
 !i122 79
 l69
-Z36 L34 228
-Z37 VZ@9e=RRAXC_3<RYDX;Pa<1
-Z38 !s100 8eFPNQ2[ZB@=hKJHXG;O40
+L34 228
+VZ@9e=RRAXC_3<RYDX;Pa<1
+!s100 8eFPNQ2[ZB@=hKJHXG;O40
 R14
 32
-R28
+R30
 !i10b 1
-R29
-R33
-R34
+R31
+R35
+R36
 !i113 1
+R18
 R19
-R20

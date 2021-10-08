@@ -23,11 +23,9 @@ SW[7] => buffer_3state_8portas:BUF3STATE_SW.entrada[7]
 SW[8] => buffer_3state_1bit:BUF3STATE_SW8.entrada
 SW[9] => buffer_3state_1bit:BUF3STATE_SW9.entrada
 KEY[0] => cpu:CPU.KEY[0]
-KEY[0] => debouncememorizacao:DEBOUNCE_KEY0.entrada
 KEY[0] => edgedetector:detectorSub0.entrada
 KEY[0] => edgedetector:detectorSub1.entrada
 KEY[1] => cpu:CPU.KEY[1]
-KEY[1] => debouncememorizacao:DEBOUNCE_KEY1.entrada
 KEY[2] => cpu:CPU.KEY[2]
 KEY[2] => buffer_3state_1bit:BUF3STATE_KEY2.entrada
 KEY[3] => cpu:CPU.KEY[3]
@@ -125,7 +123,7 @@ HEX5[4] <= conversorhex7seg:CONV_HEX5.saida7seg[4]
 HEX5[5] <= conversorhex7seg:CONV_HEX5.saida7seg[5]
 HEX5[6] <= conversorhex7seg:CONV_HEX5.saida7seg[6]
 WRTE <= cpu:CPU.Wr
-HABILITAREGHEX <= HabilitaHEX0.DB_MAX_OUTPUT_PORT_TYPE
+HABILITAREGHEX <= HabilitaKEY0.DB_MAX_OUTPUT_PORT_TYPE
 DECODEREND[0] <= decoder3x8:Decoder2.OUTPUT[0]
 DECODEREND[1] <= decoder3x8:Decoder2.OUTPUT[1]
 DECODEREND[2] <= decoder3x8:Decoder2.OUTPUT[2]
@@ -159,6 +157,7 @@ BarramentoDadosIN[4] <= LeituraDados[4].DB_MAX_OUTPUT_PORT_TYPE
 BarramentoDadosIN[5] <= LeituraDados[5].DB_MAX_OUTPUT_PORT_TYPE
 BarramentoDadosIN[6] <= LeituraDados[6].DB_MAX_OUTPUT_PORT_TYPE
 BarramentoDadosIN[7] <= LeituraDados[7].DB_MAX_OUTPUT_PORT_TYPE
+RESET_KEY <= edgedetector:detectorSub0.saida
 ENTRADAA_ULA[0] <= cpu:CPU.ENTRADAA_ULA[0]
 ENTRADAA_ULA[1] <= cpu:CPU.ENTRADAA_ULA[1]
 ENTRADAA_ULA[2] <= cpu:CPU.ENTRADAA_ULA[2]
@@ -1553,33 +1552,103 @@ saida7seg[6] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_KEY0
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_KEY1
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_KEY2
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_KEY3
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_KEY_RST
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_8portas:BUF3STATE_SW
@@ -1610,15 +1679,43 @@ saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_SW8
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|buffer_3state_1bit:BUF3STATE_SW9
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8|debounceMemorizacao:DEBOUNCE_KEY0

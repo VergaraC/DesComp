@@ -4,6 +4,46 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[9]",
+					"strict" : false
+				},
+				{
 					"name" : "ROM_Saida[0]",
 					"strict" : false
 				},
@@ -16,7 +56,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "ROM_Saida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[4]",
+					"strict" : false
+				},
+				{
 					"name" : "ROM_Saida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[7]",
 					"strict" : false
 				},
 				{
@@ -33,6 +89,10 @@
 				},
 				{
 					"name" : "ROM_Saida[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[12]",
 					"strict" : false
 				},
 				{
@@ -80,7 +140,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "A0_A8[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A0_A8[4]",
+					"strict" : false
+				},
+				{
 					"name" : "A0_A8[5]",
+					"strict" : false
+				},
+				{
+					"name" : "A0_A8[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A0_A8[7]",
 					"strict" : false
 				},
 				{
@@ -336,7 +412,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "DECODERBLOC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODERBLOC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODERBLOC[3]",
+					"strict" : false
+				},
+				{
 					"name" : "DECODERBLOC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODERBLOC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODERBLOC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODERBLOC[7]",
 					"strict" : false
 				},
 				{
@@ -405,6 +505,10 @@
 				},
 				{
 					"name" : "BarramentoDadosIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_KEY",
 					"strict" : false
 				},
 				{
@@ -509,6 +613,58 @@
 				},
 				{
 					"name" : "SELETOR_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_RST",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
