@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity Aula8 is
   -- Total de bits das entradas e saidas
-  generic ( 
+  generic (
 		  larguraDados : natural := 8;
 		  larguraROM: natural := 13;
 		  larguraAddROM: natural := 9;

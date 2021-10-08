@@ -1,0 +1,34 @@
+Quartus Prime Archive log --	/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.qarlog
+
+Archive:	/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.qar
+Date:		Thu Oct  7 19:50:56 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.qpf
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.qsf
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder3X8.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/LogicaDesvio.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/UlaSomaSub.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Waveform.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/Waveform1.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/WaveformAula8_1.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd
+/home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 23 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -123,7 +123,7 @@ LogicaDesvio : entity work.LogicaDesvio
 Rd <= Sinais_Controle(1);
 Wr <= Sinais_Controle(0);
 Data_OUT <= REG1_ULA_A;
-Data_Address <= Sinais_Controle(8 downto 0);
+Data_Address <= Instruction_IN(8 downto 0);
 ROM_Address <= ROM_OUT;
 
 
