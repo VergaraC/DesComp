@@ -24,9 +24,15 @@ entity CPU is
 	 ROM_Address : out std_logic_vector(8 downto 0);
 	 DATA_Address : out std_logic_vector(8 downto 0);
 	 
-    KEY: in std_logic_vector(3 downto 0)
+    KEY: in std_logic_vector(3 downto 0);
     --LEDR  : out std_logic_vector(9 downto 0);
 	 --ENDERECO : out std_logic_vector(8 downto 0)
+	 
+	 ENTRADAA_ULA: out std_logic_vector(7 downto 0);
+	 ENTRADAB_ULA: out std_logic_vector(7 downto 0);
+	 OUT_ULA: out std_logic_vector(7 downto 0);
+	 SELETOR_ULA: out std_logic_vector(1 downto 0)
+
 	 
   );
 end entity;
@@ -121,5 +127,9 @@ Data_OUT <= REG1_ULA_A;
 Data_Address <= Instruction_IN(8 downto 0);
 ROM_Address <= ROM_OUT;
 
+ENTRADAA_ULA <= REG1_ULA_A;
+ENTRADAB_ULA <= MUX_ULA;
+OUT_ULA <= Saida_ULA;
+SELETOR_ULA <= Sinais_Controle(4 downto 3);
 
 end architecture;

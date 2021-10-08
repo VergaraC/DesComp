@@ -324,6 +324,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "DECODEREND[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DECODEREND[7]",
+					"strict" : false
+				},
+				{
 					"name" : "DECODERBLOC[0]",
 					"strict" : false
 				},
@@ -397,6 +405,110 @@
 				},
 				{
 					"name" : "BarramentoDadosIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAA_ULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRADAB_ULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_ULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SELETOR_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SELETOR_ULA[1]",
 					"strict" : false
 				},
 				{

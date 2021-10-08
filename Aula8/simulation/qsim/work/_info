@@ -25,19 +25,19 @@ R0
 Z11 8Aula8.vho
 Z12 FAula8.vho
 l0
-L39 1
+Z13 L39 1
 VzI^:SBGkzd>gQXUXgEDPF2
 !s100 >z0NfPEU:Xf[0;7AiQf7U1
-Z13 OV;C;2020.1;71
+Z14 OV;C;2020.1;71
 32
-Z14 !s110 1633723592
+Z15 !s110 1633723592
 !i10b 1
-Z15 !s108 1633723592.000000
-Z16 !s90 -work|work|Aula8.vho|
-Z17 !s107 Aula8.vho|
+Z16 !s108 1633723592.000000
+Z17 !s90 -work|work|Aula8.vho|
+Z18 !s107 Aula8.vho|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -54,54 +54,150 @@ l366
 L66 5143
 VLe>>I`bOCTnCCaK3e>iR10
 !s100 UV6`K:f5JQmN2MBhQZSjS1
-R13
-32
 R14
-!i10b 1
+32
 R15
+!i10b 1
 R16
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Eaula8_vhd_vec_tst
-Z20 w1633723591
+Z21 w1633723591
 R8
 R9
 !i122 75
 R0
-Z21 8Waveform3.vwf.vht
-Z22 FWaveform3.vwf.vht
+Z22 8Waveform3.vwf.vht
+Z23 FWaveform3.vwf.vht
 l0
-L32 1
+Z24 L32 1
 VL?zeFMFBH222zJYjHHdIO2
 !s100 WMV=KT>7NooM`bd0@b8g;3
-R13
-32
 R14
-!i10b 1
+32
 R15
-Z23 !s90 -work|work|Waveform3.vwf.vht|
-Z24 !s107 Waveform3.vwf.vht|
+!i10b 1
+R16
+Z25 !s90 -work|work|Waveform3.vwf.vht|
+Z26 !s107 Waveform3.vwf.vht|
 !i113 1
-R18
 R19
+R20
 Aaula8_arch
 R8
 R9
-Z25 DEx4 work 17 aula8_vhd_vec_tst 0 22 L?zeFMFBH222zJYjHHdIO2
+DEx4 work 17 aula8_vhd_vec_tst 0 22 L?zeFMFBH222zJYjHHdIO2
 !i122 75
 l85
 L34 119
 VzK6Kc7fQh675ooCWGajjo1
 !s100 oCLMR0]IhEV<Q;[:;>YRZ3
-R13
-32
 R14
-!i10b 1
+32
 R15
-R23
-R24
+!i10b 1
+R16
+R25
+R26
 !i113 1
-R18
 R19
+R20
+Ecpu
+Z27 w1633724804
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+!i122 78
+R0
+R11
+R12
+l0
+R13
+Vf`4A5MWB=<704lb3b587^2
+!s100 R2QXXFJJ=JFdz42IRZLZE1
+R14
+32
+Z28 !s110 1633724805
+!i10b 1
+Z29 !s108 1633724805.000000
+R17
+R18
+!i113 1
+R19
+R20
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 3 cpu 0 22 f`4A5MWB=<704lb3b587^2
+!i122 78
+l326
+L58 3107
+VYmAW>a6:O4OSeni_Q>O`W1
+!s100 aQ[zNQ7;M3]BfVzebDn_13
+R14
+32
+R28
+!i10b 1
+R29
+R17
+R18
+!i113 1
+R19
+R20
+Ecpu_vhd_vec_tst
+Z30 w1633724803
+R8
+R9
+!i122 79
+R0
+Z31 8Waveform6.vwf.vht
+Z32 FWaveform6.vwf.vht
+l0
+R24
+VWH5;nYiB6@7gZK<F=?2KH2
+!s100 MT_2[ECbSh>ONUcARUP8c0
+R14
+32
+R28
+!i10b 1
+R29
+Z33 !s90 -work|work|Waveform6.vwf.vht|
+Z34 !s107 Waveform6.vwf.vht|
+!i113 1
+R19
+R20
+Acpu_arch
+R8
+R9
+Z35 DEx4 work 15 cpu_vhd_vec_tst 0 22 WH5;nYiB6@7gZK<F=?2KH2
+!i122 79
+l69
+Z36 L34 228
+Z37 VZ@9e=RRAXC_3<RYDX;Pa<1
+Z38 !s100 8eFPNQ2[ZB@=hKJHXG;O40
+R14
+32
+R28
+!i10b 1
+R29
+R33
+R34
+!i113 1
+R19
+R20

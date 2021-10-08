@@ -32,13 +32,20 @@ entity Aula8 is
 	 HEX4 : out std_logic_vector(6 downto 0);
 	 HEX5 : out std_logic_vector(6 downto 0);
 	 
+	 --SAIDAS P/ TESTE
 	 WRTE : out std_logic;
 	 HABILITAREGHEX: out std_logic;
 	 DECODEREND: out std_logic_vector(7 downto 0);
 	 DECODERBLOC: out std_logic_vector(7 downto 0);
 	 SAIDA_DEBOUNCE: out std_logic;
 	 BarramentoDadosOUT: out std_logic_vector(7 downto 0);
-	 BarramentoDadosIN: out std_logic_vector(7 downto 0)
+	 BarramentoDadosIN: out std_logic_vector(7 downto 0);
+	 
+	 --TESTE CPU
+	 ENTRADAA_ULA: out std_logic_vector(7 downto 0);
+	 ENTRADAB_ULA: out std_logic_vector(7 downto 0);
+	 OUT_ULA: out std_logic_vector(7 downto 0);
+	 SELETOR_ULA: out std_logic_vector(1 downto 0)
 	 
   );
 end entity;
@@ -130,7 +137,12 @@ CPU : entity work.CPU
 			KEY => KEY,
 			RESET => '0',
 			Rd => rd,
-			Wr => wr
+			Wr => wr,
+			--TESTES
+			ENTRADAA_ULA => ENTRADAA_ULA,
+			ENTRADAB_ULA => ENTRADAb_ULA,
+			OUT_ULA => OUT_ULA,
+			SELETOR_ULA => SELETOR_ULA
 		 );
 			 
 Decoder1 : entity work.Decoder3X8

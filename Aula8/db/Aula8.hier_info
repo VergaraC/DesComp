@@ -159,6 +159,32 @@ BarramentoDadosIN[4] <= LeituraDados[4].DB_MAX_OUTPUT_PORT_TYPE
 BarramentoDadosIN[5] <= LeituraDados[5].DB_MAX_OUTPUT_PORT_TYPE
 BarramentoDadosIN[6] <= LeituraDados[6].DB_MAX_OUTPUT_PORT_TYPE
 BarramentoDadosIN[7] <= LeituraDados[7].DB_MAX_OUTPUT_PORT_TYPE
+ENTRADAA_ULA[0] <= cpu:CPU.ENTRADAA_ULA[0]
+ENTRADAA_ULA[1] <= cpu:CPU.ENTRADAA_ULA[1]
+ENTRADAA_ULA[2] <= cpu:CPU.ENTRADAA_ULA[2]
+ENTRADAA_ULA[3] <= cpu:CPU.ENTRADAA_ULA[3]
+ENTRADAA_ULA[4] <= cpu:CPU.ENTRADAA_ULA[4]
+ENTRADAA_ULA[5] <= cpu:CPU.ENTRADAA_ULA[5]
+ENTRADAA_ULA[6] <= cpu:CPU.ENTRADAA_ULA[6]
+ENTRADAA_ULA[7] <= cpu:CPU.ENTRADAA_ULA[7]
+ENTRADAB_ULA[0] <= cpu:CPU.ENTRADAB_ULA[0]
+ENTRADAB_ULA[1] <= cpu:CPU.ENTRADAB_ULA[1]
+ENTRADAB_ULA[2] <= cpu:CPU.ENTRADAB_ULA[2]
+ENTRADAB_ULA[3] <= cpu:CPU.ENTRADAB_ULA[3]
+ENTRADAB_ULA[4] <= cpu:CPU.ENTRADAB_ULA[4]
+ENTRADAB_ULA[5] <= cpu:CPU.ENTRADAB_ULA[5]
+ENTRADAB_ULA[6] <= cpu:CPU.ENTRADAB_ULA[6]
+ENTRADAB_ULA[7] <= cpu:CPU.ENTRADAB_ULA[7]
+OUT_ULA[0] <= cpu:CPU.OUT_ULA[0]
+OUT_ULA[1] <= cpu:CPU.OUT_ULA[1]
+OUT_ULA[2] <= cpu:CPU.OUT_ULA[2]
+OUT_ULA[3] <= cpu:CPU.OUT_ULA[3]
+OUT_ULA[4] <= cpu:CPU.OUT_ULA[4]
+OUT_ULA[5] <= cpu:CPU.OUT_ULA[5]
+OUT_ULA[6] <= cpu:CPU.OUT_ULA[6]
+OUT_ULA[7] <= cpu:CPU.OUT_ULA[7]
+SELETOR_ULA[0] <= cpu:CPU.SELETOR_ULA[0]
+SELETOR_ULA[1] <= cpu:CPU.SELETOR_ULA[1]
 
 
 |Aula8|edgeDetector:detectorSub0
@@ -251,6 +277,32 @@ KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
+ENTRADAA_ULA[0] <= registradorgenerico:REG1.DOUT[0]
+ENTRADAA_ULA[1] <= registradorgenerico:REG1.DOUT[1]
+ENTRADAA_ULA[2] <= registradorgenerico:REG1.DOUT[2]
+ENTRADAA_ULA[3] <= registradorgenerico:REG1.DOUT[3]
+ENTRADAA_ULA[4] <= registradorgenerico:REG1.DOUT[4]
+ENTRADAA_ULA[5] <= registradorgenerico:REG1.DOUT[5]
+ENTRADAA_ULA[6] <= registradorgenerico:REG1.DOUT[6]
+ENTRADAA_ULA[7] <= registradorgenerico:REG1.DOUT[7]
+ENTRADAB_ULA[0] <= muxgenerico2x1:MUX2x1.saida_MUX[0]
+ENTRADAB_ULA[1] <= muxgenerico2x1:MUX2x1.saida_MUX[1]
+ENTRADAB_ULA[2] <= muxgenerico2x1:MUX2x1.saida_MUX[2]
+ENTRADAB_ULA[3] <= muxgenerico2x1:MUX2x1.saida_MUX[3]
+ENTRADAB_ULA[4] <= muxgenerico2x1:MUX2x1.saida_MUX[4]
+ENTRADAB_ULA[5] <= muxgenerico2x1:MUX2x1.saida_MUX[5]
+ENTRADAB_ULA[6] <= muxgenerico2x1:MUX2x1.saida_MUX[6]
+ENTRADAB_ULA[7] <= muxgenerico2x1:MUX2x1.saida_MUX[7]
+OUT_ULA[0] <= ulasomasub:ULA1.saida[0]
+OUT_ULA[1] <= ulasomasub:ULA1.saida[1]
+OUT_ULA[2] <= ulasomasub:ULA1.saida[2]
+OUT_ULA[3] <= ulasomasub:ULA1.saida[3]
+OUT_ULA[4] <= ulasomasub:ULA1.saida[4]
+OUT_ULA[5] <= ulasomasub:ULA1.saida[5]
+OUT_ULA[6] <= ulasomasub:ULA1.saida[6]
+OUT_ULA[7] <= ulasomasub:ULA1.saida[7]
+SELETOR_ULA[0] <= decoder:Decoder.output[3]
+SELETOR_ULA[1] <= decoder:Decoder.output[4]
 
 
 |Aula8|CPU:CPU|muxGenerico2x1:MUX2x1
