@@ -5,7 +5,7 @@ entity Aula8 is
   -- Total de bits das entradas e saidas
   generic ( 
 		  larguraDados : natural := 8;
-		  larguraROM: natural := 13;
+		  larguraROM: natural := 15;
 		  larguraAddROM: natural := 9;
 		  larguraPCROM: natural := 9;
 		  larguraRAM: natural := 8;
@@ -20,7 +20,7 @@ entity Aula8 is
     LEDR  : out std_logic_vector(9 downto 0);
 	 KEY_RST: in std_logic;
 	
-	 ROM_Saida   : out std_logic_vector(12 downto 0); 
+	 ROM_Saida   : out std_logic_vector(14 downto 0); 
 	 RAM_Saida  : out std_logic_vector(7 downto 0);
 	 A0_A8: out std_logic_vector(8 downto 0); 
 	 Address      : out std_logic_vector(8 downto 0);
@@ -60,7 +60,7 @@ architecture arquitetura of Aula8 is
   
   signal LED : std_logic_vector (9 downto 0);
 
-  signal ROM_out : std_logic_vector (12 downto 0);
+  signal ROM_out : std_logic_vector (14 downto 0);
   signal ROM_Addr : std_logic_vector(8 downto 0);
 
   signal Reset_A : std_logic;
@@ -136,7 +136,7 @@ CPU : entity work.CPU
 			Data_OUT => escritaDados,
 			ROM_Address => ROM_Addr,
 			CLOCK_50 => CLK,
-			KEY => KEY,
+			--KEY => KEY,
 			RESET => '0',
 			Rd => rd,
 			Wr => wr,

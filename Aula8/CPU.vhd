@@ -20,11 +20,11 @@ entity CPU is
 	 
 	 Data_IN : in std_logic_vector(7 downto 0);
 	 Data_OUT : out std_logic_vector(7 downto 0);
-	 Instruction_IN : in std_logic_vector(12 downto 0);
+	 Instruction_IN : in std_logic_vector(14 downto 0);
 	 ROM_Address : out std_logic_vector(8 downto 0);
 	 DATA_Address : out std_logic_vector(8 downto 0);
 	 
-    KEY: in std_logic_vector(3 downto 0);
+    --KEY: in std_logic_vector(3 downto 0);
     --LEDR  : out std_logic_vector(9 downto 0);
 	 --ENDERECO : out std_logic_vector(8 downto 0)
 	 
@@ -41,7 +41,7 @@ end entity;
 architecture arquitetura of CPU is
 
   signal MUX_ULA : std_logic_vector(larguraDados-1 downto 0);
-  signal REG1_ULA_A : std_logic_vector (larguraDados-1 downto 0);
+  signal BANCO_ULA_A : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
   signal Sinais_Controle : std_logic_vector (11 downto 0);
   signal CLK : std_logic;
@@ -79,18 +79,26 @@ MUX2x1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 					  				  
 -- Mux aula5 ainda n completo				
 MUX4x1 :  entity work.muxGenerico4x1  generic map (larguraDados => 9)
-        port map( entradaA_MUX => SomaUmPC,
+        port map(entradaA_MUX => SomaUmPC,
                  entradaB_MUX =>  Instruction_IN(8 downto 0),
 					  entradaC_MUX =>  REG_RET_Output,
 					  entradaD_MUX =>  "000000000",
                  seletor_MUX => SelMux4X1,
                  saida_MUX => OutputMux4X1);
-					  			  
--- O port map completo do Acumulador.
-REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-          port map (DIN => SAIDA_ULA, DOUT => REG1_ULA_A, ENABLE => Sinais_Controle(5), CLK => CLK, RST => Reset_A);
 
 
+--REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
+--          port map (DIN => SAIDA_ULA, DOUT => BANCO_ULA_A, ENABLE => Sinais_Controle(5), CLK => CLK, RST => Reset_A);
+
+BancoRegistradores : entity work.bancoRegistradoresArqRegMem   generic map (larguraDados => larguraDados, larguraEndBancoRegs => 2)
+		 port map ( 
+			  clk => CLK,
+			  endereco => Instruction_IN(10 downto 9),
+			  dadoEscrita => SAIDA_ULA,
+			  habilitaEscrita => Sinais_Controle(5),
+			  saida  => BANCO_ULA_A
+		 );
+		 
 FLAG : entity work.Registrador1X1   generic map (larguraDados => larguraDados)
           port map (DIN => ULA_FLAG, DOUT => OutputFlagEQ, ENABLE => Sinais_Controle(2), CLK => CLK, RST => Reset_A);
 			 
@@ -108,11 +116,11 @@ somaUm :  entity work.somaConstante  generic map (larguraDados => larguraPCROM, 
 			 
 -- O port map completo da ULA:
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
-          port map (entradaA => REG1_ULA_A, entradaB => MUX_ULA, saida => Saida_ULA, saida_FLAG => ULA_FLAG , seletor => Sinais_Controle(4 downto 3));
+          port map (entradaA => BANCO_ULA_A, entradaB => MUX_ULA, saida => Saida_ULA, saida_FLAG => ULA_FLAG , seletor => Sinais_Controle(4 downto 3));
 
 			 
 Decoder : entity work.Decoder
-          port map (OPCODE => Instruction_IN(12 downto 9), OUTPUT => Sinais_Controle);
+          port map (OPCODE => Instruction_IN(14 downto 11), OUTPUT => Sinais_Controle);
 			 
 			 
 LogicaDesvio : entity work.LogicaDesvio
@@ -123,11 +131,11 @@ LogicaDesvio : entity work.LogicaDesvio
 
 Rd <= Sinais_Controle(1);
 Wr <= Sinais_Controle(0);
-Data_OUT <= REG1_ULA_A;
+Data_OUT <= BANCO_ULA_A;
 Data_Address <= Instruction_IN(8 downto 0);
 ROM_Address <= ROM_OUT;
 
-ENTRADAA_ULA <= REG1_ULA_A;
+ENTRADAA_ULA <= BANCO_ULA_A;
 ENTRADAB_ULA <= MUX_ULA;
 OUT_ULA <= Saida_ULA;
 SELETOR_ULA <= Sinais_Controle(4 downto 3);
