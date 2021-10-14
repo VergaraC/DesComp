@@ -272,8 +272,8 @@ DEBOUNCE_KEY0 : entity work.DebounceMemorizacao
 DEBOUNCE_KEY1 : entity work.DebounceMemorizacao
 		  port map(entrada => '1', saida => Debounce_BufferKEY1, clk => CLK_KEY1, rst => RST_KEY1);
 		  
-RST_KEY0 <= (rd and DataAddress(0) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
-RST_KEY1 <= (rd and not(DataAddress(0)) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
+RST_KEY0 <= (DataAddress(0) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
+RST_KEY1 <= (not(DataAddress(0)) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
 
 --ANDs de habilita
 		  

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8
-Fri Oct  8 19:51:02 2021
+Fri Oct  8 23:54:14 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -87,7 +87,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct  8 19:51:02 2021       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct  8 23:54:14 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8                                       ;
 ; Top-level Entity Name           ; Aula8                                       ;
@@ -246,14 +246,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 470            ;
+; Estimate of Logic utilization (ALMs needed) ; 493            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 503            ;
-;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 264            ;
-;     -- 5 input functions                    ; 53             ;
-;     -- 4 input functions                    ; 74             ;
-;     -- <=3 input functions                  ; 109            ;
+; Combinational ALUT usage for logic          ; 545            ;
+;     -- 7 input functions                    ; 7              ;
+;     -- 6 input functions                    ; 301            ;
+;     -- 5 input functions                    ; 56             ;
+;     -- 4 input functions                    ; 81             ;
+;     -- <=3 input functions                  ; 100            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 577            ;
 ;                                             ;                ;
@@ -263,8 +263,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 575            ;
-; Total fan-out                               ; 4547           ;
-; Average fan-out                             ; 3.21           ;
+; Total fan-out                               ; 4809           ;
+; Average fan-out                             ; 3.29           ;
 +---------------------------------------------+----------------+
 
 
@@ -273,14 +273,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+-----------------------+--------------+
-; |Aula8                                    ; 503 (14)            ; 577 (0)                   ; 0                 ; 0          ; 169  ; 0            ; |Aula8                                      ; Aula8                 ; work         ;
-;    |CPU:CPU|                              ; 73 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                              ; CPU                   ; work         ;
+; |Aula8                                    ; 545 (14)            ; 577 (0)                   ; 0                 ; 0          ; 169  ; 0            ; |Aula8                                      ; Aula8                 ; work         ;
+;    |CPU:CPU|                              ; 72 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                              ; CPU                   ; work         ;
 ;       |Decoder:Decoder|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Decoder:Decoder              ; Decoder               ; work         ;
+;       |LogicaDesvio:LogicaDesvio|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|LogicaDesvio:LogicaDesvio    ; LogicaDesvio          ; work         ;
 ;       |Registrador1X1:FLAG|               ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Registrador1X1:FLAG          ; Registrador1X1        ; work         ;
 ;       |ULASomaSub:ULA1|                   ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|ULASomaSub:ULA1              ; ULASomaSub            ; work         ;
 ;       |muxGenerico2x1:MUX2x1|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|muxGenerico2x1:MUX2x1        ; muxGenerico2x1        ; work         ;
-;       |muxGenerico4x1:MUX4x1|             ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|muxGenerico4x1:MUX4x1        ; muxGenerico4x1        ; work         ;
-;       |registradorGenerico:PC|            ; 1 (1)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:PC       ; registradorGenerico   ; work         ;
+;       |muxGenerico4x1:MUX4x1|             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|muxGenerico4x1:MUX4x1        ; muxGenerico4x1        ; work         ;
+;       |registradorGenerico:PC|            ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:PC       ; registradorGenerico   ; work         ;
 ;       |registradorGenerico:REG1|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:REG1     ; registradorGenerico   ; work         ;
 ;       |registradorGenerico:REG_RET|       ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:REG_RET  ; registradorGenerico   ; work         ;
 ;       |somaConstante:somaUm|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|somaConstante:somaUm         ; somaConstante         ; work         ;
@@ -304,7 +305,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |edgeDetector:detectorSub0|            ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|edgeDetector:detectorSub0            ; edgeDetector          ; work         ;
 ;    |edgeDetector:detectorSub1|            ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|edgeDetector:detectorSub1            ; edgeDetector          ; work         ;
 ;    |memoriaRAM:RAM|                       ; 306 (306)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaRAM:RAM                       ; memoriaRAM            ; work         ;
-;    |memoriaROM:ROM|                       ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                       ; memoriaROM            ; work         ;
+;    |memoriaROM:ROM|                       ; 77 (77)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                       ; memoriaROM            ; work         ;
 ;    |registradorGenerico:LEDRP|            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:LEDRP            ; registradorGenerico   ; work         ;
 ;    |registradorGenerico:REG_HEX0|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX0         ; registradorGenerico   ; work         ;
 ;    |registradorGenerico:REG_HEX1|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX1         ; registradorGenerico   ; work         ;
@@ -336,9 +337,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Aula8|CPU:CPU|registradorGenerico:PC|DOUT[7] ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Aula8|CPU:CPU|registradorGenerico:PC|DOUT[6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Aula8|CPU:CPU|ULASomaSub:ULA1|saida[1]       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Aula8|CPU:CPU|registradorGenerico:PC|DOUT[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Aula8|CPU:CPU|ULASomaSub:ULA1|saida[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
@@ -790,25 +790,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 8                           ;
 ;     plain             ; 14                          ;
 ; arriav_io_obuf        ; 16                          ;
-; arriav_lcell_comb     ; 503                         ;
+; arriav_lcell_comb     ; 545                         ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 12                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 474                         ;
+;         5 data inputs ; 16                          ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 512                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 84                          ;
-;         4 data inputs ; 70                          ;
-;         5 data inputs ; 41                          ;
-;         6 data inputs ; 264                         ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 71                          ;
+;         4 data inputs ; 81                          ;
+;         5 data inputs ; 40                          ;
+;         6 data inputs ; 301                         ;
 ; boundary_port         ; 169                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.30                        ;
-; Average LUT depth     ; 6.04                        ;
+; Max LUT depth         ; 10.30                       ;
+; Average LUT depth     ; 6.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -827,7 +826,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct  8 19:50:54 2021
+    Info: Processing started: Fri Oct  8 23:54:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file DebounceMemorizacao.vhd
@@ -922,16 +921,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 19
-Info (21057): Implemented 1235 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1277 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 153 output pins
-    Info (21061): Implemented 1066 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 498 megabytes
-    Info: Processing ended: Fri Oct  8 19:51:02 2021
+    Info (21061): Implemented 1108 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 484 megabytes
+    Info: Processing ended: Fri Oct  8 23:54:14 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:18
 
 
