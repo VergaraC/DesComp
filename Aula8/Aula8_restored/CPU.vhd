@@ -41,7 +41,7 @@ end entity;
 architecture arquitetura of CPU is
 
   signal MUX_ULA : std_logic_vector(larguraDados-1 downto 0);
-  signal REG1_ULA_A : std_logic_vector (larguraDados-1 downto 0);
+  signal BANCO_ULA_A : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
   signal Sinais_Controle : std_logic_vector (11 downto 0);
   signal CLK : std_logic;
@@ -88,7 +88,7 @@ MUX4x1 :  entity work.muxGenerico4x1  generic map (larguraDados => 9)
 					  			  
 -- O port map completo do Acumulador.
 REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-          port map (DIN => SAIDA_ULA, DOUT => REG1_ULA_A, ENABLE => Sinais_Controle(5), CLK => CLK, RST => Reset_A);
+          port map (DIN => SAIDA_ULA, DOUT => BANCO_ULA_A, ENABLE => Sinais_Controle(5), CLK => CLK, RST => Reset_A);
 
 Banco_Registradores : entity work.bancoRegistradores   generic map (larguraDados => larguraDados, larguraEndBancoRegs => 2)
 		 port map ( 
@@ -96,7 +96,7 @@ Banco_Registradores : entity work.bancoRegistradores   generic map (larguraDados
 			  endereco => Instruction_IN(10 downto 9),
 			  dadoEscrita => SAIDA_ULA,
 			  habilitaEscrita => Sinais_Controle(5),
-			  saida  => REG1_ULA_A
+			  saida  => BANCO_ULA_A
 		 );
 		 
 FLAG : entity work.Registrador1X1   generic map (larguraDados => larguraDados)
@@ -116,7 +116,7 @@ somaUm :  entity work.somaConstante  generic map (larguraDados => larguraPCROM, 
 			 
 -- O port map completo da ULA:
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
-          port map (entradaA => REG1_ULA_A, entradaB => MUX_ULA, saida => Saida_ULA, saida_FLAG => ULA_FLAG , seletor => Sinais_Controle(4 downto 3));
+          port map (entradaA => BANCO_ULA_A, entradaB => MUX_ULA, saida => Saida_ULA, saida_FLAG => ULA_FLAG , seletor => Sinais_Controle(4 downto 3));
 
 			 
 Decoder : entity work.Decoder
@@ -131,11 +131,11 @@ LogicaDesvio : entity work.LogicaDesvio
 
 Rd <= Sinais_Controle(1);
 Wr <= Sinais_Controle(0);
-Data_OUT <= REG1_ULA_A;
+Data_OUT <= BANCO_ULA_A;
 Data_Address <= Instruction_IN(8 downto 0);
 ROM_Address <= ROM_OUT;
 
-ENTRADAA_ULA <= REG1_ULA_A;
+ENTRADAA_ULA <= BANCO_ULA_A;
 ENTRADAB_ULA <= MUX_ULA;
 OUT_ULA <= Saida_ULA;
 SELETOR_ULA <= Sinais_Controle(4 downto 3);
