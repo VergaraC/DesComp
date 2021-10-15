@@ -110,6 +110,8 @@ architecture arquitetura of Aula8 is
   signal RST_KEY1 : std_logic;
   
   signal incrementoSeg : std_logic;
+  signal Divisor1Hz_MUX_A : std_logic;
+  signal DivisorRapido_MUX_B : std_logic;
 
 
 begin
@@ -121,15 +123,26 @@ begin
 
 CLK <= CLOCK_50;
 
-divisor : entity work.divisorGenerico
-            generic map (divisor => 5)   -- divide por 10.
-            port map (clk => CLOCK_50, saida_clk => incrementoSeg);
+divisor1Hz : entity work.divisorGenerico
+            generic map (divisor => 5)   -- PRECISA MUDAR DIVISOR
+            port map (clk => CLOCK_50, saida_clk => Divisor1Hz_MUX_A);
 				
-detectorSub0: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
-		  
-detectorSub1: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
+divisorRapido : entity work.divisorGenerico
+            generic map (divisor => 5)   -- PRECISA MUDAR DIVISOR
+            port map (clk => CLOCK_50, saida_clk => DivisorRapido_MUX_B);
+				
+--ERRADO: PRECISA CRIAR FILE NOVA				
+MUX_RELOGIO :  entity work.muxGenerico2x1  generic map (larguraDados => 1,)
+        port map(entradaA_MUX => Divisor1Hz_MUX_A,
+                 entradaB_MUX =>  DivisorRapido_MUX_B,
+                 seletor_MUX => SW(4),
+                 saida_MUX => CLK_KEY0);
+				
+--detectorSub0: work.edgeDetector(bordaSubida)
+--        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
+--		  
+--detectorSub1: work.edgeDetector(bordaSubida)
+--        port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
 
 --end generate;
 
@@ -145,11 +158,6 @@ CPU : entity work.CPU
 			RESET => '0',
 			Rd => rd,
 			Wr => wr
---			--TESTES
---			ENTRADAA_ULA => ENTRADAA_ULA,
---			ENTRADAB_ULA => ENTRADAb_ULA,
---			OUT_ULA => OUT_ULA,
---			SELETOR_ULA => SELETOR_ULA
 		 );
 			 
 Decoder1 : entity work.Decoder3X8
