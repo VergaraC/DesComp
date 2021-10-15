@@ -96,6 +96,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "ROM_Saida[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_Saida[14]",
+					"strict" : false
+				},
+				{
 					"name" : "RAM_Saida[0]",
 					"strict" : false
 				},
@@ -368,263 +376,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "WRTE",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "HABILITAREGHEX",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODEREND[7]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DECODERBLOC[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SAIDA_DEBOUNCE",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[0]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[1]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[3]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[4]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[5]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[6]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosOUT[7]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[0]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[2]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[3]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[4]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[5]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[6]",
-					"strict" : false
-				},
-				{
-					"name" : "BarramentoDadosIN[7]",
-					"strict" : false
-				},
-				{
-					"name" : "RESET_KEY",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAA_ULA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "ENTRADAB_ULA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "OUT_ULA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SELETOR_ULA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SELETOR_ULA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[3]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY_RST",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[2]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
@@ -632,11 +388,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "KEY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[8]",
+					"name" : "FPGA_RESET_N",
 					"strict" : false
 				},
 				{
@@ -668,15 +432,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "KEY[1]",
 					"strict" : false
 				},
 				{
 					"name" : "KEY[0]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[1]",
 					"strict" : false
 				}
 			]

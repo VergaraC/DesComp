@@ -18,11 +18,11 @@ entity Aula8 is
 	 SW: in std_logic_vector(9 downto 0);
     KEY: in std_logic_vector(3 downto 0);
     LEDR  : out std_logic_vector(9 downto 0);
-	 KEY_RST: in std_logic;
+	 FPGA_RESET_N: in std_logic;
 	
-	 ROM_Saida   : out std_logic_vector(14 downto 0); 
+	 ROM_Saida   : out std_logic_vector(14 downto 0);
 	 RAM_Saida  : out std_logic_vector(7 downto 0);
-	 A0_A8: out std_logic_vector(8 downto 0); 
+	 A0_A8: out std_logic_vector(8 downto 0);
 	 Address      : out std_logic_vector(8 downto 0);
 	 
 	 HEX0 : out std_logic_vector(6 downto 0);
@@ -30,23 +30,23 @@ entity Aula8 is
 	 HEX2 : out std_logic_vector(6 downto 0);
 	 HEX3 : out std_logic_vector(6 downto 0);
 	 HEX4 : out std_logic_vector(6 downto 0);
-	 HEX5 : out std_logic_vector(6 downto 0);
+	 HEX5 : out std_logic_vector(6 downto 0)
 	 
-	 --SAIDAS P/ TESTE
-	 WRTE : out std_logic;
-	 HABILITAREGHEX: out std_logic;
-	 DECODEREND: out std_logic_vector(7 downto 0);
-	 DECODERBLOC: out std_logic_vector(7 downto 0);
-	 SAIDA_DEBOUNCE: out std_logic;
-	 BarramentoDadosOUT: out std_logic_vector(7 downto 0);
-	 BarramentoDadosIN: out std_logic_vector(7 downto 0);
-	 RESET_KEY: out std_logic;
-	 
-	 --TESTE CPU
-	 ENTRADAA_ULA: out std_logic_vector(7 downto 0);
-	 ENTRADAB_ULA: out std_logic_vector(7 downto 0);
-	 OUT_ULA: out std_logic_vector(7 downto 0);
-	 SELETOR_ULA: out std_logic_vector(1 downto 0)
+--	 --SAIDAS P/ TESTE
+--	 WRTE : out std_logic;
+--	 HABILITAREGHEX: out std_logic;
+--	 DECODEREND: out std_logic_vector(7 downto 0);
+--	 DECODERBLOC: out std_logic_vector(7 downto 0);
+--	 SAIDA_DEBOUNCE: out std_logic;
+--	 BarramentoDadosOUT: out std_logic_vector(7 downto 0);
+--	 BarramentoDadosIN: out std_logic_vector(7 downto 0);
+--	 RESET_KEY: out std_logic;
+--	 
+--	 --TESTE CPU
+--	 ENTRADAA_ULA: out std_logic_vector(7 downto 0);
+--	 ENTRADAB_ULA: out std_logic_vector(7 downto 0);
+--	 OUT_ULA: out std_logic_vector(7 downto 0);
+--	 SELETOR_ULA: out std_logic_vector(1 downto 0)
 	 
 	 
   );
@@ -144,12 +144,12 @@ CPU : entity work.CPU
 			--KEY => KEY,
 			RESET => '0',
 			Rd => rd,
-			Wr => wr,
-			--TESTES
-			ENTRADAA_ULA => ENTRADAA_ULA,
-			ENTRADAB_ULA => ENTRADAb_ULA,
-			OUT_ULA => OUT_ULA,
-			SELETOR_ULA => SELETOR_ULA
+			Wr => wr
+--			--TESTES
+--			ENTRADAA_ULA => ENTRADAA_ULA,
+--			ENTRADAB_ULA => ENTRADAb_ULA,
+--			OUT_ULA => OUT_ULA,
+--			SELETOR_ULA => SELETOR_ULA
 		 );
 			 
 Decoder1 : entity work.Decoder3X8
@@ -256,7 +256,7 @@ BUF3STATE_KEY3 :  entity work.buffer_3state_1bit
         port map(entrada => KEY(3), habilita =>  HabilitaKEY3, saida => LeituraDados);
 		  
 BUF3STATE_KEY_RST :  entity work.buffer_3state_1bit
-        port map(entrada => KEY_RST, habilita =>  HabilitaKEY_RST, saida => LeituraDados);
+        port map(entrada => FPGA_RESET_N, habilita =>  HabilitaKEY_RST, saida => LeituraDados);
 
 --buffers SW		  
 		  
@@ -309,14 +309,14 @@ LEDR	  <= LED;
 Address <= ROM_Addr;
 ROM_Saida <= ROM_out;
 A0_A8 <= DataAddress;
-WRTE <= wr;
-HABILITAREGHEX <= HabilitaKEY0;
-DECODEREND <= SaidaDecoder2;
-DECODERBLOC <= SaidaDecoder1;
-SAIDA_DEBOUNCE <= Debounce_BufferKEY0;
-BarramentoDadosOUT <= escritaDados;
-BarramentoDadosIN <= leituraDados;
-RESET_KEY <= CLK_KEY0;
+--WRTE <= wr;
+--HABILITAREGHEX <= HabilitaKEY0;
+--DECODEREND <= SaidaDecoder2;
+--DECODERBLOC <= SaidaDecoder1;
+--SAIDA_DEBOUNCE <= Debounce_BufferKEY0;
+--BarramentoDadosOUT <= escritaDados;
+--BarramentoDadosIN <= leituraDados;
+--RESET_KEY <= CLK_KEY0;
 
 end architecture;
 
