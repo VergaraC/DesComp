@@ -108,6 +108,8 @@ architecture arquitetura of Aula8 is
   signal CLK_KEY0 : std_logic;
   signal RST_KEY0 : std_logic;
   signal RST_KEY1 : std_logic;
+  
+  signal incrementoSeg : std_logic;
 
 
 begin
@@ -119,6 +121,10 @@ begin
 
 CLK <= CLOCK_50;
 
+divisor : entity work.divisorGenerico
+            generic map (divisor => 5)   -- divide por 10.
+            port map (clk => CLOCK_50, saida_clk => incrementoSeg);
+				
 detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
 		  
@@ -126,7 +132,6 @@ detectorSub1: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
 
 --end generate;
-
 
 CPU : entity work.CPU
           port map (

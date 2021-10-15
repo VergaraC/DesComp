@@ -48,6 +48,9 @@ architecture assincrona of memoriaROM is
 -- Address[11] => 1 --------------------
 -- Address[12] => 9 ---------------------
 -- Address[13] => 10 -------------------------------
+-- Address[14] => 6 ------------------------------- N implementado
+-- Address[15] => 2 ------------------------------- N implementado
+
 -- Address[20] => 1x limite
 -- Address[21] => 10x limite
 -- Address[22] => 100x limite
