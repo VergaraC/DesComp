@@ -110,7 +110,7 @@ architecture arquitetura of Aula8 is
   signal RST_KEY1 : std_logic;
   
   signal incrementoSeg : std_logic;
-  signal Divisor1Hz_MUX_A : std_logic;
+  signal Divisor_MUX_A : std_logic;
   signal DivisorRapido_MUX_B : std_logic;
 
 
@@ -122,29 +122,6 @@ begin
 --else generate
 
 CLK <= CLOCK_50;
-
-divisor1Hz : entity work.divisorGenerico
-            generic map (divisor => 5)   -- PRECISA MUDAR DIVISOR
-            port map (clk => CLOCK_50, saida_clk => Divisor1Hz_MUX_A);
-				
-divisorRapido : entity work.divisorGenerico
-            generic map (divisor => 5)   -- PRECISA MUDAR DIVISOR
-            port map (clk => CLOCK_50, saida_clk => DivisorRapido_MUX_B);
-				
---ERRADO: PRECISA CRIAR FILE NOVA				
-MUX_RELOGIO :  entity work.muxGenerico2x1  generic map (larguraDados => 1,)
-        port map(entradaA_MUX => Divisor1Hz_MUX_A,
-                 entradaB_MUX =>  DivisorRapido_MUX_B,
-                 seletor_MUX => SW(4),
-                 saida_MUX => CLK_KEY0);
-				
---detectorSub0: work.edgeDetector(bordaSubida)
---        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
---		  
---detectorSub1: work.edgeDetector(bordaSubida)
---        port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
-
---end generate;
 
 CPU : entity work.CPU
           port map (
@@ -277,14 +254,30 @@ BUF3STATE_SW8 :  entity work.buffer_3state_1bit
 BUF3STATE_SW9 :  entity work.buffer_3state_1bit
         port map(entrada => SW(9), habilita =>  HabilitaSW9, saida => LeituraDados);
 		  
---Debounce KEY0
-
+--Debounce Keys
+					  
+detectorSub1: work.edgeDetector(bordaSubida)
+        port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
+		  
 DEBOUNCE_KEY0 : entity work.DebounceMemorizacao
 		  port map(entrada => '1', saida => Debounce_BufferKEY0, clk => CLK_KEY0, rst => RST_KEY0);
-
+		  
 DEBOUNCE_KEY1 : entity work.DebounceMemorizacao
 		  port map(entrada => '1', saida => Debounce_BufferKEY1, clk => CLK_KEY1, rst => RST_KEY1);
 		  
+
+divisor : entity work.divisorGenerico generic map (divisor => 25000000)   
+        port map (clk => CLOCK_50, saida_clk => Divisor_MUX_A);
+				
+divisorRapido : entity work.divisorGenerico generic map (divisor => 8000)   -- PRECISA MUDAR DIVISOR
+        port map (clk => CLOCK_50, saida_clk => DivisorRapido_MUX_B);
+					
+MUX_RELOGIO :  entity work.muxGenerico1x1  generic map (larguraDados => 1)
+        port map(entradaA_MUX => Divisor_MUX_A,
+                 entradaB_MUX =>  DivisorRapido_MUX_B,
+                 seletor_MUX => SW(9),
+                 saida_MUX => CLK_KEY0);
+		  	  
 RST_KEY0 <= (DataAddress(0) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
 RST_KEY1 <= (not(DataAddress(0)) and DataAddress(1) and DataAddress(2) and DataAddress(3) and DataAddress(4) and DataAddress(5) and DataAddress(6) and DataAddress(7) and DataAddress(8));
 

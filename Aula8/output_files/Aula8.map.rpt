@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Aula8
-Fri Oct 15 18:44:27 2021
+Analysis & Elaboration report for Aula8
+Sun Oct 17 18:19:52 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,10 +7,58 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |Aula8
+  5. Parameter Settings for User Entity Instance: CPU:CPU
+  6. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX2x1
+  7. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX4x1
+  8. Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores
+  9. Parameter Settings for User Entity Instance: CPU:CPU|Registrador1X1:FLAG
+ 10. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_RET
+ 11. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 12. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 14. Parameter Settings for User Entity Instance: Decoder3x8:Decoder1
+ 15. Parameter Settings for User Entity Instance: Decoder3x8:Decoder2
+ 16. Parameter Settings for User Entity Instance: registradorGenerico:LEDRP
+ 17. Parameter Settings for User Entity Instance: Registrador1X1:LEDR8
+ 18. Parameter Settings for User Entity Instance: Registrador1X1:LEDR9
+ 19. Parameter Settings for User Entity Instance: memoriaROM:ROM
+ 20. Parameter Settings for User Entity Instance: memoriaRAM:RAM
+ 21. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
+ 22. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
+ 23. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
+ 24. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
+ 25. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
+ 26. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
+ 27. Parameter Settings for User Entity Instance: divisorGenerico:divisor
+ 28. Parameter Settings for User Entity Instance: divisorGenerico:divisorRapido
+ 29. Parameter Settings for User Entity Instance: MuxGenerico1x1:MUX_RELOGIO
+ 30. Analysis & Elaboration Settings
+ 31. Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY1"
+ 32. Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY0"
+ 33. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX5"
+ 34. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 35. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX4"
+ 36. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 37. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX3"
+ 38. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 39. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX2"
+ 40. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 41. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX1"
+ 42. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 43. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX0"
+ 44. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 45. Port Connectivity Checks: "Registrador1X1:LEDR9"
+ 46. Port Connectivity Checks: "Registrador1X1:LEDR8"
+ 47. Port Connectivity Checks: "registradorGenerico:LEDRP"
+ 48. Port Connectivity Checks: "Decoder3x8:Decoder2"
+ 49. Port Connectivity Checks: "Decoder3x8:Decoder1"
+ 50. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 51. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX4x1"
+ 52. Port Connectivity Checks: "CPU:CPU"
+ 53. Analysis & Elaboration Messages
 
 
 
@@ -34,26 +82,317 @@ https://fpgasoftware.intel.com/eula.
 
 
 
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sun Oct 17 18:19:52 2021       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; Aula8                                       ;
+; Top-level Entity Name         ; Aula8                                       ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Aula8 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                               ;
+; larguraROM     ; 15    ; Signed Integer                               ;
+; larguraAddROM  ; 9     ; Signed Integer                               ;
+; larguraPCROM   ; 9     ; Signed Integer                               ;
+; larguraRAM     ; 8     ; Signed Integer                               ;
+; larguraAddRAM  ; 6     ; Signed Integer                               ;
+; simulacao      ; true  ; Enumerated                                   ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; larguradados   ; 8     ; Signed Integer              ;
+; largurarom     ; 13    ; Signed Integer              ;
+; larguraaddrom  ; 9     ; Signed Integer              ;
+; largurapcrom   ; 9     ; Signed Integer              ;
+; larguraram     ; 8     ; Signed Integer              ;
+; larguraaddram  ; 8     ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX2x1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX4x1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores ;
++---------------------+-------+-----------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                  ;
++---------------------+-------+-----------------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                                        ;
+; larguraendbancoregs ; 2     ; Signed Integer                                                        ;
++---------------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|Registrador1X1:FLAG ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_RET ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Oct 15 18:44:27 2021           ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name               ; Aula8                                       ;
-; Top-level Entity Name       ; Aula8                                       ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                   ;
+; constante      ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder3x8:Decoder1 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; larguradados   ; 3     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder3x8:Decoder2 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; larguradados   ; 3     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:LEDRP ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador1X1:LEDR8 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador1X1:LEDR9 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaROM:ROM ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; datawidth      ; 15    ; Signed Integer                     ;
+; addrwidth      ; 9     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaRAM:RAM ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; datawidth      ; 8     ; Signed Integer                     ;
+; addrwidth      ; 6     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:divisor ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                           ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:divisorRapido ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; divisor        ; 8000  ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MuxGenerico1x1:MUX_RELOGIO ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -141,100 +480,326 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY1" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; entrada ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY0" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; entrada ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:CONV_HEX5" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND             ;
+; negativo ; Input ; Info     ; Stuck at GND             ;
+; overflow ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX5" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:CONV_HEX4" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND             ;
+; negativo ; Input ; Info     ; Stuck at GND             ;
+; overflow ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX4" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:CONV_HEX3" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND             ;
+; negativo ; Input ; Info     ; Stuck at GND             ;
+; overflow ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX3" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:CONV_HEX2" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND             ;
+; negativo ; Input ; Info     ; Stuck at GND             ;
+; overflow ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX2" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:CONV_HEX1" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND             ;
+; negativo ; Input ; Info     ; Stuck at GND             ;
+; overflow ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:CONV_HEX0" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND             ;
+; negativo ; Input ; Info     ; Stuck at GND             ;
+; overflow ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX0" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "Registrador1X1:LEDR9" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; rst  ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "Registrador1X1:LEDR8" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; rst  ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:LEDRP" ;
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                ;
++------+-------+----------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder3x8:Decoder2"                                                                        ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder3x8:Decoder1"                                                                        ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; output[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
+; rst    ; Input ; Info     ; Stuck at GND                   ;
++--------+-------+----------+--------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX4x1" ;
++--------------+-------+----------+-------------------------+
+; Port         ; Type  ; Severity ; Details                 ;
++--------------+-------+----------+-------------------------+
+; entradad_mux ; Input ; Info     ; Stuck at GND            ;
++--------------+-------+----------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU"                                                                                    ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; reset        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; entradaa_ula ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; entradab_ula ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_ula      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; seletor_ula  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 15 18:44:21 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
+    Info: Processing started: Sun Oct 17 18:19:38 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8 --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/tyr/Desktop/DesComp/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file DebounceMemorizacao.vhd
-    Info (12022): Found design unit 1: debounceMemorizacao-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/DebounceMemorizacao.vhd Line: 12
-    Info (12023): Found entity 1: debounceMemorizacao File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/DebounceMemorizacao.vhd Line: 4
+    Info (12022): Found design unit 1: debounceMemorizacao-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/DebounceMemorizacao.vhd Line: 12
+    Info (12023): Found entity 1: debounceMemorizacao File: /home/tyr/Desktop/DesComp/DesComp/Aula8/DebounceMemorizacao.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3state_8portas-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3state_8portas File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3state_8portas-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/buffer_3state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3state_8portas File: /home/tyr/Desktop/DesComp/DesComp/Aula8/buffer_3state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3state_1Bit.vhd
-    Info (12022): Found design unit 1: buffer_3state_1bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3state_1bit File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3state_1bit-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3state_1bit File: /home/tyr/Desktop/DesComp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/tyr/Desktop/DesComp/DesComp/Aula8/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Aula8.vhd
-    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 56
-    Info (12023): Found entity 1: Aula8 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 4
+    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 56
+    Info (12023): Found entity 1: Aula8 File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaRAM.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MemoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MemoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arch_name File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd Line: 14
-    Info (12023): Found entity 1: Decoder File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arch_name File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Decoder.vhd Line: 14
+    Info (12023): Found entity 1: Decoder File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MuxGenerico.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MuxGenerico.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file EdgeDetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/tyr/Desktop/DesComp/DesComp/Aula8/EdgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/tyr/Desktop/DesComp/DesComp/Aula8/EdgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/tyr/Desktop/DesComp/DesComp/Aula8/EdgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: memoriaROM File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MemoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MemoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Aula8/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file UlaSomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/UlaSomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/UlaSomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/UlaSomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/tyr/Desktop/DesComp/DesComp/Aula8/UlaSomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SomaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/SomaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/tyr/Desktop/DesComp/DesComp/Aula8/SomaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: /home/tyr/Desktop/DesComp/DesComp/Aula8/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file LogicaDesvio.vhd
-    Info (12022): Found design unit 1: LogicaDesvio-arch_name File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/LogicaDesvio.vhd Line: 14
-    Info (12023): Found entity 1: LogicaDesvio File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/LogicaDesvio.vhd Line: 5
+    Info (12022): Found design unit 1: LogicaDesvio-arch_name File: /home/tyr/Desktop/DesComp/DesComp/Aula8/LogicaDesvio.vhd Line: 14
+    Info (12023): Found entity 1: LogicaDesvio File: /home/tyr/Desktop/DesComp/DesComp/Aula8/LogicaDesvio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Registrador1X1.vhd
-    Info (12022): Found design unit 1: Registrador1X1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd Line: 15
-    Info (12023): Found entity 1: Registrador1X1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd Line: 4
+    Info (12022): Found design unit 1: Registrador1X1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Registrador1X1.vhd Line: 15
+    Info (12023): Found entity 1: Registrador1X1 File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Registrador1X1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder3X8.vhd
-    Info (12022): Found design unit 1: Decoder3x8-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder3X8.vhd Line: 18
-    Info (12023): Found entity 1: Decoder3x8 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder3X8.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder3x8-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Decoder3X8.vhd Line: 18
+    Info (12023): Found entity 1: Decoder3x8 File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Decoder3X8.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file CPU.vhd
-    Info (12022): Found design unit 1: CPU-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 41
-    Info (12023): Found entity 1: CPU File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 4
+    Info (12022): Found design unit 1: CPU-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 41
+    Info (12023): Found entity 1: CPU File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file divisorGenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/divisorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: divisorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/divisorGenerico.vhd Line: 5
-Error (10476): VHDL error at Aula8.vhd(135): type of identifier "Divisor1Hz_MUX_A" does not agree with its usage as "std_logic_vector" type File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 135
-Error (10476): VHDL error at Aula8.vhd(136): type of identifier "DivisorRapido_MUX_B" does not agree with its usage as "std_logic_vector" type File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 136
-Error (10476): VHDL error at Aula8.vhd(138): type of identifier "CLK_KEY0" does not agree with its usage as "std_logic_vector" type File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 138
-Error (10558): VHDL error at Aula8.vhd(138): cannot associate formal port "saida_MUX" of mode "out" with an expression File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 138
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 0 warnings
-    Error: Peak virtual memory: 471 megabytes
-    Error: Processing ended: Fri Oct 15 18:44:27 2021
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:17
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/tyr/Desktop/DesComp/DesComp/Aula8/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Aula8/divisorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico1X1.vhd
+    Info (12022): Found design unit 1: MuxGenerico1x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MuxGenerico1X1.vhd Line: 14
+    Info (12023): Found entity 1: MuxGenerico1x1 File: /home/tyr/Desktop/DesComp/DesComp/Aula8/MuxGenerico1X1.vhd Line: 4
+Info (12127): Elaborating entity "Aula8" for the top level hierarchy
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 126
+Warning (10541): VHDL Signal Declaration warning at CPU.vhd(49): used implicit default value for signal "Reset_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 49
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX2x1" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 74
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX4x1" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 81
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 93
+Info (12128): Elaborating entity "Registrador1X1" for hierarchy "CPU:CPU|Registrador1X1:FLAG" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 102
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REG_RET" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 106
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 114
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 118
+Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 122
+Warning (10036): Verilog HDL or VHDL warning at Decoder.vhd(16): object "NOP" assigned a value but never read File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Decoder.vhd Line: 16
+Info (12128): Elaborating entity "LogicaDesvio" for hierarchy "CPU:CPU|LogicaDesvio:LogicaDesvio" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/CPU.vhd Line: 126
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:Decoder1" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 140
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:LEDRP" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 148
+Info (12128): Elaborating entity "Registrador1X1" for hierarchy "Registrador1X1:LEDR8" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 151
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 157
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 160
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 164
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:CONV_HEX0" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 167
+Info (12128): Elaborating entity "buffer_3state_1bit" for hierarchy "buffer_3state_1bit:BUF3STATE_KEY0" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 231
+Info (12128): Elaborating entity "buffer_3state_8portas" for hierarchy "buffer_3state_8portas:BUF3STATE_SW" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 248
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub1" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 259
+Info (12128): Elaborating entity "debounceMemorizacao" for hierarchy "debounceMemorizacao:DEBOUNCE_KEY0" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 262
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisor" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 269
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisorRapido" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 272
+Info (12128): Elaborating entity "MuxGenerico1x1" for hierarchy "MuxGenerico1x1:MUX_RELOGIO" File: /home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.vhd Line: 275
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 789 megabytes
+    Info: Processing ended: Sun Oct 17 18:19:52 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:40
 
 
