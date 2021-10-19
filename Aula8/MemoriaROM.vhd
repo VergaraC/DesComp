@@ -44,9 +44,8 @@ architecture assincrona of memoriaROM is
 -- Address[12] => 9 ---------------------
 -- Address[13] => 10 -------------------------------
 -- Address[14] => 6 -------------------------------
--- Address[13] => 2 -------------------------------
-
-
+-- Address[15] => 4 -------------------------------
+-- Address[16] => 2 -------------------------------
 -- Address[20] => unidade segundo limite
 -- Address[21] => dezena segundo limite
 -- Address[22] => unidade minuto limite
@@ -65,92 +64,97 @@ architecture assincrona of memoriaROM is
 ------------------------------------------
 
  --Preparando os componentes
- tmp(0) := LDI & '0' & x"00"; --Carrega 0
+ tmp(0) := LDI & R2 & '0' & x"00"; --Carrega 0
 
 -- Escrevendo 0 nos SevenSegs
-tmp(1) := STA & '1' & x"20";
-tmp(2) := STA & '1' & x"21";
-tmp(3) := STA & '1' & x"22";
-tmp(4) := STA & '1' & x"23";
-tmp(5) := STA & '1' & x"24";
-tmp(6) := STA & '1' & x"25";
+tmp(1) := STA & R2 & '1' & x"20";
+tmp(2) := STA & R2 & '1' & x"21";
+tmp(3) := STA & R2 & '1' & x"22";
+tmp(4) := STA & R2 & '1' & x"23";
+tmp(5) := STA & R2 & '1' & x"24";
+tmp(6) := STA & R2 & '1' & x"25";
 
 -- Apagando todos os LEDs
-tmp(7) := STA & '1' & x"00";
-tmp(8) := STA & '1' & x"01";
-tmp(9) := STA & '1' & x"02";
+tmp(7) := STA & R2 & '1' & x"00";
+tmp(8) := STA & R2 & '1' & x"01";
+tmp(9) := STA & R2 & '1' & x"02";
 
 -- Colocando 0 nas RAMs que armazenam os valores
-tmp(10) := STA & '0' & x"00";
-tmp(11) := STA & '0' & x"01";
-tmp(12) := STA & '0' & x"02";
-tmp(13) := STA & '0' & x"03";
-tmp(14) := STA & '0' & x"04";
-tmp(15) := STA & '0' & x"05"; 
+tmp(10) := STA & R2 & '0' & x"00";
+tmp(11) := STA & R2 & '0' & x"01";
+tmp(12) := STA & R2 & '0' & x"02";
+tmp(13) := STA & R2 & '0' & x"03";
+tmp(14) := STA & R2 & '0' & x"04";
+tmp(15) := STA & R2 & '0' & x"05";  
 
 -- Zerando Flag Contador
-tmp(16) := STA & '0' & x"06";
+tmp(16) := STA & R2 & '0' & x"06";
 
 -- Armazenando Variaveis Fixas a serrem utilizadas no Projeto
-tmp(17) := LDI & '0' & x"00";
-tmp(18) := STA & '0' & x"0A"; -- 0 
-tmp(19) := LDI & '0' & x"01";
-tmp(20) := STA & '0' & x"0B"; -- 1
-tmp(21) := LDI & '0' & x"09";
-tmp(22) := STA & '0' & x"0C"; -- 9
-tmp(23) := LDI & '0' & x"0A"; 
-tmp(24) := STA & '0' & x"0D"; -- 10
-tmp(25) := LDI & '0' & x"06"; 
-tmp(26) := STA & '0' & x"0E"; -- 6
-tmp(27) := LDI & '0' & x"02"; 
-tmp(28) := STA & '0' & x"0F"; -- 2
+tmp(17) := LDI & R0 & '0' & x"00";
+tmp(18) := STA & R0 & '0' & x"0A"; -- 0 
+tmp(19) := LDI & R0 & '0' & x"01";
+tmp(20) := STA & R0 & '0' & x"0B"; -- 1
+tmp(21) := LDI & R0 & '0' & x"09";
+tmp(22) := STA & R0 & '0' & x"0C"; -- 9
+tmp(23) := LDI & R0 & '0' & x"0A"; 
+tmp(24) := STA & R0 & '0' & x"0D"; -- 10
+tmp(25) := LDI & R0 & '0' & x"06"; 
+tmp(26) := STA & R0 & '0' & x"0E"; -- 6
+tmp(27) := LDI & R0 & '0' & x"04"; 
+tmp(28) := STA & R0 & '0' & x"0F"; -- 4
+tmp(29) := LDI & R0 & '0' & x"02"; 
+tmp(30) := STA & R0 & '0' & x"10"; -- 2
 
 -- setando o limite inicial
-tmp(29) := LDA & '0' & x"0C";
-tmp(30) := STA & '0' & x"14"; -- seta limite unidade segundo como 9
-tmp(31) := LDA & '0' & x"0E";
-tmp(32) := STA & '0' & x"15"; -- seta limite dezena segundo como 6
-tmp(33) := LDA & '0' & x"0C";
-tmp(34) := STA & '0' & x"16"; -- seta limite unidade minuto como 9
-tmp(35) := LDA & '0' & x"0E";
-tmp(36) := STA & '0' & x"17"; -- seta limite dezena minuto como 6
-tmp(37) := LDA & '0' & x"0C";
-tmp(38) := STA & '0' & x"18"; -- seta limite unidade hora como 9
-tmp(39) := LDA & '0' & x"0F";
-tmp(40) := STA & '0' & x"19"; -- seta limite dezena hora como 2
+tmp(31) := LDI & R0 & '0' & x"09";
+tmp(32) := STA & R0 & '0' & x"14"; -- seta limite unidade segundo como 9
+tmp(33) := STA & R0 & '0' & x"16"; -- seta limite unidade minuto como 9
+
+tmp(34) := LDI & R0 & '0' & x"06";
+tmp(35) := STA & R0 & '0' & x"15"; -- seta limite dezena segundo como 6
+tmp(36) := STA & R0 & '0' & x"17"; -- seta limite dezena minuto como 6
+
+tmp(37) := LDI & R0 & '0' & x"04";
+tmp(38) := STA & R0 & '0' & x"18"; -- seta limite unidade hora como 4
+
+tmp(39) := LDI & R0 & '0' & x"02";
+tmp(40) := STA & R0 & '0' & x"19"; -- seta limite dezena hora como 2
 
 -- SetUp Feito
 -- Loop Keys 
--- Checando Flag Contador (6 na RAM)
-tmp(31) := NOP & '0' & x"00"; 
-tmp(32) := LDA & '0' & x"06"; -- Pega o Valor da Flag
-tmp(33) := CEQ & '0' & x"0B"; -- Compara com 1
-tmp(34) := JEQ & '0' & x"27"; -- Efetua o Jump (Address[39]) quando for igual a 1
+-- Checando Flag Contador (6 na RAM) 
+
+-- MUDAR OS END DOS JUMPS ------------------------------------------------------------------------------------------------------------------------
+tmp(41) := NOP & R0 & '0' & x"00"; 
+tmp(42) := LDA & R0 & '0' & x"06"; -- Pega o Valor da Flag
+tmp(43) := CEQ & R0 & '0' & x"0B"; -- Compara com 1
+tmp(44) := JEQ & R0 & '0' & x"27"; -- Efetua o Jump (Address[39]) quando for igual a 1
 
  --Checando Key 0
-tmp(35) := LDA & '1' & x"60"; -- Pega o Valor de key 0
-tmp(36) := CEQ & '0' & x"0A"; -- Compara com 0
-tmp(37) := JEQ & '0' & x"27"; -- Efetua o Jump (Address[39]) quando for igual a 0
-tmp(38) := JSR & '0' & x"33"; -- Efetua o Jump (Address[51])
+tmp(45) := LDA & R0 & '1' & x"60"; -- Pega o Valor de key 0
+tmp(46) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(47) := JEQ & R0 & '0' & x"27"; -- Efetua o Jump (Address[39]) quando for igual a 0
+tmp(48) := JSR & R0 & '0' & x"33"; -- Efetua o Jump (Address[51])
 
 --Checando Key 1
-tmp(39) := LDA & '1' & x"61"; -- Pega o Valor da key 1
-tmp(40) := CEQ & '0' & x"0A"; -- Compara com 0
-tmp(41) := JEQ & '0' & x"2C"; -- Efetua o Jump (Address[44]) quando for igual a 0
-tmp(42) := JSR & '0' & x"9A"; -- Efetua o Jump (Address[154])
-tmp(43) := NOP & '0' & x"00"; 
-tmp(44) := JSR & '0' & x"7E"; -- Efetua o Jump (Address[126])
+tmp(49) := LDA & R0 & '1' & x"61"; -- Pega o Valor da key 1
+tmp(50) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(51) := JEQ & R0 & '0' & x"2C"; -- Efetua o Jump (Address[44]) quando for igual a 0
+tmp(52) := JSR & R0 & '0' & x"9A"; -- Efetua o Jump (Address[154])
+tmp(53) := NOP & R0 & '0' & x"00"; 
+--tmp(54) := JSR & '0' & x"7E"; -- Efetua o Jump (Address[126])
 
 --Checando Key FPGA-Reset
-tmp(45) := LDA & '1' & x"64"; -- Observa o valor do FPGA-Reset
-tmp(46) := CEQ & '0' & x"0B"; -- Compara com 1    
-tmp(47) := JEQ & '0' & x"31"; -- Efetua o Jump (Address[49]) quando for igual a 1
-tmp(48) := JSR & '0' & x"66"; -- Efetua o Jump (Address[102])
-tmp(49) := JSR & '0' & x"71"; -- Efetua o Jump (Address[113])
-tmp(50) := JMP & '0' & x"1E"; -- Efetua o Jump (Address[31])
+tmp(54) := LDA & R0 & '1' & x"64"; -- Observa o valor do FPGA-Reset
+tmp(55) := CEQ & R0 & '0' & x"0B"; -- Compara com 1    
+tmp(56) := JEQ & R0 & '0' & x"31"; -- Efetua o Jump (Address[49]) quando for igual a 1
+tmp(57) := JSR & R0 & '0' & x"66"; -- Efetua o Jump (Address[102])
+tmp(58) := JSR & R0 & '0' & x"71"; -- Efetua o Jump (Address[113])
+tmp(59) := JMP & R0 & '0' & x"1E"; -- Efetua o Jump (Address[31])
 
 -- Loop Key 0 
-tmp(51) := STA & '1' & x"FF"; -- Zerar KEY0    
+tmp(60) := STA & R0 & '1' & x"FF"; -- Zerar KEY0    
 
 -- Incremento unidade segundo
 tmp(52) := LDA & '0' & x"00"; -- Pega o Valor unidade segundo
