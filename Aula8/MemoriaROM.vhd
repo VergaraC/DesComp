@@ -129,7 +129,6 @@ tmp(40) := STA & R0 & '0' & x"19"; -- seta limite dezena hora como 2
 -- Loop Keys 
 -- Checando Flag Contador (6 na RAM) 
 
--- MUDAR OS END DOS JUMPS ------------------------------------------------------------------------------------------------------------------------
 tmp(41) := NOP & R0 & '0' & x"00";
 tmp(42) := LDA & R0 & '0' & x"06"; -- Pega o Valor da Flag
 tmp(43) := CEQ & R0 & '0' & x"0B"; -- Compara com 1
@@ -144,18 +143,18 @@ tmp(48) := JSR & R0 & '0' & x"3C"; -- Efetua o Jump (Address[60])
 --Checando Key 1
 tmp(49) := LDA & R0 & '1' & x"61"; -- Pega o Valor da key 1
 tmp(50) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(51) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[54]) quando for igual a 0
-tmp(52) := JSR & R0 & '0' & x""; -- Efetua o Jump (Address[168])
+tmp(51) := JEQ & R0 & '0' & x"36"; -- Efetua o Jump (Address[54]) quando for igual a 0
+tmp(52) := JSR & R0 & '0' & x"A8"; -- Efetua o Jump (Address[168])
 tmp(53) := NOP & R0 & '0' & x"00"; 
 --tmp(54) := JSR & '0' & x"7E"; -- Efetua o Jump (Address[126])
 
 --Checando Key FPGA-Reset
 tmp(54) := LDA & R0 & '1' & x"64"; -- Observa o valor do FPGA-Reset
 tmp(55) := CEQ & R0 & '0' & x"0B"; -- Compara com 1    
-tmp(56) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[58]) quando for igual a 1
-tmp(57) := JSR & R0 & '0' & x""; -- Efetua o Jump (Address[116])
-tmp(58) := JSR & R0 & '0' & x""; -- Efetua o Jump (Address[127])
-tmp(59) := JMP & R0 & '0' & x""; -- Efetua o Jump (Address[41])
+tmp(56) := JEQ & R0 & '0' & x"3A"; -- Efetua o Jump (Address[58]) quando for igual a 1
+tmp(57) := JSR & R0 & '0' & x"74"; -- Efetua o Jump (Address[116])
+tmp(58) := JSR & R0 & '0' & x"7F"; -- Efetua o Jump (Address[127])
+tmp(59) := JMP & R0 & '0' & x"29"; -- Efetua o Jump (Address[41])
 
 -- Loop Key 0 
 tmp(60) := STA & R0 & '1' & x"FF"; -- Zerar KEY0    
@@ -165,7 +164,7 @@ tmp(61) := LDA & R0 & '0' & x"00"; -- Pega o Valor unidade segundo
 tmp(62) := SOMA & R0 & '0' & x"0B"; -- Soma 1 
 tmp(63) := STA & R0 & '0' & x"00"; -- Guarda no mesmo lugar
 tmp(64) := CEQ & R0 & '0' & x"0D"; -- Compara com 10
-tmp(65) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[67])
+tmp(65) := JEQ & R0 & '0' & x"43"; -- Efetua o Jump (Address[67])
 tmp(66) := RET & R0 & '0' & x"00"; -- Return    
 
 -- Incremento dezena segundo
@@ -175,7 +174,7 @@ tmp(69) := LDA & R0 & '0' & x"01"; -- Pega o Valor dezena segundo
 tmp(70) := SOMA & R0 & '0' & x"0B"; -- Soma 1 
 tmp(71) := STA & R0 & '0' & x"01"; -- Guarda no mesmo lugar
 tmp(72) := CEQ & R0 & '0' & x"0E"; -- Compara com 6
-tmp(73) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[75])
+tmp(73) := JEQ & R0 & '0' & x"4B"; -- Efetua o Jump (Address[75])
 tmp(74) := RET & R0 & '0' & x"00"; -- Return
 
 -- Incremento unidade minuto
@@ -185,7 +184,7 @@ tmp(77) := LDA & R0 & '0' & x"02"; -- Pega o Valor unidade minuto
 tmp(78) := SOMA & R0 & '0' & x"0B"; -- Soma 1 
 tmp(79) := STA & R0 & '0' & x"02"; -- Guarda no mesmo lugar
 tmp(80) := CEQ & R0 & '0' & x"0D"; -- Compara com 10
-tmp(81) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[83]) quando for igual a 10
+tmp(81) := JEQ & R0 & '0' & x"53"; -- Efetua o Jump (Address[83]) quando for igual a 10
 tmp(82) := RET & R0 & '0' & x"00"; -- Return    
 
 -- Incremento dezena minuto
@@ -195,7 +194,7 @@ tmp(85) := LDA & R0 & '0' & x"03"; -- Pega o Valor dezena minuto
 tmp(86) := SOMA & R0 & '0' & x"0B"; -- Soma 1 
 tmp(87) := STA & R0 & '0' & x"03"; -- Guarda no mesmo lugar
 tmp(88) := CEQ & R0 & '0' & x"0E"; -- Compara com 6
-tmp(89) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[91]) quando for igual a 10
+tmp(89) := JEQ & R0 & '0' & x"5B"; -- Efetua o Jump (Address[91]) quando for igual a 10
 tmp(90) := RET & R0 & '0' & x"00"; -- Return
 
 -- Incremento unidade hora
@@ -205,10 +204,10 @@ tmp(93) := LDA & R0 & '0' & x"04"; -- Pega o Valor unidade hora
 tmp(94) := SOMA & R0 & '0' & x"0B"; -- Soma 1
 tmp(95) := STA & R0 & '0' & x"04"; -- Guarda no mesmo lugar
 tmp(96) := CEQ & R0 & '0' & x"0F"; -- Compara com 4
-tmp(97) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[108]) quando for igual a 4
+tmp(97) := JEQ & R0 & '0' & x"6C"; -- Efetua o Jump (Address[108]) quando for igual a 4
 tmp(98) := LDA & R0 & '0' & x"04"; -- Pega Address[4]
 tmp(99) := CEQ & R0 & '0' & x"0D"; -- Compara com 10
-tmp(100) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[102]) quando for igual a 10
+tmp(100) := JEQ & R0 & '0' & x"66"; -- Efetua o Jump (Address[102]) quando for igual a 10
 tmp(101) := RET & R0 & '0' & x"00"; -- Return
 
 -- Incremento dezena hora
@@ -221,7 +220,7 @@ tmp(107) := RET & R0 & '0' & x"00"; -- Return
 
 tmp(108) := LDA & R0 & '0' & x"05"; -- Pega o Valor dezena hora
 tmp(109) := CEQ & R0 & '0' & x"10"; -- Compara com 2
-tmp(110) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[112]) quando for igual a 2
+tmp(110) := JEQ & R0 & '0' & x"70"; -- Efetua o Jump (Address[112]) quando for igual a 2
 tmp(111) := RET & R0 & '0' & x"00"; -- Return    
 
 -- Liga LEDs
@@ -258,44 +257,8 @@ tmp(137) := LDA & R2 & '0' & x"05"; -- Pega o Valor dezena hora
 tmp(138) := STA & R2 & '1' & x"25"; -- Salva no HEX5    
 tmp(139) := RET & R0 & '0' & x"00"; -- Return
 
---checando limites
-tmp(140) := LDA & R0 & '0' & x"14"; -- Carrega limite unidade segundo
-tmp(141) := CEQ & R0 & '0' & x"00"; -- Compara unidade segundo e o seu limite
-tmp(142) := JEQ & R0 & '0' & x""; -- Efetua o Jump (Address[])                PAREI AQUI!!!!!!!!!!!!!!!!!
-tmp(143) := RET & R0 & '0' & x"00"; -- Return
-
-tmp(144) := LDA & R0 & '0' & x"15"; -- Carrega limite dezena segundo
-tmp(145) := CEQ & R0 & '0' & x"01"; -- Compara dezena segundo e o seu limite
-tmp(146) := JEQ & R0 & '0' & x"86"; -- Efetua o Jump (Address[134])
-tmp(147) := RET & R0 & '0' & x"00"; -- Return
-
-tmp(148) := LDA & R0 & '0' & x"16"; -- Carrega limite unidade minuto
-tmp(149) := CEQ & R0 & '0' & x"02"; -- Compara unidade minuto e o seu limite
-tmp(150) := JEQ & R0 & '0' & x"8A"; -- Efetua o Jump (Address[138])
-tmp(151) := RET & R0 & '0' & x"00"; -- Return
-
-tmp(152) := LDA & R0 & '0' & x"17"; -- Carrega limite dezena minuto
-tmp(153) := CEQ & R0 & '0' & x"03"; -- Compara dezena minuto e o seu limite
-tmp(154) := JEQ & R0 & '0' & x"8E"; -- Efetua o Jump (Address[142])
-tmp(155) := RET & R0 & '0' & x"00"; -- Return
-
-tmp(156) := LDA & R0 & '0' & x"18"; -- Carrega limite unidade hora
-tmp(157) := CEQ & R0 & '0' & x"04"; -- Compara unidade hora e o seu limite
-tmp(158) := JEQ & R0 & '0' & x"92"; -- Efetua o Jump (Address[146])
-tmp(159) := RET & R0 & '0' & x"00"; -- Return 
-
-tmp(160) := LDA & R0 & '0' & x"19"; -- Carrega limite dezena hora
-tmp(161) := CEQ & R0 & '0' & x"05"; -- Compara dezena hora e o seu limite
-tmp(162) := JEQ & R0 & '0' & x"96"; -- Efetua o Jump (Address[150])
-tmp(163) := RET & R0 & '0' & x"00"; -- Return
-
-tmp(164) := LDA & R0 & '0' & x"0B"; -- Carrega Address[11]
-tmp(165) := STA & R0 & '0' & x"06"; -- Ativa Flag Contador
-tmp(166) := STA & R0 & '1' & x"01"; -- Ativa o LED 9
-tmp(167) := RET & R0 & '0' & x"00"; -- Return    
 
 -- Definindo limites
-
 --unidade segundo
 tmp(168) := STA & R0 & '1' & x"FE"; -- Zera Key 1
 tmp(169) := LDI & R3 & '0' & x"01"; -- Pega 1 
@@ -303,7 +266,7 @@ tmp(170) := STA & R3 & '1' & x"00"; -- Ativa o LED 0
 tmp(171) := LDA & R0 & '1' & x"61"; -- Pega Key 1
 tmp(172) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(173) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(174) := JEQ & R0 & '0' & x"9B"; -- Efetua o Jump (Address[155]) quando for igual a 0
+tmp(174) := JEQ & R0 & '0' & x"A9"; -- Efetua o Jump (Address[169]) quando for igual a 0
 tmp(175) := STA & R1 & '0' & x"00"; -- Guarda limite unidade segundo    
 
 -- dezena segundo
@@ -313,7 +276,7 @@ tmp(178) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-1)
 tmp(179) := LDA & R0 & '1' & x"61"; -- Pega a Key 1
 tmp(180) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(181) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(182) := JEQ & R0 & '0' & x"A3"; -- Efetua o Jump (Address[163]) quando for igual a 0
+tmp(182) := JEQ & R0 & '0' & x"B1"; -- Efetua o Jump (Address[177]) quando for igual a 0
 tmp(183) := STA & R1 & '0' & x"01"; -- Guarda limite dezena segundo 
 
 -- unidade minuto
@@ -323,7 +286,7 @@ tmp(186) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-2)
 tmp(187) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
 tmp(188) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(189) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(190) := JEQ & R0 & '0' & x"AB"; -- Efetua o Jump (Address[171]) quando for igual a 0
+tmp(190) := JEQ & R0 & '0' & x"B9"; -- Efetua o Jump (Address[185]) quando for igual a 0
 tmp(191) := STA & R1 & '0' & x"02"; -- Armazena novo limite para unidade minuto
 
 -- dezena minuto
@@ -333,7 +296,7 @@ tmp(194) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-3)
 tmp(195) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
 tmp(196) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(197) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(198) := JEQ & R0 & '0' & x"B3"; -- Efetua o Jump (Address[179]) quando for igual a 0
+tmp(198) := JEQ & R0 & '0' & x"C1"; -- Efetua o Jump (Address[193]) quando for igual a 0
 tmp(199) := STA & R1 & '0' & x"03"; -- Armazena novo limite para dezena minuto
 
 -- unidade hora  
@@ -343,7 +306,7 @@ tmp(202) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-4)
 tmp(203) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
 tmp(204) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(205) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(206) := JEQ & R0 & '0' & x"BB"; -- Efetua o Jump (Address[187]) quando for igual a 0
+tmp(206) := JEQ & R0 & '0' & x"C9"; -- Efetua o Jump (Address[201]) quando for igual a 0
 tmp(207) := STA & R1 & '0' & x"04"; -- Armazena novo limite para unidade hora
 
 -- dezena hora 
@@ -353,7 +316,7 @@ tmp(210) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-5)
 tmp(211) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
 tmp(212) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(213) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(214) := JEQ & R0 & '0' & x"C3"; -- Efetua o Jump (Address[195]) quando for igual a 0
+tmp(214) := JEQ & R0 & '0' & x"D1"; -- Efetua o Jump (Address[209]) quando for igual a 0
 tmp(215) := STA & R1 & '0' & x"05"; -- Armazena novo limite para dezena hora
 
 
