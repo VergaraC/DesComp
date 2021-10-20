@@ -36,7 +36,6 @@ architecture arquitetura of Projeto2 is
 begin
 
 
-
 CLK <= CLOCK_50;
 				
 		  

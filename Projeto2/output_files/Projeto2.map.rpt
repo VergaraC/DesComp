@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto2
-Wed Oct 20 16:05:18 2021
+Wed Oct 20 16:29:58 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -53,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 20 16:05:18 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 20 16:29:58 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Projeto2                                    ;
 ; Top-level Entity Name           ; Projeto2                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 6                                           ;
 ; Total pins                      ; 99                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -169,25 +169,27 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd ;         ;
-; MemoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd                  ;         ;
-; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd         ;         ;
-; UlaSomaSub.vhd                   ; yes             ; User VHDL File  ; /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd                  ;         ;
-; SomaConstante.vhd                ; yes             ; User VHDL File  ; /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd               ;         ;
-; Projeto2.vhd                     ; yes             ; User VHDL File  ; /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd                    ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd ;         ;
+; MemoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd                  ;         ;
+; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd         ;         ;
+; UlaSomaSub.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd                  ;         ;
+; SomaConstante.vhd                ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd               ;         ;
+; Projeto2.vhd                     ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd                    ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------+
@@ -195,16 +197,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 17                ;
+; Estimate of Logic utilization (ALMs needed) ; 21                ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 33                ;
+; Combinational ALUT usage for logic          ; 40                ;
 ;     -- 7 input functions                    ; 0                 ;
-;     -- 6 input functions                    ; 0                 ;
+;     -- 6 input functions                    ; 1                 ;
 ;     -- 5 input functions                    ; 0                 ;
 ;     -- 4 input functions                    ; 0                 ;
-;     -- <=3 input functions                  ; 33                ;
+;     -- <=3 input functions                  ; 39                ;
 ;                                             ;                   ;
-; Dedicated logic registers                   ; 0                 ;
+; Dedicated logic registers                   ; 6                 ;
 ;                                             ;                   ;
 ; I/O pins                                    ; 99                ;
 ;                                             ;                   ;
@@ -212,19 +214,22 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; Seletor_ULA~input ;
 ; Maximum fan-out                             ; 33                ;
-; Total fan-out                               ; 196               ;
-; Average fan-out                             ; 0.85              ;
+; Total fan-out                               ; 235               ;
+; Average fan-out                             ; 0.96              ;
 +---------------------------------------------+-------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
-; |Projeto2                  ; 33 (0)              ; 0 (0)                     ; 0                 ; 0          ; 99   ; 0            ; |Projeto2                 ; Projeto2    ; work         ;
-;    |ULASomaSub:ULA1|       ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto2|ULASomaSub:ULA1 ; ULASomaSub  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name         ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+---------------------+--------------+
+; |Projeto2                    ; 40 (0)              ; 6 (0)                     ; 0                 ; 0          ; 99   ; 0            ; |Projeto2                         ; Projeto2            ; work         ;
+;    |MemoriaROM:ROM1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto2|MemoriaROM:ROM1         ; MemoriaROM          ; work         ;
+;    |ULASomaSub:ULA1|         ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto2|ULASomaSub:ULA1         ; ULASomaSub          ; work         ;
+;    |registradorGenerico:PC|  ; 1 (1)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto2|registradorGenerico:PC  ; registradorGenerico ; work         ;
+;    |somaConstante:somaConst| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto2|somaConstante:somaConst ; somaConstante       ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1258,76 +1263,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~67   ; Lost fanout                            ;
 ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~68   ; Lost fanout                            ;
 ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~69   ; Lost fanout                            ;
-; registradorGenerico:PC|DOUT[2..7]                                ; Lost fanout                            ;
-; Total Number of Removed Registers = 1054                         ;                                        ;
+; Total Number of Removed Registers = 1048                         ;                                        ;
 +------------------------------------------------------------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
-+-----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------+
-; Register name                                                   ; Reason for Removal        ; Registers Removed due to This Register                          ;
-+-----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------+
-; registradorGenerico:PC|DOUT[8]                                  ; Lost Fanouts              ; registradorGenerico:PC|DOUT[6], registradorGenerico:PC|DOUT[5], ;
-;                                                                 ;                           ; registradorGenerico:PC|DOUT[4]                                  ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~38  ; Lost Fanouts              ; registradorGenerico:PC|DOUT[3], registradorGenerico:PC|DOUT[2]  ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~121 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~57  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~133 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~69  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~132 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~68  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~131 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~67  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~130 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~66  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~129 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~65  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~128 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~64  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~127 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~63  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~126 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~62  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~125 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~61  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~124 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~60  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~123 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~59  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~122 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~58  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~102 ; Stuck at GND              ; registradorGenerico:PC|DOUT[7]                                  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~120 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~56  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~119 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~55  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~118 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~54  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~117 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~53  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~116 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~52  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~115 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~51  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~114 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~50  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~113 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~49  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~112 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~48  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~111 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~47  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~110 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~46  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~109 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~45  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~108 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~44  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~299 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~43  ;
-;                                                                 ; due to stuck port data_in ;                                                                 ;
-+-----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                  ;
++-----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal        ; Registers Removed due to This Register                         ;
++-----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~120 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~56 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~133 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~69 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~132 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~68 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~131 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~67 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~130 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~66 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~129 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~65 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~128 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~64 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~127 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~63 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~126 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~62 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~125 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~61 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~124 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~60 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~123 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~59 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~122 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~58 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~121 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~57 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~299 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~43 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~119 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~55 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~118 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~54 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~117 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~53 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~116 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~52 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~115 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~51 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~114 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~50 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~113 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~49 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~112 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~48 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~111 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~47 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~110 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~46 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~109 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~45 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
+; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~108 ; Stuck at GND              ; bancoRegistradoresArqRegMem:Banco_Registradores|registrador~44 ;
+;                                                                 ; due to stuck port data_in ;                                                                ;
++-----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1335,7 +1334,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -1436,15 +1435,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 34                          ;
-;     arith             ; 33                          ;
+; arriav_ff             ; 6                           ;
+;     plain             ; 6                           ;
+; arriav_lcell_comb     ; 41                          ;
+;     arith             ; 38                          ;
 ;         1 data inputs ; 33                          ;
-;     normal            ; 1                           ;
+;         2 data inputs ; 5                           ;
+;     normal            ; 3                           ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         6 data inputs ; 1                           ;
 ; boundary_port         ; 99                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 3.38                        ;
+; Average LUT depth     ; 3.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1463,119 +1467,113 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 20 16:05:04 2021
+    Info: Processing started: Wed Oct 20 16:29:50 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
-    Info (12022): Found design unit 1: MemoriaROM-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: MemoriaROM File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 6
+    Info (12022): Found design unit 1: MemoriaROM-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: MemoriaROM File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file UlaSomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 14
-    Info (12023): Found entity 1: ULASomaSub File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd Line: 14
+    Info (12023): Found entity 1: ULASomaSub File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SomaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Projeto2.vhd
-    Info (12022): Found design unit 1: Projeto2-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 24
-    Info (12023): Found entity 1: Projeto2 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 5
+    Info (12022): Found design unit 1: Projeto2-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 24
+    Info (12023): Found entity 1: Projeto2 File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 5
 Info (12127): Elaborating entity "Projeto2" for the top level hierarchy
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 43
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaConst" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 47
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA1" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 50
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "bancoRegistradoresArqRegMem:Banco_Registradores" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 53
-Info (12128): Elaborating entity "MemoriaROM" for hierarchy "MemoriaROM:ROM1" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 57
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 42
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaConst" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 46
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA1" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 49
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "bancoRegistradoresArqRegMem:Banco_Registradores" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 52
+Info (12128): Elaborating entity "MemoriaROM" for hierarchy "MemoriaROM:ROM1" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 56
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276004): RAM logic "MemoriaROM:ROM1|memROM" is uninferred due to inappropriate RAM size File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 36
-    Info (276007): RAM logic "bancoRegistradoresArqRegMem:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 43
+    Info (276004): RAM logic "MemoriaROM:ROM1|memROM" is uninferred due to inappropriate RAM size File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 36
+    Info (276007): RAM logic "bancoRegistradoresArqRegMem:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 43
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "A[0]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[1]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[2]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[3]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[4]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[5]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[6]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[7]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[8]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[9]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[10]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[11]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[12]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[13]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[14]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[15]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[16]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[17]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[18]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[19]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[20]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[21]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[22]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[23]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[24]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[25]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[26]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[27]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[28]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[29]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[30]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "A[31]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 16
-    Warning (13410): Pin "B[0]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[1]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[2]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[3]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[4]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[5]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[6]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[7]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[8]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[9]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[10]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[11]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[12]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[13]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[14]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[15]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[16]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[17]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[18]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[19]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[20]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[21]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[22]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[23]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[24]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[25]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[26]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[27]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[28]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[29]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[30]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-    Warning (13410): Pin "B[31]" is stuck at GND File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 17
-Info (17049): 958 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "A[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[6]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[7]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[8]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[9]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[10]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[11]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[12]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[13]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[14]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[15]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[16]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[17]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[18]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[19]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[20]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[21]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[22]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[23]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[24]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[25]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[26]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "A[27]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 16
+    Warning (13410): Pin "B[0]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[1]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[2]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[3]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[4]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[5]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[6]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[7]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[8]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[9]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[10]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[11]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[12]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[13]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[14]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[15]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[16]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[17]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[18]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[19]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[20]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[21]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[22]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[23]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[24]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[25]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[26]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[27]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[28]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+    Warning (13410): Pin "B[29]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 17
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 952 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 13
-    Warning (15610): No output dependent on input pin "Wr3" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 14
-Info (21057): Implemented 132 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Wr3" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 14
+Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 475 megabytes
-    Info: Processing ended: Wed Oct 20 16:05:18 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:38
+    Info (21061): Implemented 40 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 497 megabytes
+    Info: Processing ended: Wed Oct 20 16:29:58 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

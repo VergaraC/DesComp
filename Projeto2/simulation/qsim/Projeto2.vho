@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "10/20/2021 16:12:23"
+-- DATE "10/20/2021 16:30:20"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -27,9 +27,11 @@
 -- This VHDL file should be used for ModelSim-Altera (VHDL) only
 -- 
 
+LIBRARY ALTERA;
 LIBRARY ALTERA_LNSIM;
 LIBRARY CYCLONEV;
 LIBRARY IEEE;
+USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE ALTERA_LNSIM.ALTERA_LNSIM_COMPONENTS.ALL;
 USE CYCLONEV.CYCLONEV_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -39,9 +41,9 @@ ENTITY 	Projeto2 IS
 	CLOCK_50 : IN std_logic;
 	Wr3 : IN std_logic;
 	Seletor_ULA : IN std_logic;
-	A : BUFFER std_logic_vector(31 DOWNTO 0);
-	B : BUFFER std_logic_vector(31 DOWNTO 0);
-	OutULA : BUFFER std_logic_vector(31 DOWNTO 0)
+	A : OUT std_logic_vector(31 DOWNTO 0);
+	B : OUT std_logic_vector(31 DOWNTO 0);
+	OutULA : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END Projeto2;
 
@@ -61,7 +63,6 @@ SIGNAL ww_Seletor_ULA : std_logic;
 SIGNAL ww_A : std_logic_vector(31 DOWNTO 0);
 SIGNAL ww_B : std_logic_vector(31 DOWNTO 0);
 SIGNAL ww_OutULA : std_logic_vector(31 DOWNTO 0);
-SIGNAL \CLOCK_50~input_o\ : std_logic;
 SIGNAL \Wr3~input_o\ : std_logic;
 SIGNAL \A[0]~output_o\ : std_logic;
 SIGNAL \A[1]~output_o\ : std_logic;
@@ -159,6 +160,18 @@ SIGNAL \OutULA[28]~output_o\ : std_logic;
 SIGNAL \OutULA[29]~output_o\ : std_logic;
 SIGNAL \OutULA[30]~output_o\ : std_logic;
 SIGNAL \OutULA[31]~output_o\ : std_logic;
+SIGNAL \CLOCK_50~input_o\ : std_logic;
+SIGNAL \PC|DOUT[2]~0_combout\ : std_logic;
+SIGNAL \somaConst|Add0~17_sumout\ : std_logic;
+SIGNAL \somaConst|Add0~18\ : std_logic;
+SIGNAL \somaConst|Add0~13_sumout\ : std_logic;
+SIGNAL \somaConst|Add0~14\ : std_logic;
+SIGNAL \somaConst|Add0~9_sumout\ : std_logic;
+SIGNAL \somaConst|Add0~10\ : std_logic;
+SIGNAL \somaConst|Add0~5_sumout\ : std_logic;
+SIGNAL \somaConst|Add0~6\ : std_logic;
+SIGNAL \somaConst|Add0~1_sumout\ : std_logic;
+SIGNAL \ROM1|memROM~0_combout\ : std_logic;
 SIGNAL \Seletor_ULA~input_o\ : std_logic;
 SIGNAL \ULA1|Add0~130_cout\ : std_logic;
 SIGNAL \ULA1|Add0~1_sumout\ : std_logic;
@@ -224,6 +237,9 @@ SIGNAL \ULA1|Add0~118\ : std_logic;
 SIGNAL \ULA1|Add0~121_sumout\ : std_logic;
 SIGNAL \ULA1|Add0~122\ : std_logic;
 SIGNAL \ULA1|Add0~125_sumout\ : std_logic;
+SIGNAL \PC|DOUT\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
+SIGNAL \PC|ALT_INV_DOUT\ : std_logic_vector(7 DOWNTO 2);
 SIGNAL \ALT_INV_Seletor_ULA~input_o\ : std_logic;
 
 BEGIN
@@ -237,6 +253,13 @@ OutULA <= ww_OutULA;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
+\PC|ALT_INV_DOUT\(2) <= NOT \PC|DOUT\(2);
+\PC|ALT_INV_DOUT\(3) <= NOT \PC|DOUT\(3);
+\PC|ALT_INV_DOUT\(4) <= NOT \PC|DOUT\(4);
+\PC|ALT_INV_DOUT\(5) <= NOT \PC|DOUT\(5);
+\PC|ALT_INV_DOUT\(6) <= NOT \PC|DOUT\(6);
+\PC|ALT_INV_DOUT\(7) <= NOT \PC|DOUT\(7);
 \ALT_INV_Seletor_ULA~input_o\ <= NOT \Seletor_ULA~input_o\;
 
 \A[0]~output\ : cyclonev_io_obuf
@@ -583,7 +606,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \ROM1|memROM~0_combout\,
 	devoe => ww_devoe,
 	o => \A[28]~output_o\);
 
@@ -595,7 +618,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \ROM1|memROM~0_combout\,
 	devoe => ww_devoe,
 	o => \A[29]~output_o\);
 
@@ -607,7 +630,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \ROM1|memROM~0_combout\,
 	devoe => ww_devoe,
 	o => \A[30]~output_o\);
 
@@ -619,7 +642,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \ROM1|memROM~0_combout\,
 	devoe => ww_devoe,
 	o => \A[31]~output_o\);
 
@@ -991,7 +1014,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \ROM1|memROM~0_combout\,
 	devoe => ww_devoe,
 	o => \B[30]~output_o\);
 
@@ -1003,7 +1026,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \ROM1|memROM~0_combout\,
 	devoe => ww_devoe,
 	o => \B[31]~output_o\);
 
@@ -1390,6 +1413,211 @@ PORT MAP (
 	i => \ULA1|Add0~125_sumout\,
 	devoe => ww_devoe,
 	o => \OutULA[31]~output_o\);
+
+\CLOCK_50~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_CLOCK_50,
+	o => \CLOCK_50~input_o\);
+
+\PC|DOUT[2]~0\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \PC|DOUT[2]~0_combout\ = !\PC|DOUT\(2)
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "1010101010101010101010101010101010101010101010101010101010101010",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PC|ALT_INV_DOUT\(2),
+	combout => \PC|DOUT[2]~0_combout\);
+
+\PC|DOUT[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLOCK_50~input_o\,
+	d => \PC|DOUT[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PC|DOUT\(2));
+
+\somaConst|Add0~17\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \somaConst|Add0~17_sumout\ = SUM(( \PC|DOUT\(2) ) + ( \PC|DOUT\(3) ) + ( !VCC ))
+-- \somaConst|Add0~18\ = CARRY(( \PC|DOUT\(2) ) + ( \PC|DOUT\(3) ) + ( !VCC ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111110000000000000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => \PC|ALT_INV_DOUT\(2),
+	dataf => \PC|ALT_INV_DOUT\(3),
+	cin => GND,
+	sumout => \somaConst|Add0~17_sumout\,
+	cout => \somaConst|Add0~18\);
+
+\PC|DOUT[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLOCK_50~input_o\,
+	d => \somaConst|Add0~17_sumout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PC|DOUT\(3));
+
+\somaConst|Add0~13\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \somaConst|Add0~13_sumout\ = SUM(( \PC|DOUT\(4) ) + ( GND ) + ( \somaConst|Add0~18\ ))
+-- \somaConst|Add0~14\ = CARRY(( \PC|DOUT\(4) ) + ( GND ) + ( \somaConst|Add0~18\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => \PC|ALT_INV_DOUT\(4),
+	cin => \somaConst|Add0~18\,
+	sumout => \somaConst|Add0~13_sumout\,
+	cout => \somaConst|Add0~14\);
+
+\PC|DOUT[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLOCK_50~input_o\,
+	d => \somaConst|Add0~13_sumout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PC|DOUT\(4));
+
+\somaConst|Add0~9\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \somaConst|Add0~9_sumout\ = SUM(( \PC|DOUT\(5) ) + ( GND ) + ( \somaConst|Add0~14\ ))
+-- \somaConst|Add0~10\ = CARRY(( \PC|DOUT\(5) ) + ( GND ) + ( \somaConst|Add0~14\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => \PC|ALT_INV_DOUT\(5),
+	cin => \somaConst|Add0~14\,
+	sumout => \somaConst|Add0~9_sumout\,
+	cout => \somaConst|Add0~10\);
+
+\PC|DOUT[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLOCK_50~input_o\,
+	d => \somaConst|Add0~9_sumout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PC|DOUT\(5));
+
+\somaConst|Add0~5\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \somaConst|Add0~5_sumout\ = SUM(( \PC|DOUT\(6) ) + ( GND ) + ( \somaConst|Add0~10\ ))
+-- \somaConst|Add0~6\ = CARRY(( \PC|DOUT\(6) ) + ( GND ) + ( \somaConst|Add0~10\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => \PC|ALT_INV_DOUT\(6),
+	cin => \somaConst|Add0~10\,
+	sumout => \somaConst|Add0~5_sumout\,
+	cout => \somaConst|Add0~6\);
+
+\PC|DOUT[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLOCK_50~input_o\,
+	d => \somaConst|Add0~5_sumout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PC|DOUT\(6));
+
+\somaConst|Add0~1\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \somaConst|Add0~1_sumout\ = SUM(( \PC|DOUT\(7) ) + ( GND ) + ( \somaConst|Add0~6\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => \PC|ALT_INV_DOUT\(7),
+	cin => \somaConst|Add0~6\,
+	sumout => \somaConst|Add0~1_sumout\);
+
+\PC|DOUT[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLOCK_50~input_o\,
+	d => \somaConst|Add0~1_sumout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PC|DOUT\(7));
+
+\ROM1|memROM~0\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \ROM1|memROM~0_combout\ = ( !\PC|DOUT\(3) & ( !\PC|DOUT\(2) & ( (!\PC|DOUT\(7) & (!\PC|DOUT\(6) & (!\PC|DOUT\(5) & !\PC|DOUT\(4)))) ) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "1000000000000000000000000000000000000000000000000000000000000000",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PC|ALT_INV_DOUT\(7),
+	datab => \PC|ALT_INV_DOUT\(6),
+	datac => \PC|ALT_INV_DOUT\(5),
+	datad => \PC|ALT_INV_DOUT\(4),
+	datae => \PC|ALT_INV_DOUT\(3),
+	dataf => \PC|ALT_INV_DOUT\(2),
+	combout => \ROM1|memROM~0_combout\);
 
 \Seletor_ULA~input\ : cyclonev_io_ibuf
 -- pragma translate_off
@@ -1894,16 +2122,17 @@ PORT MAP (
 
 \ULA1|Add0~113\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ULA1|Add0~113_sumout\ = SUM(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~110\ ))
--- \ULA1|Add0~114\ = CARRY(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~110\ ))
+-- \ULA1|Add0~113_sumout\ = SUM(( \ROM1|memROM~0_combout\ ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~110\ ))
+-- \ULA1|Add0~114\ = CARRY(( \ROM1|memROM~0_combout\ ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~110\ ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000000000000000000000",
+	lut_mask => "0000000000000000000000001111111100000000000000000101010101010101",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
+	dataa => \ROM1|ALT_INV_memROM~0_combout\,
 	dataf => \ALT_INV_Seletor_ULA~input_o\,
 	cin => \ULA1|Add0~110\,
 	sumout => \ULA1|Add0~113_sumout\,
@@ -1911,16 +2140,17 @@ PORT MAP (
 
 \ULA1|Add0~117\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ULA1|Add0~117_sumout\ = SUM(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~114\ ))
--- \ULA1|Add0~118\ = CARRY(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~114\ ))
+-- \ULA1|Add0~117_sumout\ = SUM(( \ROM1|memROM~0_combout\ ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~114\ ))
+-- \ULA1|Add0~118\ = CARRY(( \ROM1|memROM~0_combout\ ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~114\ ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000000000000000000000",
+	lut_mask => "0000000000000000000000001111111100000000000000000101010101010101",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
+	dataa => \ROM1|ALT_INV_memROM~0_combout\,
 	dataf => \ALT_INV_Seletor_ULA~input_o\,
 	cin => \ULA1|Add0~114\,
 	sumout => \ULA1|Add0~117_sumout\,
@@ -1928,16 +2158,17 @@ PORT MAP (
 
 \ULA1|Add0~121\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ULA1|Add0~121_sumout\ = SUM(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~118\ ))
--- \ULA1|Add0~122\ = CARRY(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~118\ ))
+-- \ULA1|Add0~121_sumout\ = SUM(( \ROM1|memROM~0_combout\ ) + ( !\ROM1|memROM~0_combout\ $ (\Seletor_ULA~input_o\) ) + ( \ULA1|Add0~118\ ))
+-- \ULA1|Add0~122\ = CARRY(( \ROM1|memROM~0_combout\ ) + ( !\ROM1|memROM~0_combout\ $ (\Seletor_ULA~input_o\) ) + ( \ULA1|Add0~118\ ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000000000000000000000",
+	lut_mask => "0000000000000000010101011010101000000000000000000101010101010101",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
+	dataa => \ROM1|ALT_INV_memROM~0_combout\,
 	dataf => \ALT_INV_Seletor_ULA~input_o\,
 	cin => \ULA1|Add0~118\,
 	sumout => \ULA1|Add0~121_sumout\,
@@ -1945,28 +2176,19 @@ PORT MAP (
 
 \ULA1|Add0~125\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ULA1|Add0~125_sumout\ = SUM(( GND ) + ( !\Seletor_ULA~input_o\ ) + ( \ULA1|Add0~122\ ))
+-- \ULA1|Add0~125_sumout\ = SUM(( \ROM1|memROM~0_combout\ ) + ( !\ROM1|memROM~0_combout\ $ (\Seletor_ULA~input_o\) ) + ( \ULA1|Add0~122\ ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000000000001111111100000000000000000000000000000000",
+	lut_mask => "0000000000000000010101011010101000000000000000000101010101010101",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
+	dataa => \ROM1|ALT_INV_memROM~0_combout\,
 	dataf => \ALT_INV_Seletor_ULA~input_o\,
 	cin => \ULA1|Add0~122\,
 	sumout => \ULA1|Add0~125_sumout\);
-
-\CLOCK_50~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_CLOCK_50,
-	o => \CLOCK_50~input_o\);
 
 \Wr3~input\ : cyclonev_io_ibuf
 -- pragma translate_off
