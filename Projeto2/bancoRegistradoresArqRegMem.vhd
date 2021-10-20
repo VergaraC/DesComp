@@ -2,7 +2,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-entity bancoRegistradores is
+entity bancoRegistradoresArqRegMem is
     generic(
         larguraDados        : natural := 32;
         larguraEndBancoRegs : natural := 5   
@@ -20,7 +20,7 @@ entity bancoRegistradores is
     );
 end entity;
 
-architecture comportamento of bancoRegistradores is
+architecture comportamento of bancoRegistradoresArqRegMem is
 
     subtype palavra_t is std_logic_vector((larguraDados-1) downto 0);
     type memoria_t is array(2**larguraEndBancoRegs-1 downto 0) of palavra_t;

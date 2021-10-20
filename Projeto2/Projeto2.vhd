@@ -13,9 +13,9 @@ entity Projeto2 is
     CLOCK_50 : in std_logic;
 	 Wr3: in std_logic;
 	 Seletor_ULA: in std_logic;
-	 A : std_logic_vector(larguraDados-1 downto 0);
-	 B : std_logic_vector(larguraDados-1 downto 0);
-    OutULA : std_logic_vector(larguraDados-1 downto 0)
+	 A: out std_logic_vector(larguraDados-1 downto 0);
+	 B: out std_logic_vector(larguraDados-1 downto 0);
+    OutULA: out std_logic_vector(larguraDados-1 downto 0)
 	 
   );
 end entity;
@@ -44,7 +44,7 @@ PC : entity work.registradorGenerico   generic map (larguraDados => larguraDados
           port map (DIN => SomadorPC, DOUT => PC_ROM, ENABLE => '1', CLK => CLK, RST => '0');
 
 			 
-somaUm :  entity work.somaConstante  generic map (larguraDados => larguraDados, constante => 4)
+somaConst :  entity work.somaConstante  generic map (larguraDados => larguraDados, constante => 4)
           port map( entrada => PC_ROM, saida => SomadorPC);
 
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
@@ -52,10 +52,11 @@ ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
 
 Banco_Registradores : entity work.bancoRegistradoresArqRegMem  generic map (larguraDados => larguraDados, larguraEndBancoRegs => larguraAddrBanco)
 			 port map ( clk => CLK, A => Instruction(15 downto 11), B => Instruction(20 downto 16),C => Instruction(25 downto 21), DadosC => ULA_Out,
-				 FlagC => Wr_R3, A_Out => BancoULA_A, B_Out => BancoULA_B);
+				 FlagC => Wr3, A_Out => BancoULA_A, B_Out => BancoULA_B);
 		 
-ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDadosROM, addrWidth => larguraAddrROM)
+ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDados, addrWidth => larguraDados )
 		 port map (
+			 clk => CLK,
 			 Endereco => PC_ROM,
 			 Dado => Instruction
 		 );
