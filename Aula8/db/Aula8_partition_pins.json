@@ -80,10 +80,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ROM_Saida[9]",
-					"strict" : false
-				},
-				{
 					"name" : "ROM_Saida[10]",
 					"strict" : false
 				},
@@ -380,11 +376,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[8]",
+					"name" : "SW[9]",
 					"strict" : false
 				},
 				{
@@ -396,7 +392,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[9]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
@@ -429,6 +425,10 @@
 				},
 				{
 					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
 					"strict" : false
 				}
 			]

@@ -116,7 +116,7 @@ architecture arquitetura of Aula8 is
 
 begin
 
--- Para simular, fica mais simples tirar o edgeDetector
+--Para simular, fica mais simples tirar o edgeDetector
 --gravar:  if simulacao generate
 --CLK <= KEY(0);
 --else generate
@@ -269,7 +269,7 @@ DEBOUNCE_KEY1 : entity work.DebounceMemorizacao
 divisor : entity work.divisorGenerico generic map (divisor => 25000000)   
         port map (clk => CLOCK_50, saida_clk => Divisor_MUX_A);
 				
-divisorRapido : entity work.divisorGenerico generic map (divisor => 8000)   -- PRECISA MUDAR DIVISOR
+divisorRapido : entity work.divisorGenerico generic map (divisor => 10000)
         port map (clk => CLOCK_50, saida_clk => DivisorRapido_MUX_B);
 					
 MUX_RELOGIO :  entity work.muxGenerico1x1  generic map (larguraDados => 1)
