@@ -86,8 +86,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 8A        :                
 GND                          : A11       : gnd    :                   :         :           :                
-RAM_Saida[1]                 : A12       : output : 2.5 V             :         : 7A        : N              
-ROM_Saida[10]                : A13       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7A        :                
+ROM_Saida[2]                 : A13       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7A        :                
 VCCIO7A                      : A16       : power  :                   : 2.5V    : 7A        :                
@@ -145,15 +145,15 @@ GND                          : B1        : gnd    :                   :         
 GND                          : B2        : gnd    :                   :         :           :                
 DNU                          : B3        :        :                   :         :           :                
 DNU                          : B4        :        :                   :         :           :                
-A0_A8[4]                     : B5        : output : 2.5 V             :         : 8A        : N              
+ROM_Saida[14]                : B5        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8A        :                
 VREFB8AN0                    : B8        : power  :                   :         : 8A        :                
 GND                          : B9        : gnd    :                   :         :           :                
-Address[4]                   : B10       : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7A        :                
-ROM_Saida[6]                 : B12       : output : 2.5 V             :         : 7A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 8A        :                
+ROM_Saida[7]                 : B11       : output : 2.5 V             :         : 7A        : N              
+A0_A8[6]                     : B12       : output : 2.5 V             :         : 7A        : N              
+A0_A8[3]                     : B13       : output : 2.5 V             :         : 7A        : N              
 GND                          : B14       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 7A        :                
@@ -171,11 +171,11 @@ GND                          : C5        :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8A        :                
 VCCIO8A                      : C7        : power  :                   : 2.5V    : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8A        :                
-ROM_Saida[3]                 : C9        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 8A        :                
 VCCPD7A8A                    : C10       : power  :                   : 2.5V    : 7A, 8A    :                
-Address[1]                   : C11       : output : 2.5 V             :         : 7A        : N              
+Address[2]                   : C11       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : C12       : power  :                   : 2.5V    : 7A        :                
-Address[7]                   : C13       : output : 2.5 V             :         : 7A        : N              
+A0_A8[8]                     : C13       : output : 2.5 V             :         : 7A        : N              
 VREFB7AN0                    : C14       : power  :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7A        :                
@@ -196,12 +196,12 @@ VCCPD7A8A                    : D8        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8A        :                
 GND                          : D10       : gnd    :                   :         :           :                
 VCC_AUX                      : D11       : power  :                   : 2.5V    :           :                
-ROM_Saida[0]                 : D12       : output : 2.5 V             :         : 7A        : N              
-A0_A8[7]                     : D13       : output : 2.5 V             :         : 7A        : N              
+Address[0]                   : D12       : output : 2.5 V             :         : 7A        : N              
+ROM_Saida[6]                 : D13       : output : 2.5 V             :         : 7A        : N              
 VCCPD7A8A                    : D14       : power  :                   : 2.5V    : 7A, 8A    :                
 VCCIO7A                      : D15       : power  :                   : 2.5V    : 7A        :                
 VCCPD7A8A                    : D16       : power  :                   : 2.5V    : 7A, 8A    :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7A        :                
+RAM_Saida[0]                 : D17       : output : 2.5 V             :         : 7A        : N              
 VCC_AUX                      : D18       : power  :                   : 2.5V    :           :                
 NC                           : D19       :        :                   :         :           :                
 GND                          : D20       : gnd    :                   :         :           :                
@@ -218,11 +218,11 @@ VCCIO8A                      : E8        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8A        :                
 VCCPD7A8A                    : E11       : power  :                   : 2.5V    : 7A, 8A    :                
-ROM_Saida[14]                : E12       : output : 2.5 V             :         : 7A        : N              
+A0_A8[7]                     : E12       : output : 2.5 V             :         : 7A        : N              
 GND                          : E13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7A        :                
-Address[8]                   : E15       : output : 2.5 V             :         : 7A        : N              
-ROM_Saida[9]                 : E16       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7A        :                
+ROM_Saida[4]                 : E16       : output : 2.5 V             :         : 7A        : N              
 DNU                          : E17       :        :                   :         :           :                
 VCCIO7A                      : E18       : power  :                   : 2.5V    : 7A        :                
 NC                           : E19       :        :                   :         :           :                
@@ -238,10 +238,10 @@ GND                          : F6        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8A        :                
 VCCPGM                       : F8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8A        :                
-ROM_Saida[1]                 : F10       : output : 2.5 V             :         : 8A        : N              
+Address[1]                   : F10       : output : 2.5 V             :         : 8A        : N              
 VCCIO7A                      : F11       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F12       :        :                   :         : 7A        :                
-ROM_Saida[7]                 : F13       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7A        :                
 GND                          : F16       : gnd    :                   :         :           :                
@@ -258,16 +258,16 @@ GND                          : G4        : gnd    :                   :         
 nCE                          : G5        :        :                   :         : 9A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 8A        :                
 VCCIO8A                      : G7        : power  :                   : 2.5V    : 8A        :                
-A0_A8[5]                     : G8        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8A        :                
 GND                          : G9        : gnd    :                   :         :           :                
-Address[0]                   : G10       : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 7A        :                
-A0_A8[8]                     : G12       : output : 2.5 V             :         : 7A        : N              
-A0_A8[6]                     : G13       : output : 2.5 V             :         : 7A        : N              
+Address[8]                   : G12       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 7A        :                
 VCCIO7A                      : G14       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7A        :                
+RAM_Saida[1]                 : G16       : output : 2.5 V             :         : 7A        : N              
+A0_A8[4]                     : G17       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 7A        :                
 GND                          : G19       : gnd    :                   :         :           :                
 NC                           : G20       :        :                   :         :           :                
@@ -283,12 +283,12 @@ GND                          : H7        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : H8        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 7A        :                
-ROM_Saida[12]                : H11       : output : 2.5 V             :         : 7A        : N              
+ROM_Saida[8]                 : H11       : output : 2.5 V             :         : 7A        : N              
 GND                          : H12       : gnd    :                   :         :           :                
-ROM_Saida[4]                 : H13       : output : 2.5 V             :         : 7A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7A        :                
+A0_A8[2]                     : H13       : output : 2.5 V             :         : 7A        : N              
+RAM_Saida[5]                 : H14       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 7A        :                
+Address[7]                   : H16       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : H17       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 7A        :                
 VCCA_FPLL                    : H19       : power  :                   : 2.5V    :           :                
@@ -301,11 +301,11 @@ GND                          : J3        : gnd    :                   :         
 VCC                          : J4        : power  :                   : 1.1V    :           :                
 GND                          : J5        : gnd    :                   :         :           :                
 MSEL1                        : J6        :        :                   :         : 9A        :                
-ROM_Saida[5]                 : J7        : output : 2.5 V             :         : 8A        : N              
+ROM_Saida[12]                : J7        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 8A        :                
 VCC                          : J10       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7A        :                
+ROM_Saida[3]                 : J11       : output : 2.5 V             :         : 7A        : N              
 VCC                          : J12       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 7A        :                
 VCC                          : J14       : power  :                   : 1.1V    :           :                
@@ -323,9 +323,9 @@ VCC                          : K3        : power  :                   : 1.1V    
 GND                          : K4        : gnd    :                   :         :           :                
 VCC                          : K5        : power  :                   : 1.1V    :           :                
 CONF_DONE                    : K6        :        :                   :         : 9A        :                
-A0_A8[0]                     : K7        : output : 2.5 V             :         : 8A        : N              
+Address[4]                   : K7        : output : 2.5 V             :         : 8A        : N              
 GND                          : K8        : gnd    :                   :         :           :                
-RAM_Saida[3]                 : K9        : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 7A        :                
 GND                          : K10       : gnd    :                   :         :           :                
 VCC                          : K11       : power  :                   : 1.1V    :           :                
 GND                          : K12       : gnd    :                   :         :           :                
@@ -337,7 +337,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : K17       :        :                   :      
 VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 5B        :                
+RAM_Saida[6]                 : K21       : output : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K22       :        :                   :         : 5B        :                
 LEDR[9]                      : L1        : output : 3.3-V LVTTL       :         : 2A        : Y              
 LEDR[8]                      : L2        : output : 3.3-V LVTTL       :         : 2A        : Y              
@@ -345,8 +345,8 @@ GND                          : L3        : gnd    :                   :         
 VCC                          : L4        : power  :                   : 1.1V    :           :                
 GND                          : L5        : gnd    :                   :         :           :                
 MSEL0                        : L6        :        :                   :         : 9A        :                
-A0_A8[1]                     : L7        : output : 2.5 V             :         : 8A        : N              
-ROM_Saida[8]                 : L8        : output : 2.5 V             :         : 7A        : N              
+Address[3]                   : L7        : output : 2.5 V             :         : 8A        : N              
+Address[5]                   : L8        : output : 2.5 V             :         : 7A        : N              
 DNU                          : L9        :        :                   :         :           :                
 VCC                          : L10       : power  :                   : 1.1V    :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -355,7 +355,7 @@ GND                          : L13       : gnd    :                   :         
 VCC                          : L14       : power  :                   : 1.1V    :           :                
 GND                          : L15       : gnd    :                   :         :           :                
 VCC                          : L16       : power  :                   : 1.1V    :           :                
-RAM_Saida[2]                 : L17       : output : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L17       :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L18       :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L19       :        :                   :         : 5B        :                
 VREFB5BN0                    : L20       : power  :                   :         : 5B        :                
@@ -378,9 +378,9 @@ GND                          : M14       : gnd    :                   :         
 VCC                          : M15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M16       :        :                   :         : 5B        :                
 VCCPD5B                      : M17       : power  :                   : 2.5V    : 5B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M18       :        :                   :         : 5B        :                
+RAM_Saida[4]                 : M18       : output : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : M19       : power  :                   : 2.5V    : 5B        :                
-RAM_Saida[6]                 : M20       : output : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M20       :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M21       :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 5B        :                
 LEDR[5]                      : N1        : output : 3.3-V LVTTL       :         : 2A        : Y              
@@ -398,11 +398,11 @@ VCC                          : N12       : power  :                   : 1.1V    
 GND                          : N13       : gnd    :                   :         :           :                
 VCC                          : N14       : power  :                   : 1.1V    :           :                
 GND                          : N15       : gnd    :                   :         :           :                
-RAM_Saida[5]                 : N16       : output : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N16       :        :                   :         : 5B        :                
 GND                          : N17       : gnd    :                   :         :           :                
 VCCPD5B                      : N18       : power  :                   : 2.5V    : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N19       :        :                   :         : 5B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N20       :        :                   :         : 5B        :                
+A0_A8[0]                     : N20       : output : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 5B        :                
 GND                          : N22       : gnd    :                   :         :           :                
 GND                          : P1        : gnd    :                   :         :           :                
@@ -411,7 +411,7 @@ VCC                          : P3        : power  :                   : 1.1V    
 GND                          : P4        : gnd    :                   :         :           :                
 TMS                          : P5        : input  :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P6        :        :                   :         : 3A        :                
-Address[2]                   : P7        : output : 2.5 V             :         : 3A        : N              
+ROM_Saida[10]                : P7        : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3B        :                
 HEX4[6]                      : P9        : output : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : P10       : gnd    :                   :         :           :                
@@ -422,7 +422,7 @@ HEX5[3]                      : P14       : output : 3.3-V LVTTL       :         
 VCC                          : P15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P16       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P17       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P18       :        :                   :         : 5A        :                
+ROM_Saida[0]                 : P18       : output : 2.5 V             :         : 5A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P19       :        :                   :         : 5A        :                
 VCCIO5A                      : P20       : power  :                   : 2.5V    : 5A        :                
 VCCPD5A                      : P21       : power  :                   : 2.5V    : 5A        :                
@@ -431,9 +431,9 @@ VCCIO2A                      : R1        : power  :                   : 3.3V    
 VCCPD1A2A                    : R2        : power  :                   : 3.3V    : 1A, 2A    :                
 GND                          : R3        : gnd    :                   :         :           :                
 nCSO, DATA4                  : R4        :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 3A        :                
+ROM_Saida[11]                : R5        : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3A        :                
-ROM_Saida[11]                : R7        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3A        :                
 VCCIO3B                      : R8        : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 3B        :                
@@ -441,22 +441,22 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 3B        :                
 GND                          : R13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4A        :                
-ROM_Saida[13]                : R15       : output : 2.5 V             :         : 5A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R17       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 5A        :                
+A0_A8[5]                     : R16       : output : 2.5 V             :         : 5A        : N              
+ROM_Saida[1]                 : R17       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
 VCCPGM                       : R19       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VREFB5AN0                    : R20       : power  :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R21       :        :                   :         : 5A        :                
-ROM_Saida[2]                 : R22       : output : 2.5 V             :         : 5A        : N              
+ROM_Saida[5]                 : R22       : output : 2.5 V             :         : 5A        : N              
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 VCCA_FPLL                    : T3        : power  :                   : 2.5V    :           :                
 AS_DATA3, DATA3              : T4        :        :                   :         : 3A        :                
 VCCA_FPLL                    : T5        : power  :                   : 2.5V    :           :                
 VCCIO3A                      : T6        : power  :                   : 2.5V    : 3A        :                
-Address[3]                   : T7        : output : 2.5 V             :         : 3A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3A        :                
+ROM_Saida[9]                 : T8        : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 3B        :                
 VCCIO3B                      : T11       : power  :                   : 3.3V    : 3B        :                
@@ -465,10 +465,10 @@ SW[2]                        : T13       : input  : 3.3-V LVTTL       :         
 HEX5[2]                      : T14       : output : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 5A        :                
 GND                          : T16       : gnd    :                   :         :           :                
-RAM_Saida[4]                 : T17       : output : 2.5 V             :         : 5A        : N              
-Address[5]                   : T18       : output : 2.5 V             :         : 5A        : N              
-A0_A8[2]                     : T19       : output : 2.5 V             :         : 5A        : N              
-RAM_Saida[0]                 : T20       : output : 2.5 V             :         : 5A        : N              
+RAM_Saida[2]                 : T17       : output : 2.5 V             :         : 5A        : N              
+RAM_Saida[3]                 : T18       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :         : 5A        :                
+A0_A8[1]                     : T20       : output : 2.5 V             :         : 5A        : N              
 GND                          : T21       : gnd    :                   :         :           :                
 RAM_Saida[7]                 : T22       : output : 2.5 V             :         : 5A        : N              
 LEDR[7]                      : U1        : output : 3.3-V LVTTL       :         : 2A        : Y              
@@ -476,9 +476,9 @@ LEDR[6]                      : U2        : output : 3.3-V LVTTL       :         
 GND                          : U3        : gnd    :                   :         :           :                
 GND                          : U4        : gnd    :                   :         :           :                
 GND                          : U5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3A        :                
+Address[6]                   : U6        : output : 2.5 V             :         : 3A        : N              
 KEY[0]                       : U7        : input  : 3.3-V LVTTL       :         : 3A        : Y              
-A0_A8[3]                     : U8        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 3A        :                
 GND                          : U9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
@@ -498,7 +498,7 @@ GND                          : V2        : gnd    :                   :         
 DCLK                         : V3        :        :                   :         : 3A        :                
 GND                          : V4        : gnd    :                   :         :           :                
 TCK                          : V5        : input  :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 3A        :                
+ROM_Saida[13]                : V6        : output : 2.5 V             :         : 3A        : N              
 GND                          : V7        : gnd    :                   :         :           :                
 VCCPGM                       : V8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 3B        :                
@@ -522,7 +522,7 @@ GND                          : W4        : gnd    :                   :         
 TDI                          : W5        : input  :                   :         : 3A        :                
 VCCPD3A                      : W6        : power  :                   : 2.5V    : 3A        :                
 VCC_AUX                      : W7        : power  :                   : 2.5V    :           :                
-Address[6]                   : W8        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3A        :                
 KEY[1]                       : W9        : input  : 3.3-V LVTTL       :         : 3A        : Y              
 VCCIO3B                      : W10       : power  :                   : 3.3V    : 3B        :                
 VCCPD3B4A                    : W11       : power  :                   : 3.3V    : 3B, 4A    :                

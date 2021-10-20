@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/20/2021 16:30:19"
+-- Generated on "10/20/2021 16:39:41"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Projeto2
 -- 
@@ -67,14 +67,9 @@ t_prcs_CLOCK_50: PROCESS
 BEGIN
 	CLOCK_50 <= '1';
 	WAIT FOR 10000 ps;
-	FOR i IN 1 TO 49
-	LOOP
-		CLOCK_50 <= '0';
-		WAIT FOR 10000 ps;
-		CLOCK_50 <= '1';
-		WAIT FOR 10000 ps;
-	END LOOP;
 	CLOCK_50 <= '0';
+	WAIT FOR 10000 ps;
+	CLOCK_50 <= '1';
 WAIT;
 END PROCESS t_prcs_CLOCK_50;
 

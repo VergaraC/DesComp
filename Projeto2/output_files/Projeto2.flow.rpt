@@ -1,5 +1,5 @@
 Flow report for Projeto2
-Wed Oct 20 16:30:20 2021
+Wed Oct 20 16:39:42 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 20 16:30:20 2021       ;
+; Flow Status                     ; Successful - Wed Oct 20 16:39:42 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Projeto2                                    ;
 ; Top-level Entity Name           ; Projeto2                                    ;
@@ -106,7 +106,9 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 491 MB              ; 00:00:19                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 660 MB              ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 666 MB              ; 00:00:00                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:19                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 660 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 666 MB              ; 00:00:00                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +120,8 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; deku-ThinkPad-E490 ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 ; EDA Netlist Writer   ; deku-ThinkPad-E490 ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 ; EDA Netlist Writer   ; deku-ThinkPad-E490 ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; deku-ThinkPad-E490 ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; deku-ThinkPad-E490 ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 +----------------------+--------------------+----------------+------------+----------------+
 
 
@@ -125,6 +129,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto2 -c Projeto2 --vector_source=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Waveform1.vwf --testbench_file=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim/Waveform1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim/ Projeto2 -c Projeto2
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto2 -c Projeto2 --vector_source=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Waveform1.vwf --testbench_file=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim/Waveform1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim/ Projeto2 -c Projeto2
 

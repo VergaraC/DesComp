@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8
-Tue Oct 19 21:25:11 2021
+Wed Oct 20 17:22:26 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,60 +13,59 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |Aula8
- 12. Parameter Settings for User Entity Instance: CPU:CPU
- 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX2x1
- 14. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX4x1
- 15. Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores
- 16. Parameter Settings for User Entity Instance: CPU:CPU|Registrador1X1:FLAG
- 17. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_RET
- 18. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
- 19. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
- 20. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
- 21. Parameter Settings for User Entity Instance: Decoder3x8:Decoder1
- 22. Parameter Settings for User Entity Instance: Decoder3x8:Decoder2
- 23. Parameter Settings for User Entity Instance: registradorGenerico:LEDRP
- 24. Parameter Settings for User Entity Instance: Registrador1X1:LEDR8
- 25. Parameter Settings for User Entity Instance: Registrador1X1:LEDR9
- 26. Parameter Settings for User Entity Instance: memoriaROM:ROM
- 27. Parameter Settings for User Entity Instance: memoriaRAM:RAM
- 28. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
- 29. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
- 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
- 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
- 32. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
- 33. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
- 34. Parameter Settings for User Entity Instance: divisorGenerico:divisor
- 35. Parameter Settings for User Entity Instance: divisorGenerico:divisorRapido
- 36. Parameter Settings for User Entity Instance: MuxGenerico1x1:MUX_RELOGIO
- 37. Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY1"
- 38. Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY0"
- 39. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX5"
- 40. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
- 41. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX4"
- 42. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
- 43. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX3"
- 44. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
- 45. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX2"
- 46. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
- 47. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX1"
- 48. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
- 49. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX0"
- 50. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
- 51. Port Connectivity Checks: "Registrador1X1:LEDR9"
- 52. Port Connectivity Checks: "Registrador1X1:LEDR8"
- 53. Port Connectivity Checks: "registradorGenerico:LEDRP"
- 54. Port Connectivity Checks: "Decoder3x8:Decoder2"
- 55. Port Connectivity Checks: "Decoder3x8:Decoder1"
- 56. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 57. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX4x1"
- 58. Port Connectivity Checks: "CPU:CPU"
- 59. Post-Synthesis Netlist Statistics for Top Partition
- 60. Elapsed Time Per Partition
- 61. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Aula8
+ 11. Parameter Settings for User Entity Instance: CPU:CPU
+ 12. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX2x1
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX4x1
+ 14. Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores
+ 15. Parameter Settings for User Entity Instance: CPU:CPU|Registrador1X1:FLAG
+ 16. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_RET
+ 17. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 18. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
+ 19. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 20. Parameter Settings for User Entity Instance: Decoder3x8:Decoder1
+ 21. Parameter Settings for User Entity Instance: Decoder3x8:Decoder2
+ 22. Parameter Settings for User Entity Instance: registradorGenerico:LEDRP
+ 23. Parameter Settings for User Entity Instance: Registrador1X1:LEDR8
+ 24. Parameter Settings for User Entity Instance: Registrador1X1:LEDR9
+ 25. Parameter Settings for User Entity Instance: memoriaROM:ROM
+ 26. Parameter Settings for User Entity Instance: memoriaRAM:RAM
+ 27. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
+ 28. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
+ 29. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
+ 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
+ 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
+ 32. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
+ 33. Parameter Settings for User Entity Instance: divisorGenerico:divisor
+ 34. Parameter Settings for User Entity Instance: divisorGenerico:divisorRapido
+ 35. Parameter Settings for User Entity Instance: MuxGenerico1x1:MUX_RELOGIO
+ 36. Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY1"
+ 37. Port Connectivity Checks: "debounceMemorizacao:DEBOUNCE_KEY0"
+ 38. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX5"
+ 39. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 40. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX4"
+ 41. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 42. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX3"
+ 43. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 44. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX2"
+ 45. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 46. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX1"
+ 47. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 48. Port Connectivity Checks: "conversorHex7Seg:CONV_HEX0"
+ 49. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 50. Port Connectivity Checks: "Registrador1X1:LEDR9"
+ 51. Port Connectivity Checks: "Registrador1X1:LEDR8"
+ 52. Port Connectivity Checks: "registradorGenerico:LEDRP"
+ 53. Port Connectivity Checks: "Decoder3x8:Decoder2"
+ 54. Port Connectivity Checks: "Decoder3x8:Decoder1"
+ 55. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 56. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX4x1"
+ 57. Port Connectivity Checks: "CPU:CPU"
+ 58. Post-Synthesis Netlist Statistics for Top Partition
+ 59. Elapsed Time Per Partition
+ 60. Analysis & Synthesis Messages
 
 
 
@@ -93,13 +92,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 19 21:25:11 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 20 17:22:25 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8                                       ;
 ; Top-level Entity Name           ; Aula8                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 625                                         ;
+; Total registers                 ; 641                                         ;
 ; Total pins                      ; 109                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -215,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -255,25 +254,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 512            ;
+; Estimate of Logic utilization (ALMs needed) ; 525            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 580            ;
+; Combinational ALUT usage for logic          ; 593            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 306            ;
+;     -- 6 input functions                    ; 321            ;
 ;     -- 5 input functions                    ; 60             ;
-;     -- 4 input functions                    ; 69             ;
-;     -- <=3 input functions                  ; 145            ;
+;     -- 4 input functions                    ; 72             ;
+;     -- <=3 input functions                  ; 140            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 625            ;
+; Dedicated logic registers                   ; 641            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 109            ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 623            ;
-; Total fan-out                               ; 4820           ;
-; Average fan-out                             ; 3.39           ;
+; Maximum fan-out                             ; 639            ;
+; Total fan-out                               ; 4989           ;
+; Average fan-out                             ; 3.44           ;
 +---------------------------------------------+----------------+
 
 
@@ -282,13 +281,13 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name                 ; Library Name ;
 +--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------------+--------------+
-; |Aula8                                                 ; 580 (21)            ; 625 (0)                   ; 0                 ; 0          ; 109  ; 0            ; |Aula8                                                        ; Aula8                       ; work         ;
-;    |CPU:CPU|                                           ; 67 (0)              ; 35 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                                                ; CPU                         ; work         ;
+; |Aula8                                                 ; 593 (21)            ; 641 (0)                   ; 0                 ; 0          ; 109  ; 0            ; |Aula8                                                        ; Aula8                       ; work         ;
+;    |CPU:CPU|                                           ; 69 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                                                ; CPU                         ; work         ;
 ;       |Decoder:Decoder|                                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Decoder:Decoder                                ; Decoder                     ; work         ;
 ;       |LogicaDesvio:LogicaDesvio|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|LogicaDesvio:LogicaDesvio                      ; LogicaDesvio                ; work         ;
 ;       |Registrador1X1:FLAG|                            ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Registrador1X1:FLAG                            ; Registrador1X1              ; work         ;
 ;       |ULASomaSub:ULA1|                                ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|ULASomaSub:ULA1                                ; ULASomaSub                  ; work         ;
-;       |bancoRegistradoresArqRegMem:BancoRegistradores| ; 10 (10)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores ; bancoRegistradoresArqRegMem ; work         ;
+;       |bancoRegistradoresArqRegMem:BancoRegistradores| ; 12 (12)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores ; bancoRegistradoresArqRegMem ; work         ;
 ;       |muxGenerico4x1:MUX4x1|                          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|muxGenerico4x1:MUX4x1                          ; muxGenerico4x1              ; work         ;
 ;       |registradorGenerico:PC|                         ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:PC                         ; registradorGenerico         ; work         ;
 ;       |registradorGenerico:REG_RET|                    ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:REG_RET                    ; registradorGenerico         ; work         ;
@@ -314,7 +313,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |divisorGenerico:divisor|                           ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula8|divisorGenerico:divisor                                ; divisorGenerico             ; work         ;
 ;    |edgeDetector:detectorSub1|                         ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|edgeDetector:detectorSub1                              ; edgeDetector                ; work         ;
 ;    |memoriaRAM:RAM|                                    ; 303 (303)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaRAM:RAM                                         ; memoriaRAM                  ; work         ;
-;    |memoriaROM:ROM|                                    ; 78 (78)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                                         ; memoriaROM                  ; work         ;
+;    |memoriaROM:ROM|                                    ; 89 (89)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                                         ; memoriaROM                  ; work         ;
 ;    |registradorGenerico:LEDRP|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:LEDRP                              ; registradorGenerico         ; work         ;
 ;    |registradorGenerico:REG_HEX0|                      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX0                           ; registradorGenerico         ; work         ;
 ;    |registradorGenerico:REG_HEX1|                      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX1                           ; registradorGenerico         ; work         ;
@@ -326,42 +325,17 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                         ;
-+-----------------------------------------------------------------------+--------------------+
-; Register name                                                         ; Reason for Removal ;
-+-----------------------------------------------------------------------+--------------------+
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~19 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~20 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~21 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~22 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~23 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~24 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~25 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~26 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~35 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~36 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~37 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~38 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~39 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~40 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~41 ; Lost fanout        ;
-; CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador~42 ; Lost fanout        ;
-; Total Number of Removed Registers = 16                                ;                    ;
-+-----------------------------------------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 625   ;
+; Total registers                              ; 641   ;
 ; Number of registers using Synchronous Clear  ; 39    ;
-; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 569   ;
+; Number of registers using Clock Enable       ; 585   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -872,30 +846,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 625                         ;
+; arriav_ff             ; 641                         ;
 ;     CLR               ; 2                           ;
 ;     ENA               ; 553                         ;
-;     ENA SLD           ; 16                          ;
+;     ENA SLD           ; 32                          ;
 ;     SCLR              ; 39                          ;
 ;     plain             ; 15                          ;
 ; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 581                         ;
+; arriav_lcell_comb     ; 593                         ;
 ;     arith             ; 65                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 48                          ;
 ;         5 data inputs ; 16                          ;
-;     normal            ; 516                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 528                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 85                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 69                          ;
+;         2 data inputs ; 84                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 72                          ;
 ;         5 data inputs ; 44                          ;
-;         6 data inputs ; 306                         ;
+;         6 data inputs ; 321                         ;
 ; boundary_port         ; 109                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.31                        ;
+; Average LUT depth     ; 6.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -914,7 +887,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 19 21:25:02 2021
+    Info: Processing started: Wed Oct 20 17:22:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
@@ -1022,22 +995,19 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[5]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[5]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
     Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[6]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[6]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
     Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[7]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[7]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ROM_Saida[9]" is stuck at GND File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 19
-Info (21057): Implemented 1260 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1289 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 93 output pins
-    Info (21061): Implemented 1151 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info (21061): Implemented 1180 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 500 megabytes
-    Info: Processing ended: Tue Oct 19 21:25:11 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Wed Oct 20 17:22:26 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

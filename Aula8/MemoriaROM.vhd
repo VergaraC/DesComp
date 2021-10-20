@@ -146,7 +146,6 @@ tmp(50) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(51) := JEQ & R0 & '0' & x"36"; -- Efetua o Jump (Address[54]) quando for igual a 0
 tmp(52) := JSR & R0 & '0' & x"A8"; -- Efetua o Jump (Address[168])
 tmp(53) := NOP & R0 & '0' & x"00"; 
---tmp(54) := JSR & '0' & x"7E"; -- Efetua o Jump (Address[126])
 
 --Checando Key FPGA-Reset
 tmp(54) := LDA & R0 & '1' & x"64"; -- Observa o valor do FPGA-Reset

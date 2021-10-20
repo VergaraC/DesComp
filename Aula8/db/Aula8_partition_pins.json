@@ -80,6 +80,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ROM_Saida[9]",
+					"strict" : false
+				},
+				{
 					"name" : "ROM_Saida[10]",
 					"strict" : false
 				},
