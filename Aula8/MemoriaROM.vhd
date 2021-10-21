@@ -144,7 +144,7 @@ tmp(48) := JSR & R0 & '0' & x"3C"; -- Efetua o Jump (Address[60])
 tmp(49) := LDA & R0 & '1' & x"61"; -- Pega o Valor da key 1
 tmp(50) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
 tmp(51) := JEQ & R0 & '0' & x"36"; -- Efetua o Jump (Address[54]) quando for igual a 0
-tmp(52) := JSR & R0 & '0' & x"A8"; -- Efetua o Jump (Address[168])
+tmp(52) := JSR & R0 & '0' & x"8C"; -- Efetua o Jump (Address[140])
 tmp(53) := NOP & R0 & '0' & x"00"; 
 
 --Checando Key FPGA-Reset
@@ -219,17 +219,12 @@ tmp(107) := RET & R0 & '0' & x"00"; -- Return
 
 tmp(108) := LDA & R0 & '0' & x"05"; -- Pega o Valor dezena hora
 tmp(109) := CEQ & R0 & '0' & x"10"; -- Compara com 2
-tmp(110) := JEQ & R0 & '0' & x"70"; -- Efetua o Jump (Address[112]) quando for igual a 2
+tmp(110) := JEQ & R0 & '0' & x"74"; -- Efetua o Jump (Address[116]) quando for igual a 2
 tmp(111) := RET & R0 & '0' & x"00"; -- Return    
 
--- Liga LEDs
-tmp(112) := LDA & R0 & '0' & x"0B"; -- Pega Address[11]
-tmp(113) := STA & R0 & '0' & x"06"; -- Ativa Flag Contador
-tmp(114) := STA & R0 & '1' & x"02"; -- Ativa LED9 	 
-tmp(115) := RET & R0 & '0' & x"00"; -- Return
 
 -- Reset FPGA
-tmp(116) := LDA & R1 & '0' & x"0A"; -- Pega Address[116]
+tmp(116) := LDA & R1 & '0' & x"0A"; -- Pega Address[10]
 tmp(117) := STA & R1 & '0' & x"00"; -- Armazena 0 no unidade segundo
 tmp(118) := STA & R1 & '0' & x"01"; -- Armazena 0 no dezena segundo
 tmp(119) := STA & R1 & '0' & x"02"; -- Armazena 0 no unidade minuto
@@ -256,73 +251,72 @@ tmp(137) := LDA & R2 & '0' & x"05"; -- Pega o Valor dezena hora
 tmp(138) := STA & R2 & '1' & x"25"; -- Salva no HEX5    
 tmp(139) := RET & R0 & '0' & x"00"; -- Return
 
-
 -- Definindo limites
 --unidade segundo
-tmp(168) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(169) := LDI & R3 & '0' & x"01"; -- Pega 1 
-tmp(170) := STA & R3 & '1' & x"00"; -- Ativa o LED 0   	 
-tmp(171) := LDA & R0 & '1' & x"61"; -- Pega Key 1
-tmp(172) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(173) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(174) := JEQ & R0 & '0' & x"A9"; -- Efetua o Jump (Address[169]) quando for igual a 0
-tmp(175) := STA & R1 & '0' & x"00"; -- Guarda limite unidade segundo    
+tmp(140) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(141) := LDI & R3 & '0' & x"01"; -- Pega 1 
+tmp(142) := STA & R3 & '1' & x"00"; -- Ativa o LED 0   	 
+tmp(143) := LDA & R0 & '1' & x"61"; -- Pega Key 1
+tmp(144) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(145) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
+tmp(146) := JEQ & R0 & '0' & x"8D"; -- Efetua o Jump (Address[141]) quando for igual a 0
+tmp(147) := STA & R1 & '0' & x"00"; -- Guarda limite unidade segundo    
 
 -- dezena segundo
-tmp(176) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(177) := LDI & R3 & '0' & x"03"; -- Pega 3 
-tmp(178) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-1)
-tmp(179) := LDA & R0 & '1' & x"61"; -- Pega a Key 1
-tmp(180) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(181) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(182) := JEQ & R0 & '0' & x"B1"; -- Efetua o Jump (Address[177]) quando for igual a 0
-tmp(183) := STA & R1 & '0' & x"01"; -- Guarda limite dezena segundo 
+tmp(148) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(149) := LDI & R3 & '0' & x"03"; -- Pega 3 
+tmp(150) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-1)
+tmp(151) := LDA & R0 & '1' & x"61"; -- Pega a Key 1
+tmp(152) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(153) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
+tmp(154) := JEQ & R0 & '0' & x"95"; -- Efetua o Jump (Address[149]) quando for igual a 0
+tmp(155) := STA & R1 & '0' & x"01"; -- Guarda limite dezena segundo 
 
 -- unidade minuto
-tmp(184) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(185) := LDI & R3 & '0' & x"07"; -- Pega 7 
-tmp(186) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-2)
-tmp(187) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
-tmp(188) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(189) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(190) := JEQ & R0 & '0' & x"B9"; -- Efetua o Jump (Address[185]) quando for igual a 0
-tmp(191) := STA & R1 & '0' & x"02"; -- Armazena novo limite para unidade minuto
+tmp(156) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(157) := LDI & R3 & '0' & x"07"; -- Pega 7 
+tmp(158) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-2)
+tmp(159) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
+tmp(160) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(161) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
+tmp(162) := JEQ & R0 & '0' & x"9D"; -- Efetua o Jump (Address[157]) quando for igual a 0
+tmp(163) := STA & R1 & '0' & x"02"; -- Armazena novo limite para unidade minuto
 
 -- dezena minuto
-tmp(192) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(193) := LDI & R3 & '0' & x"0F"; -- Pega 15 
-tmp(194) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-3)
-tmp(195) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
-tmp(196) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(197) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(198) := JEQ & R0 & '0' & x"C1"; -- Efetua o Jump (Address[193]) quando for igual a 0
-tmp(199) := STA & R1 & '0' & x"03"; -- Armazena novo limite para dezena minuto
+tmp(164) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(165) := LDI & R3 & '0' & x"0F"; -- Pega 15 
+tmp(166) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-3)
+tmp(167) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
+tmp(168) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(169) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
+tmp(170) := JEQ & R0 & '0' & x"A5"; -- Efetua o Jump (Address[165]) quando for igual a 0
+tmp(171) := STA & R1 & '0' & x"03"; -- Armazena novo limite para dezena minuto
 
 -- unidade hora  
-tmp(200) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(201) := LDI & R3 & '0' & x"1F"; -- Pega 31 
-tmp(202) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-4)
-tmp(203) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
-tmp(204) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(205) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(206) := JEQ & R0 & '0' & x"C9"; -- Efetua o Jump (Address[201]) quando for igual a 0
-tmp(207) := STA & R1 & '0' & x"04"; -- Armazena novo limite para unidade hora
+tmp(172) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(173) := LDI & R3 & '0' & x"1F"; -- Pega 31 
+tmp(174) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-4)
+tmp(175) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
+tmp(176) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(177) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
+tmp(178) := JEQ & R0 & '0' & x"AD"; -- Efetua o Jump (Address[173]) quando for igual a 0
+tmp(179) := STA & R1 & '0' & x"04"; -- Armazena novo limite para unidade hora
 
 -- dezena hora 
-tmp(208) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(209) := LDI & R3 & '0' & x"3F"; -- Pega 63 
-tmp(210) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-5)
-tmp(211) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
-tmp(212) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
-tmp(213) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
-tmp(214) := JEQ & R0 & '0' & x"D1"; -- Efetua o Jump (Address[209]) quando for igual a 0
-tmp(215) := STA & R1 & '0' & x"05"; -- Armazena novo limite para dezena hora
+tmp(180) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(181) := LDI & R3 & '0' & x"3F"; -- Pega 63 
+tmp(182) := STA & R3 & '1' & x"00"; -- Ativa o LEDs (0-5)
+tmp(183) := LDA & R0 & '1' & x"61"; -- Pega a KEY1
+tmp(184) := CEQ & R0 & '0' & x"0A"; -- Compara com 0
+tmp(185) := LDA & R1 & '1' & x"40"; -- Pega o Switches (0-7)
+tmp(186) := JEQ & R0 & '0' & x"B5"; -- Efetua o Jump (Address[181]) quando for igual a 0
+tmp(187) := STA & R1 & '0' & x"05"; -- Armazena novo limite para dezena hora
 
 
-tmp(216) := STA & R0 & '1' & x"FE"; -- Zera Key 1
-tmp(217) := LDA & R0 & '0' & x"0A"; -- Carrega Address[10]
-tmp(218) := STA & R0 & '1' & x"00"; -- Desliga os LEDs
-tmp(219) := RET & R0 & '0' & x"00"; -- Return
+tmp(188) := STA & R0 & '1' & x"FE"; -- Zera Key 1
+tmp(189) := LDA & R0 & '0' & x"0A"; -- Carrega Address[10]
+tmp(190) := STA & R0 & '1' & x"00"; -- Desliga os LEDs
+tmp(191) := RET & R0 & '0' & x"00"; -- Return
 
 return tmp;
 end initMemory;

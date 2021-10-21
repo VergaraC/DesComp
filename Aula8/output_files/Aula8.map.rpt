@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8
-Wed Oct 20 17:22:26 2021
+Thu Oct 21 16:16:32 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -92,7 +92,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 20 17:22:25 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 21 16:16:32 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8                                       ;
 ; Top-level Entity Name           ; Aula8                                       ;
@@ -206,47 +206,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd ;         ;
-; DebounceMemorizacao.vhd          ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/DebounceMemorizacao.vhd         ;         ;
-; buffer_3state_8portas.vhd        ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd       ;         ;
-; buffer_3state_1Bit.vhd           ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd          ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd            ;         ;
-; Aula8.vhd                        ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd                       ;         ;
-; MemoriaRAM.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd                  ;         ;
-; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd                     ;         ;
-; MuxGenerico.vhd                  ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd                 ;         ;
-; EdgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd                ;         ;
-; MemoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd                  ;         ;
-; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd         ;         ;
-; UlaSomaSub.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/UlaSomaSub.vhd                  ;         ;
-; SomaConstante.vhd                ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd               ;         ;
-; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd              ;         ;
-; LogicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/LogicaDesvio.vhd                ;         ;
-; Registrador1X1.vhd               ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd              ;         ;
-; Decoder3X8.vhd                   ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder3X8.vhd                  ;         ;
-; CPU.vhd                          ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd                         ;         ;
-; divisorGenerico.vhd              ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/divisorGenerico.vhd             ;         ;
-; MuxGenerico1X1.vhd               ; yes             ; User VHDL File  ; /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico1X1.vhd              ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd ;         ;
+; DebounceMemorizacao.vhd          ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/DebounceMemorizacao.vhd         ;         ;
+; buffer_3state_8portas.vhd        ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_8portas.vhd       ;         ;
+; buffer_3state_1Bit.vhd           ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd          ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/conversorHex7Seg.vhd            ;         ;
+; Aula8.vhd                        ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd                       ;         ;
+; MemoriaRAM.vhd                   ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaRAM.vhd                  ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder.vhd                     ;         ;
+; MuxGenerico.vhd                  ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico.vhd                 ;         ;
+; EdgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/EdgeDetector.vhd                ;         ;
+; MemoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaROM.vhd                  ;         ;
+; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/RegistradorGenerico.vhd         ;         ;
+; UlaSomaSub.vhd                   ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/UlaSomaSub.vhd                  ;         ;
+; SomaConstante.vhd                ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/SomaConstante.vhd               ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/muxGenerico4x1.vhd              ;         ;
+; LogicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/LogicaDesvio.vhd                ;         ;
+; Registrador1X1.vhd               ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/Registrador1X1.vhd              ;         ;
+; Decoder3X8.vhd                   ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder3X8.vhd                  ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd                         ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/divisorGenerico.vhd             ;         ;
+; MuxGenerico1X1.vhd               ; yes             ; User VHDL File  ; /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico1X1.vhd              ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -254,14 +256,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 525            ;
+; Estimate of Logic utilization (ALMs needed) ; 528            ;
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 593            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 321            ;
-;     -- 5 input functions                    ; 60             ;
-;     -- 4 input functions                    ; 72             ;
-;     -- <=3 input functions                  ; 140            ;
+;     -- 6 input functions                    ; 324            ;
+;     -- 5 input functions                    ; 67             ;
+;     -- 4 input functions                    ; 71             ;
+;     -- <=3 input functions                  ; 131            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 641            ;
 ;                                             ;                ;
@@ -271,8 +273,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 639            ;
-; Total fan-out                               ; 4989           ;
-; Average fan-out                             ; 3.44           ;
+; Total fan-out                               ; 5020           ;
+; Average fan-out                             ; 3.46           ;
 +---------------------------------------------+----------------+
 
 
@@ -281,7 +283,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name                 ; Library Name ;
 +--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------------+--------------+
-; |Aula8                                                 ; 593 (21)            ; 641 (0)                   ; 0                 ; 0          ; 109  ; 0            ; |Aula8                                                        ; Aula8                       ; work         ;
+; |Aula8                                                 ; 593 (23)            ; 641 (0)                   ; 0                 ; 0          ; 109  ; 0            ; |Aula8                                                        ; Aula8                       ; work         ;
 ;    |CPU:CPU|                                           ; 69 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                                                ; CPU                         ; work         ;
 ;       |Decoder:Decoder|                                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Decoder:Decoder                                ; Decoder                     ; work         ;
 ;       |LogicaDesvio:LogicaDesvio|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|LogicaDesvio:LogicaDesvio                      ; LogicaDesvio                ; work         ;
@@ -313,7 +315,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |divisorGenerico:divisor|                           ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula8|divisorGenerico:divisor                                ; divisorGenerico             ; work         ;
 ;    |edgeDetector:detectorSub1|                         ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|edgeDetector:detectorSub1                              ; edgeDetector                ; work         ;
 ;    |memoriaRAM:RAM|                                    ; 303 (303)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaRAM:RAM                                         ; memoriaRAM                  ; work         ;
-;    |memoriaROM:ROM|                                    ; 89 (89)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                                         ; memoriaROM                  ; work         ;
+;    |memoriaROM:ROM|                                    ; 87 (87)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaROM:ROM                                         ; memoriaROM                  ; work         ;
 ;    |registradorGenerico:LEDRP|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:LEDRP                              ; registradorGenerico         ; work         ;
 ;    |registradorGenerico:REG_HEX0|                      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX0                           ; registradorGenerico         ; work         ;
 ;    |registradorGenerico:REG_HEX1|                      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX1                           ; registradorGenerico         ; work         ;
@@ -860,15 +862,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 16                          ;
 ;     normal            ; 528                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 84                          ;
+;         2 data inputs ; 75                          ;
 ;         3 data inputs ; 6                           ;
-;         4 data inputs ; 72                          ;
-;         5 data inputs ; 44                          ;
-;         6 data inputs ; 321                         ;
+;         4 data inputs ; 71                          ;
+;         5 data inputs ; 51                          ;
+;         6 data inputs ; 324                         ;
 ; boundary_port         ; 109                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.23                        ;
+; Average LUT depth     ; 6.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -887,127 +889,127 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 20 17:22:18 2021
+    Info: Processing started: Thu Oct 21 16:16:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/bilbia/Insper/descomp/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file DebounceMemorizacao.vhd
-    Info (12022): Found design unit 1: debounceMemorizacao-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/DebounceMemorizacao.vhd Line: 12
-    Info (12023): Found entity 1: debounceMemorizacao File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/DebounceMemorizacao.vhd Line: 4
+    Info (12022): Found design unit 1: debounceMemorizacao-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/DebounceMemorizacao.vhd Line: 12
+    Info (12023): Found entity 1: debounceMemorizacao File: /home/bilbia/Insper/descomp/DesComp/Aula8/DebounceMemorizacao.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3state_8portas-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3state_8portas File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3state_8portas-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3state_8portas File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3state_1Bit.vhd
-    Info (12022): Found design unit 1: buffer_3state_1bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3state_1bit File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3state_1bit-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3state_1bit File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/bilbia/Insper/descomp/DesComp/Aula8/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Aula8.vhd
-    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 56
-    Info (12023): Found entity 1: Aula8 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 4
+    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 56
+    Info (12023): Found entity 1: Aula8 File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaRAM.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arch_name File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd Line: 14
-    Info (12023): Found entity 1: Decoder File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arch_name File: /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder.vhd Line: 14
+    Info (12023): Found entity 1: Decoder File: /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file EdgeDetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/EdgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/bilbia/Insper/descomp/DesComp/Aula8/EdgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/bilbia/Insper/descomp/DesComp/Aula8/EdgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/bilbia/Insper/descomp/DesComp/Aula8/EdgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: memoriaROM File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/bilbia/Insper/descomp/DesComp/Aula8/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file UlaSomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/UlaSomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/UlaSomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/UlaSomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/bilbia/Insper/descomp/DesComp/Aula8/UlaSomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SomaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/SomaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/bilbia/Insper/descomp/DesComp/Aula8/SomaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: /home/bilbia/Insper/descomp/DesComp/Aula8/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file LogicaDesvio.vhd
-    Info (12022): Found design unit 1: LogicaDesvio-arch_name File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/LogicaDesvio.vhd Line: 14
-    Info (12023): Found entity 1: LogicaDesvio File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/LogicaDesvio.vhd Line: 5
+    Info (12022): Found design unit 1: LogicaDesvio-arch_name File: /home/bilbia/Insper/descomp/DesComp/Aula8/LogicaDesvio.vhd Line: 14
+    Info (12023): Found entity 1: LogicaDesvio File: /home/bilbia/Insper/descomp/DesComp/Aula8/LogicaDesvio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Registrador1X1.vhd
-    Info (12022): Found design unit 1: Registrador1X1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd Line: 15
-    Info (12023): Found entity 1: Registrador1X1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd Line: 4
+    Info (12022): Found design unit 1: Registrador1X1-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/Registrador1X1.vhd Line: 15
+    Info (12023): Found entity 1: Registrador1X1 File: /home/bilbia/Insper/descomp/DesComp/Aula8/Registrador1X1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder3X8.vhd
-    Info (12022): Found design unit 1: Decoder3x8-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder3X8.vhd Line: 18
-    Info (12023): Found entity 1: Decoder3x8 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder3X8.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder3x8-arquitetura File: /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder3X8.vhd Line: 18
+    Info (12023): Found entity 1: Decoder3x8 File: /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder3X8.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file CPU.vhd
-    Info (12022): Found design unit 1: CPU-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 41
-    Info (12023): Found entity 1: CPU File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 4
+    Info (12022): Found design unit 1: CPU-arquitetura File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 41
+    Info (12023): Found entity 1: CPU File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file divisorGenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/divisorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: divisorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/divisorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/bilbia/Insper/descomp/DesComp/Aula8/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: /home/bilbia/Insper/descomp/DesComp/Aula8/divisorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico1X1.vhd
-    Info (12022): Found design unit 1: MuxGenerico1x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico1X1.vhd Line: 14
-    Info (12023): Found entity 1: MuxGenerico1x1 File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico1X1.vhd Line: 4
+    Info (12022): Found design unit 1: MuxGenerico1x1-comportamento File: /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico1X1.vhd Line: 14
+    Info (12023): Found entity 1: MuxGenerico1x1 File: /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico1X1.vhd Line: 4
 Info (12127): Elaborating entity "Aula8" for the top level hierarchy
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 126
-Warning (10541): VHDL Signal Declaration warning at CPU.vhd(49): used implicit default value for signal "Reset_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 49
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX2x1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 74
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX4x1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 81
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 93
-Info (12128): Elaborating entity "Registrador1X1" for hierarchy "CPU:CPU|Registrador1X1:FLAG" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 102
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REG_RET" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 106
-Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 114
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 118
-Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 122
-Warning (10036): Verilog HDL or VHDL warning at Decoder.vhd(16): object "NOP" assigned a value but never read File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Decoder.vhd Line: 16
-Info (12128): Elaborating entity "LogicaDesvio" for hierarchy "CPU:CPU|LogicaDesvio:LogicaDesvio" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/CPU.vhd Line: 126
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:Decoder1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 140
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:LEDRP" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 148
-Info (12128): Elaborating entity "Registrador1X1" for hierarchy "Registrador1X1:LEDR8" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 151
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 157
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 160
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 164
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:CONV_HEX0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 167
-Info (12128): Elaborating entity "buffer_3state_1bit" for hierarchy "buffer_3state_1bit:BUF3STATE_KEY0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 231
-Info (12128): Elaborating entity "buffer_3state_8portas" for hierarchy "buffer_3state_8portas:BUF3STATE_SW" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 248
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub1" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 259
-Info (12128): Elaborating entity "debounceMemorizacao" for hierarchy "debounceMemorizacao:DEBOUNCE_KEY0" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 262
-Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisor" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 269
-Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisorRapido" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 272
-Info (12128): Elaborating entity "MuxGenerico1x1" for hierarchy "MuxGenerico1x1:MUX_RELOGIO" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 275
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 126
+Warning (10541): VHDL Signal Declaration warning at CPU.vhd(49): used implicit default value for signal "Reset_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 49
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX2x1" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 74
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX4x1" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 81
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 93
+Info (12128): Elaborating entity "Registrador1X1" for hierarchy "CPU:CPU|Registrador1X1:FLAG" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 102
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REG_RET" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 106
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 114
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 118
+Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 122
+Warning (10036): Verilog HDL or VHDL warning at Decoder.vhd(16): object "NOP" assigned a value but never read File: /home/bilbia/Insper/descomp/DesComp/Aula8/Decoder.vhd Line: 16
+Info (12128): Elaborating entity "LogicaDesvio" for hierarchy "CPU:CPU|LogicaDesvio:LogicaDesvio" File: /home/bilbia/Insper/descomp/DesComp/Aula8/CPU.vhd Line: 126
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:Decoder1" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 140
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:LEDRP" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 148
+Info (12128): Elaborating entity "Registrador1X1" for hierarchy "Registrador1X1:LEDR8" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 151
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 157
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 160
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 164
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:CONV_HEX0" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 167
+Info (12128): Elaborating entity "buffer_3state_1bit" for hierarchy "buffer_3state_1bit:BUF3STATE_KEY0" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 231
+Info (12128): Elaborating entity "buffer_3state_8portas" for hierarchy "buffer_3state_8portas:BUF3STATE_SW" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 248
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub1" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 259
+Info (12128): Elaborating entity "debounceMemorizacao" for hierarchy "debounceMemorizacao:DEBOUNCE_KEY0" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 262
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisor" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 269
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:divisorRapido" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 272
+Info (12128): Elaborating entity "MuxGenerico1x1" for hierarchy "MuxGenerico1x1:MUX_RELOGIO" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 275
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer MuxGenerico1x1:MUX_RELOGIO|saida_MUX File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico1X1.vhd Line: 10
+    Warning (19017): Found clock multiplexer MuxGenerico1x1:MUX_RELOGIO|saida_MUX File: /home/bilbia/Insper/descomp/DesComp/Aula8/MuxGenerico1X1.vhd Line: 10
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 27
-    Info (276004): RAM logic "CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador" is uninferred due to inappropriate RAM size File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 29
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaRAM.vhd Line: 27
+    Info (276004): RAM logic "CPU:CPU|bancoRegistradoresArqRegMem:BancoRegistradores|registrador" is uninferred due to inappropriate RAM size File: /home/bilbia/Insper/descomp/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd Line: 29
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[0]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[0]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd Line: 17
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[1]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[1]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[2]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[2]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[3]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[3]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[4]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[4]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[5]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[5]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[6]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[6]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[7]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[7]" into an OR gate File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "memoriaRAM:RAM|dado_out[0]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[0]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/MemoriaRAM.vhd Line: 17
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[1]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[1]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[2]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[2]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[3]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[3]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[4]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[4]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[5]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[5]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[6]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[6]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
+    Warning (13047): Converted the fan-out from the tri-state buffer "buffer_3state_1bit:BUF3STATE_KEY0|saida[7]" to the node "CPU:CPU|muxGenerico2x1:MUX2x1|saida_MUX[7]" into an OR gate File: /home/bilbia/Insper/descomp/DesComp/Aula8/buffer_3state_1Bit.vhd Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.vhd Line: 19
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/bilbia/Insper/descomp/DesComp/Aula8/Aula8.vhd Line: 19
 Info (21057): Implemented 1289 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 93 output pins
     Info (21061): Implemented 1180 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 500 megabytes
-    Info: Processing ended: Wed Oct 20 17:22:26 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 504 megabytes
+    Info: Processing ended: Thu Oct 21 16:16:32 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:24
 
 
