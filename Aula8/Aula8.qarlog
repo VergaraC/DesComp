@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.qarlog
 
 Archive:	/home/deku/Facul/DesignComputadores/DesComp/Aula8/Aula8.qar
-Date:		Fri Oct  8 23:54:24 2021
+Date:		Thu Oct 21 16:35:33 2021
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -17,6 +17,7 @@ Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaRAM.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/MemoriaROM.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/MuxGenerico1X1.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/Registrador1X1.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/RegistradorGenerico.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/SomaConstante.vhd
@@ -28,18 +29,14 @@ Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/Waveform5.vwf
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/Waveform6.vwf
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/WaveformAula8_1.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/bancoRegistradoresArqRegMem.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_1Bit.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/buffer_3state_8portas.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/conversorHex7Seg.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Aula8/divisorGenerico.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Aula8/muxGenerico4x1.vhd
 /home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
-	======= Total: 28 files to archive =======
+	======= Total: 31 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
-
-
-******* Archived project restoration attempt on Thu Oct 14 18:23:21 2021
-Source archive file:	/home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8.qar
-Archive was extracted into	/home/tyr/Desktop/DesComp/DesComp/Aula8/Aula8_restored/
-		 - successfully.
