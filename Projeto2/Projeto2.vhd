@@ -62,7 +62,12 @@ ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDados, addrWidt
 		 
 Extensor : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => VALOR_LOCAL, larguraDadoSaida => VALOR_LOCAL)
           port map (estendeSinal_IN => sinalLocal, estendeSinal_OUT =>  sinalLocal);
-		 
+
+RAM_MIPS: entity work.RAM_MIPS  generic map (dataWidth => larguraDados, addrWidth => larguraDados, memoryAddrWidth => 6)
+			port map( clk => CLK, Endereco => Saida_ULA,
+			Dado_in => bancoReg_ULA_B, Dado_out => Saida_RAM,
+			we => Wr, re => Rd);
+			
 A <= BancoULA_A;
 B <= BancoULA_B;
 OutULA <= ULA_Out;

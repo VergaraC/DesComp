@@ -71,3 +71,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE RAMMIPS.vhd
 set_global_assignment -name VHDL_FILE extensorSinalGenerico.vhd
+set_global_assignment -name VHDL_FILE Decoder.vhd
