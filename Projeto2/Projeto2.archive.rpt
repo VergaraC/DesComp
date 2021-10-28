@@ -1,5 +1,5 @@
 Archive Project report for Projeto2
-Wed Oct 20 16:36:15 2021
+Wed Oct 27 23:59:31 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Wed Oct 20 16:36:15 2021 ;
+; Archive Project Status ; Successful - Wed Oct 27 23:59:31 2021 ;
 ; Revision Name          ; Projeto2                              ;
 ; Top-level Entity Name  ; Projeto2                              ;
 ; Family                 ; Cyclone V                             ;
@@ -50,6 +50,19 @@ Info: File Set 'Source control' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Warning: Excluding 'Automatically detected source files' The Quartus Prime software may not be able to automatically locate all project files.
+Info: Parsing: bancoRegistradoresArqRegMem.vhd
+Info: Parsing: MemoriaROM.vhd
+Info: Parsing: MuxGenerico.vhd
+Info: Parsing: RegistradorGenerico.vhd
+Info: Parsing: UlaSomaSub.vhd
+Info: Parsing: SomaConstante.vhd
+Info: Parsing: Projeto2.vhd
+Info: Parsing: RAMMIPS.vhd
+Info: Parsing: extensorSinalGenerico.vhd
+Info: Parsing: Decoder.vhd
+Info: Parsing: deslocadorGenerico.vhd
+Info: Parsing: somadorGenerico.vhd
 Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory /home/tyr/Desktop/DesComp/DesComp/Projeto2/
 Info: ----------------------------------------------------------
@@ -59,11 +72,11 @@ Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'Projeto2.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/tyr/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 578 megabytes
-    Info: Processing ended: Wed Oct 20 16:36:15 2021
+    Info: Processing ended: Wed Oct 27 23:59:31 2021
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +-----------------------------------------------------------------------+
@@ -73,13 +86,18 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 +-----------------------------------------------------------------------+
 ; /home/tyr/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf ;
 ; bancoRegistradoresArqRegMem.vhd                                       ;
+; Decoder.vhd                                                           ;
+; deslocadorGenerico.vhd                                                ;
+; extensorSinalGenerico.vhd                                             ;
 ; MemoriaROM.vhd                                                        ;
 ; MuxGenerico.vhd                                                       ;
 ; Projeto2.qpf                                                          ;
 ; Projeto2.qsf                                                          ;
 ; Projeto2.vhd                                                          ;
+; RAMMIPS.vhd                                                           ;
 ; RegistradorGenerico.vhd                                               ;
 ; SomaConstante.vhd                                                     ;
+; somadorGenerico.vhd                                                   ;
 ; UlaSomaSub.vhd                                                        ;
 ; Waveform.vwf                                                          ;
 ; Waveform1.vwf                                                         ;

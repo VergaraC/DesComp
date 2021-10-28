@@ -1,23 +1,28 @@
 Quartus Prime Archive log --	/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qarlog
 
 Archive:	/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qar
-Date:		Wed Oct 20 16:36:15 2021
+Date:		Wed Oct 27 23:59:31 2021
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
+/home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qpf
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qsf
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd
+/home/tyr/Desktop/DesComp/DesComp/Projeto2/RAMMIPS.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/Waveform.vwf
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/Waveform1.vwf
 /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd
+/home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd
+/home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd
+/home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd
 /home/tyr/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
-	======= Total: 12 files to archive =======
+	======= Total: 17 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
