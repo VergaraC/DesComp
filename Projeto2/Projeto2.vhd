@@ -25,7 +25,10 @@ architecture arquitetura of Projeto2 is
 	signal CLK : std_logic;
 	signal Instruction : std_logic_vector(larguraDados-1 downto 0);
 	signal PC_ROM : std_logic_vector(larguraDados-1 downto 0);
+	signal MuxSomImediatoOut : std_logic_vector(larguraDados-1 downto 0);
 	signal Mux_PC : std_logic_vector(larguraDados-1 downto 0);
+	signal DeslocadorMuxPcOut : std_logic_vector(27 downto 0);
+	
 	signal SomadorConstOut : std_logic_vector(larguraDados-1 downto 0);
   	signal SomadorOut : std_logic_vector(larguraDados-1 downto 0);
 
@@ -62,8 +65,15 @@ somaConst :  entity work.somaConstante  generic map (larguraDados => larguraDado
 			 
 MuxSomImediato: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 			port map (entradaA_MUX => SomadorConstOut, entradaB_MUX => SomadorOut,
-			seletor_MUX => SelMuxSomImediato, saida_MUX => Mux_PC);
+			seletor_MUX => SelMuxSomImediato, saida_MUX => MuxSomImediatoOut);
 
+DeslocadorMuxPc: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => 25, larguraDadoSaida => 27, deslocamento => 2)
+            port map (sinalIN => Instruction(25 downto 0), sinalOUT => DeslocadorMuxPcOut);
+
+MuxPC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
+			port map (entradaA_MUX => MuxSomImediatoOut, entradaB_MUX => DeslocadorMuxPcOut,
+			seletor_MUX => Sinais_Controle(0), saida_MUX => Mux_PC);
+			
 ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDados, addrWidth => larguraDados )
 		 port map (clk => CLK, Endereco => PC_ROM, Dado => Instruction);
 
