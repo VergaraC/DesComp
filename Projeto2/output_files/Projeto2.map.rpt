@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Projeto2
-Wed Oct 27 23:58:49 2021
+Thu Oct 28 15:10:01 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -9,8 +9,25 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |Projeto2
+  5. Parameter Settings for User Entity Instance: registradorGenerico:PC
+  6. Parameter Settings for User Entity Instance: somaConstante:somaConst
+  7. Parameter Settings for User Entity Instance: muxGenerico2x1:MuxSomImediato
+  8. Parameter Settings for User Entity Instance: MemoriaROM:ROM1
+  9. Parameter Settings for User Entity Instance: muxGenerico2x1:MuxReg3
+ 10. Parameter Settings for User Entity Instance: bancoRegistradoresArqRegMem:Banco_Registradores
+ 11. Parameter Settings for User Entity Instance: estendeSinalGenerico:ExtendeSinal
+ 12. Parameter Settings for User Entity Instance: Decoder:Decoder
+ 13. Parameter Settings for User Entity Instance: deslocadorGenerico:Deslocador
+ 14. Parameter Settings for User Entity Instance: somadorGenerico:somador
+ 15. Parameter Settings for User Entity Instance: muxGenerico2x1:MuxReg2Ula
+ 16. Parameter Settings for User Entity Instance: ULASomaSub:ULA1
+ 17. Parameter Settings for User Entity Instance: RAMMIPS:RAM_MIPS
+ 18. Parameter Settings for User Entity Instance: muxGenerico2x1:MuxDadoReg3
+ 19. Analysis & Elaboration Settings
+ 20. Port Connectivity Checks: "Decoder:Decoder"
+ 21. Port Connectivity Checks: "registradorGenerico:PC"
+ 22. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Wed Oct 27 23:58:49 2021           ;
+; Analysis & Elaboration Status ; Successful - Thu Oct 28 15:10:01 2021       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; Projeto2                                    ;
 ; Top-level Entity Name         ; Projeto2                                    ;
@@ -66,6 +83,169 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Projeto2 ;
++------------------+-------+-----------------------------------------------+
+; Parameter Name   ; Value ; Type                                          ;
++------------------+-------+-----------------------------------------------+
+; larguraDados     ; 32    ; Signed Integer                                ;
+; larguraAddrBanco ; 5     ; Signed Integer                                ;
+; simulacao        ; true  ; Enumerated                                    ;
++------------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:PC ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somaConstante:somaConst ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                              ;
+; constante      ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MuxSomImediato ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MemoriaROM:ROM1 ;
++-----------------+-------+------------------------------------+
+; Parameter Name  ; Value ; Type                               ;
++-----------------+-------+------------------------------------+
+; datawidth       ; 32    ; Signed Integer                     ;
+; addrwidth       ; 32    ; Signed Integer                     ;
+; memoryaddrwidth ; 6     ; Signed Integer                     ;
++-----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MuxReg3 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; larguradados   ; 5     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bancoRegistradoresArqRegMem:Banco_Registradores ;
++---------------------+-------+----------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                           ;
++---------------------+-------+----------------------------------------------------------------+
+; larguradados        ; 32    ; Signed Integer                                                 ;
+; larguraendbancoregs ; 5     ; Signed Integer                                                 ;
++---------------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: estendeSinalGenerico:ExtendeSinal ;
++--------------------+-------+---------------------------------------------------+
+; Parameter Name     ; Value ; Type                                              ;
++--------------------+-------+---------------------------------------------------+
+; larguradadoentrada ; 16    ; Signed Integer                                    ;
+; larguradadosaida   ; 32    ; Signed Integer                                    ;
++--------------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder:Decoder ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; functwidth     ; 6     ; Signed Integer                      ;
+; opcodewidth    ; 6     ; Signed Integer                      ;
+; outwidth       ; 12    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: deslocadorGenerico:Deslocador ;
++--------------------+-------+-----------------------------------------------+
+; Parameter Name     ; Value ; Type                                          ;
++--------------------+-------+-----------------------------------------------+
+; larguradadoentrada ; 32    ; Signed Integer                                ;
+; larguradadosaida   ; 32    ; Signed Integer                                ;
+; deslocamento       ; 2     ; Signed Integer                                ;
++--------------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somadorGenerico:somador ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MuxReg2Ula ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULASomaSub:ULA1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; larguradados   ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMMIPS:RAM_MIPS ;
++-----------------+-------+-------------------------------------+
+; Parameter Name  ; Value ; Type                                ;
++-----------------+-------+-------------------------------------+
+; datawidth       ; 32    ; Signed Integer                      ;
+; addrwidth       ; 32    ; Signed Integer                      ;
+; memoryaddrwidth ; 6     ; Signed Integer                      ;
++-----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MuxDadoReg3 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,25 +335,45 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder:Decoder"                                                                                  ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sinais_controle[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:PC" ;
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; enable ; Input ; Info     ; Stuck at VCC           ;
+; rst    ; Input ; Info     ; Stuck at GND           ;
++--------+-------+----------+------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 27 23:58:32 2021
+    Info: Processing started: Thu Oct 28 15:09:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2X1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
     Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
     Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
     Info (12022): Found design unit 1: MemoriaROM-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 16
     Info (12023): Found entity 1: MemoriaROM File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico.vhd Line: 4
+Warning (12019): Can't analyze file -- file MuxGenerico.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
     Info (12023): Found entity 1: registradorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
@@ -202,16 +402,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file somador
     Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 17
     Info (12023): Found entity 1: somadorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 5
 Info (12127): Elaborating entity "Projeto2" for the top level hierarchy
-Error (10344): VHDL expression error at Projeto2.vhd(71): expression has 5 elements, but must have 32 elements File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 71
-Error (10344): VHDL expression error at Projeto2.vhd(72): expression has 6 elements, but must have 32 elements File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 72
-Error (10346): VHDL error at Projeto2.vhd(70): formal port or parameter "entradaA_MUX" must have actual or default value File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 70
-Error (10346): VHDL error at Projeto2.vhd(70): formal port or parameter "entradaB_MUX" must have actual or default value File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 70
-Error (10344): VHDL expression error at Projeto2.vhd(72): expression has 32 elements, but must have 6 elements File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 72
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 6 errors, 1 warning
-    Error: Peak virtual memory: 786 megabytes
-    Error: Processing ended: Wed Oct 27 23:58:49 2021
-    Error: Elapsed time: 00:00:17
-    Error: Total CPU time (on all processors): 00:00:50
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 56
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaConst" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 60
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MuxSomImediato" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 63
+Info (12128): Elaborating entity "MemoriaROM" for hierarchy "MemoriaROM:ROM1" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 67
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MuxReg3" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 70
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "bancoRegistradoresArqRegMem:Banco_Registradores" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 74
+Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "estendeSinalGenerico:ExtendeSinal" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 79
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 82
+Info (12128): Elaborating entity "deslocadorGenerico" for hierarchy "deslocadorGenerico:Deslocador" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 86
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somador" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 89
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA1" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 97
+Warning (10541): VHDL Signal Declaration warning at UlaSomaSub.vhd(11): used implicit default value for signal "flagZ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 11
+Warning (10620): VHDL warning at UlaSomaSub.vhd(38): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 38
+Warning (10620): VHDL warning at UlaSomaSub.vhd(37): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 37
+Warning (10620): VHDL warning at UlaSomaSub.vhd(36): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 36
+Warning (10620): VHDL warning at UlaSomaSub.vhd(35): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 35
+Warning (10620): VHDL warning at UlaSomaSub.vhd(34): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 34
+Warning (10620): VHDL warning at UlaSomaSub.vhd(33): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 33
+Warning (10620): VHDL warning at UlaSomaSub.vhd(32): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 32
+Warning (10620): VHDL warning at UlaSomaSub.vhd(31): comparison between unequal length operands always returns FALSE File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 31
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM_MIPS" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 102
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 788 megabytes
+    Info: Processing ended: Thu Oct 28 15:10:01 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:49
 
 

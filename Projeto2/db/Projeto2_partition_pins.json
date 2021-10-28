@@ -28,118 +28,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "OutULA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[8]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[9]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[10]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[11]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[12]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[13]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[14]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[15]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[16]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[17]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[18]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[19]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[20]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[21]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[22]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[23]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[24]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[25]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[26]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[27]",
-					"strict" : false
-				},
-				{
 					"name" : "OutULA[28]",
 					"strict" : false
 				},
@@ -157,10 +45,6 @@
 				},
 				{
 					"name" : "CLOCK_50",
-					"strict" : false
-				},
-				{
-					"name" : "Seletor_ULA",
 					"strict" : false
 				}
 			]

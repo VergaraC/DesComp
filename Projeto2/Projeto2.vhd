@@ -30,7 +30,7 @@ architecture arquitetura of Projeto2 is
   	signal SomadorOut : std_logic_vector(larguraDados-1 downto 0);
 
   
-   signal MuxReg3Out : std_logic_vector(5 downto 0);
+   signal MuxReg3Out : std_logic_vector(4 downto 0);
 	
 	signal extensorOut : std_logic_vector(larguraDados-1 downto 0);
 	signal deslocadorOut : std_logic_vector(larguraDados-1 downto 0);
@@ -67,12 +67,12 @@ MuxSomImediato: entity work.muxGenerico2x1 generic map(larguraDados => larguraDa
 ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDados, addrWidth => larguraDados )
 		 port map (clk => CLK, Endereco => PC_ROM, Dado => Instruction);
 
-MuxReg3: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
+MuxReg3: entity work.muxGenerico2x1 generic map(larguraDados => 5)
 			port map (entradaA_MUX => Instruction(20 downto 16),entradaB_MUX => Instruction(15 downto 11),
 				seletor_MUX =>Sinais_Controle(1) , saida_MUX => MuxReg3Out);
 	 
 Banco_Registradores : entity work.bancoRegistradoresArqRegMem  generic map (larguraDados => larguraDados, larguraEndBancoRegs => larguraAddrBanco)
-			port map ( clk => CLK, A => Instruction(15 downto 11), B => Instruction(20 downto 16),
+			port map ( clk => CLK, A => Instruction(25 downto 21), B => Instruction(20 downto 16),
 				C => MuxReg3Out, DadosC => DadoReg3,
 				FlagC => Sinais_Controle(2), A_Out => BancoULA_A, B_Out => BancoULA_B);
 		 
@@ -80,7 +80,7 @@ ExtendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrad
           port map (estendeSinal_IN => Instruction(15 downto 0), estendeSinal_OUT =>  extensorOut);
 
 Decoder : entity work.Decoder generic map (FunctWidth => 6,OpCodeWidth => 6,outWidth =>12)
-          port map (OpCode => instruction(31 downto 26), Funct => instruction(0 downto 5), 
+          port map (OpCode => instruction(31 downto 26), Funct=> instruction(5 downto 0), 
 			 Sinais_Controle => Sinais_Controle);	
 
 Deslocador: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => larguraDados, larguraDadoSaida => larguraDados, deslocamento => 2)
@@ -96,8 +96,7 @@ MuxReg2Ula: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 	
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados) --- ADD Saida Z
           port map (entradaA => BancoULA_A, entradaB => MuxULA_B,
-			 saida => ULA_Out, seletor => Sinais_Controle(4 downto 7), flagZ => UlaZ);
-	 
+			 saida => ULA_Out, seletor => Sinais_Controle(7 downto 4), flagZ => UlaZ);
 
 
 RAM_MIPS: entity work.RAMMIPS  generic map (dataWidth => larguraDados, addrWidth => larguraDados, memoryAddrWidth => 6)
