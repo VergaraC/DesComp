@@ -75,3 +75,9 @@ set_global_assignment -name VHDL_FILE Decoder.vhd
 set_global_assignment -name VHDL_FILE deslocadorGenerico.vhd
 set_global_assignment -name VHDL_FILE somadorGenerico.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE Ula.vhd
+set_global_assignment -name VHDL_FILE Ula1Bit.vhd
+set_global_assignment -name VHDL_FILE muxGenerico2X1_1Bit.vhd
+set_global_assignment -name VHDL_FILE MuxGenerico4X1_1Bit.vhd
+set_global_assignment -name VHDL_FILE SomadorGenerico1Bit.vhd
+set_global_assignment -name VHDL_FILE UlaOverFlow.vhd
