@@ -43,7 +43,8 @@ architecture arquitetura of Projeto2 is
 	signal MuxULA_B : std_logic_vector(larguraDados-1 downto 0);
 	signal ULA_Out : std_logic_vector(larguraDados-1 downto 0);
 	signal UlaZ : std_logic;
-	
+	signal SeletorUla : std_logic_vector(3 downto 0);
+
 	signal DadoReg3 : std_logic_vector(larguraDados-1 downto 0);
 	signal Sinais_Controle : std_logic_vector(11 downto 0);
 
@@ -71,7 +72,7 @@ DeslocadorMuxPc: entity work.deslocadorGenerico  generic map(larguraDadoEntrada 
             port map (sinalIN => Instruction(25 downto 0), sinalOUT => DeslocadorMuxPcOut);
 
 MuxPC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
-			port map (entradaA_MUX => MuxSomImediatoOut, entradaB_MUX => DeslocadorMuxPcOut,
+			port map (entradaA_MUX => MuxSomImediatoOut, entradaB_MUX =>SomadorConstOut(31 downto 28) && DeslocadorMuxPcOut,
 			seletor_MUX => Sinais_Controle(0), saida_MUX => Mux_PC);
 			
 ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDados, addrWidth => larguraDados )
@@ -103,21 +104,25 @@ MuxReg2Ula: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 			port map (entradaA_MUX => BancoULA_B,entradaB_MUX => extensorOut,
 				seletor_MUX =>Sinais_Controle(3) , saida_MUX => MuxULA_B);
 
-	
+ControleUla: entity work.UnidadeControleUla generic map(larguraDados => larguraDados)
+			port map (Funct => instruction(5 downto 0), DecoderIn => Sinais_Controle(5 downto 4),
+				SeletorUla =>SeletorUla);
+
+				
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados) --- ADD Saida Z
           port map (entradaA => BancoULA_A, entradaB => MuxULA_B,
-			 saida => ULA_Out, seletor => Sinais_Controle(7 downto 4), flagZ => UlaZ);
+			 saida => ULA_Out, seletor =>SeletorUla, flagZ => UlaZ);
 
 
 RAM_MIPS: entity work.RAMMIPS  generic map (dataWidth => larguraDados, addrWidth => larguraDados, memoryAddrWidth => 6)
 			port map( clk => CLK, Endereco => ULA_Out,
 			Dado_in => BancoULA_B, Dado_out => Saida_RAM,
-			we => Sinais_Controle(10), re => Sinais_Controle(11));
+			we => Sinais_Controle(8), re => Sinais_Controle(9));
 		
 MuxDadoReg3: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
-			port map (entradaA_MUX => ULA_Out, entradaB_MUX => Saida_RAM, seletor_MUX => Sinais_Controle(8) , saida_MUX => DadoReg3);	
+			port map (entradaA_MUX => ULA_Out, entradaB_MUX => Saida_RAM, seletor_MUX => Sinais_Controle(6) , saida_MUX => DadoReg3);	
 
-SelMuxSomImediato <=	(Sinais_Controle(9) and UlaZ);
+SelMuxSomImediato <=	(Sinais_Controle(7) and UlaZ);
 A <= BancoULA_A;
 B <= BancoULA_B;
 OutULA <= ULA_Out;
