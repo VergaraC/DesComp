@@ -1,23 +1,23 @@
-ibrary ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 
-entity Ula is
+entity Ula1Bit is
     generic ( larguraDados : natural := 32 );
     port (
       entradaA, entradaB, SelinverteB:  in STD_LOGIC;
-		carryIn, less::  in STD_LOGIC;
+		carryIn, less:  in STD_LOGIC;
 		carryOut:  out STD_LOGIC;
       seletor:  in STD_LOGIC;
-      saida:    out STD_LOGIC;
+      saida:    out STD_LOGIC
     );
 end entity;
 
-architecture comportamento of Ula is
-   signal valorB
+architecture comportamento of Ula1Bit is
+   signal valorB :   STD_LOGIC;
 	signal andOp :    STD_LOGIC;
    signal orOp :     STD_LOGIC;
-	signal SomaOp :     STD_LOGIC;
+	signal SomaOp :   STD_LOGIC;
 	
 begin
 

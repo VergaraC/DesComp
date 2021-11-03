@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Projeto2
-Sun Oct 31 19:59:00 2021
+Analysis & Elaboration report for Projeto2
+Mon Nov  1 22:31:34 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -34,26 +34,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Oct 31 19:59:00 2021           ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name               ; Projeto2                                    ;
-; Top-level Entity Name       ; Projeto2                                    ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Failed - Mon Nov  1 22:31:34 2021           ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; Projeto2                                    ;
+; Top-level Entity Name         ; Projeto2                                    ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -139,98 +155,82 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 31 19:58:43 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2
+    Info: Processing started: Mon Nov  1 22:31:28 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2X1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
-    Info (12022): Found design unit 1: MemoriaROM-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: MemoriaROM File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 6
+    Info (12022): Found design unit 1: MemoriaROM-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: MemoriaROM File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 6
 Warning (12019): Can't analyze file -- file MuxGenerico.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file UlaSomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SomaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd Line: 5
-Error (10500): VHDL syntax error at Projeto2.vhd(75) near text "&";  expecting "(", or an identifier, or  unary operator File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 75
-Info (12021): Found 0 design units, including 0 entities, in source file Projeto2.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Projeto2.vhd
+    Info (12022): Found design unit 1: Projeto2-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 24
+    Info (12023): Found entity 1: Projeto2 File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file RAMMIPS.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RAMMIPS.vhd Line: 19
-    Info (12023): Found entity 1: RAMMIPS File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RAMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RAMMIPS.vhd Line: 19
+    Info (12023): Found entity 1: RAMMIPS File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RAMMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file extensorSinalGenerico.vhd
-    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 19
-    Info (12023): Found entity 1: estendeSinalGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 19
+    Info (12023): Found entity 1: estendeSinalGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 19
-    Info (12023): Found entity 1: Decoder File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Decoder.vhd Line: 19
+    Info (12023): Found entity 1: Decoder File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file deslocadorGenerico.vhd
-    Info (12022): Found design unit 1: deslocadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd Line: 18
-    Info (12023): Found entity 1: deslocadorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: deslocadorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd Line: 18
+    Info (12023): Found entity 1: deslocadorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 5
-Error (10500): VHDL syntax error at Ula.vhd(1) near text "ibrary";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula.vhd Line: 1
-Error (10500): VHDL syntax error at Ula.vhd(13) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula.vhd Line: 13
-Error (10500): VHDL syntax error at Ula.vhd(22) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula.vhd Line: 22
-Info (12021): Found 0 design units, including 0 entities, in source file Ula.vhd
-Error (10500): VHDL syntax error at Ula1Bit.vhd(1) near text "ibrary";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula1Bit.vhd Line: 1
-Error (10500): VHDL syntax error at Ula1Bit.vhd(9) near text ":";  expecting an identifier, or a string literal, or "buffer", or "in", or "inout", or "linkage", or "out" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula1Bit.vhd Line: 9
-Error (10500): VHDL syntax error at Ula1Bit.vhd(13) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula1Bit.vhd Line: 13
-Error (10500): VHDL syntax error at Ula1Bit.vhd(22) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula1Bit.vhd Line: 22
-Info (12021): Found 0 design units, including 0 entities, in source file Ula1Bit.vhd
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Ula.vhd
+    Info (12022): Found design unit 1: Ula-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 16
+    Info (12023): Found entity 1: Ula File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Ula1Bit.vhd
+    Info (12022): Found design unit 1: Ula1Bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula1Bit.vhd Line: 16
+    Info (12023): Found entity 1: Ula1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula1Bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2X1_1Bit.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1_1Bit-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1_1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1_1Bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1_1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico4X1_1Bit.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1_1Bit-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1_1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 4
-Critical Warning (12048): Ignored duplicate design unit "somadorGenerico-comportamento" in file somadorGenerico.vhd File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 17
+    Info (12022): Found design unit 1: muxGenerico4x1_1Bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1_1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 4
+Critical Warning (12048): Ignored duplicate design unit "somadorGenerico-comportamento" in file somadorGenerico.vhd File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file SomadorGenerico1Bit.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 5
-Error (10500): VHDL syntax error at UlaOverFlow.vhd(1) near text "ibrary";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaOverFlow.vhd Line: 1
-Error (10500): VHDL syntax error at UlaOverFlow.vhd(12) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaOverFlow.vhd Line: 12
-Error (10500): VHDL syntax error at UlaOverFlow.vhd(27) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaOverFlow.vhd Line: 27
-Info (12021): Found 0 design units, including 0 entities, in source file UlaOverFlow.vhd
-Error (10500): VHDL syntax error at UnidadeControleUla.vhd(9) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 9
-Error (10523): Ignored construct UnidadeControleUla at UnidadeControleUla.vhd(5) due to previous errors File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 5
-Info (12021): Found 0 design units, including 0 entities, in source file UnidadeControleUla.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 13 errors, 3 warnings
-    Error: Peak virtual memory: 466 megabytes
-    Error: Processing ended: Sun Oct 31 19:59:00 2021
-    Error: Elapsed time: 00:00:17
-    Error: Total CPU time (on all processors): 00:00:54
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file UlaOverFlow.vhd
+    Info (12022): Found design unit 1: UlaOverFlow-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaOverFlow.vhd Line: 16
+    Info (12023): Found entity 1: UlaOverFlow File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaOverFlow.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file UnidadeControleUla.vhd
+    Info (12022): Found design unit 1: UnidadeControleUla-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUla.vhd Line: 16
+    Info (12023): Found entity 1: UnidadeControleUla File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUla.vhd Line: 5
+Error (10476): VHDL error at Ula.vhd(35): type of identifier "entradaA" does not agree with its usage as "std_logic_vector" type File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 35
+Error (10476): VHDL error at Ula.vhd(35): type of identifier "valorB" does not agree with its usage as "std_logic_vector" type File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 35
+Error (10349): VHDL Association List error at Ula.vhd(35): formal "cIn" does not exist File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 35
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 3 errors, 3 warnings
+    Error: Peak virtual memory: 783 megabytes
+    Error: Processing ended: Mon Nov  1 22:31:34 2021
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:16
 
 

@@ -72,8 +72,10 @@ DeslocadorMuxPc: entity work.deslocadorGenerico  generic map(larguraDadoEntrada 
             port map (sinalIN => Instruction(25 downto 0), sinalOUT => DeslocadorMuxPcOut);
 
 MuxPC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
-			port map (entradaA_MUX => MuxSomImediatoOut, entradaB_MUX =>SomadorConstOut(31 downto 28) && DeslocadorMuxPcOut,
-			seletor_MUX => Sinais_Controle(0), saida_MUX => Mux_PC);
+			port map (entradaA_MUX => MuxSomImediatoOut, 
+							entradaB_MUX =>SomadorConstOut(31 downto 28) & DeslocadorMuxPcOut,
+							seletor_MUX => Sinais_Controle(0),
+							saida_MUX => Mux_PC);
 			
 ROM1 : entity work.MemoriaROM   generic map (dataWidth => larguraDados, addrWidth => larguraDados )
 		 port map (clk => CLK, Endereco => PC_ROM, Dado => Instruction);
