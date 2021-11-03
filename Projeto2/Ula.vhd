@@ -31,8 +31,8 @@ begin
 	andOp    <= entradaA and valorB;
 	orOp     <= entradaA or valorB;
 	
-	somador: entity work.somadorGenerico
-			port map (entradaA => entradaA, entradaB => valorB, cIn => carryIn, saida => soma_mux, cOut => carryOut);
+	somador: entity work.SomadorGenerico1Bit
+			port map (entradaA => entradaA, entradaB => valorB, caryIn => carryIn, saida => soma_mux, carryOut => carryOut);
 
 	MuxSaida: entity work.muxGenerico4x1_1Bit generic map(larguraDados => 1)
 			port map (entradaA_MUX => andOp,
