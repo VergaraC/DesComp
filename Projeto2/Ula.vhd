@@ -6,6 +6,7 @@ entity Ula is
     generic ( larguraDados : natural := 32 );
     port (
       entradaA, entradaB, SelinverteB:  in STD_LOGIC;
+		less:  in STD_LOGIC;
 		carryIn:  in STD_LOGIC;
 		carryOut:  out STD_LOGIC;
       seletor:  in STD_LOGIC;
@@ -38,7 +39,7 @@ begin
 			port map (entradaA_MUX => andOp,
 							entradaB_MUX => orOp,
 							entradaC_MUX => ResultadoSomador,
-							entradaD_MUX => "0", -- IMPORTANTE: TA ERRADO, BOTEI 0 SO PARA RODAR, CORRIGIR
+							entradaD_MUX => less,
 							seletor_MUX => SelinverteB,
 							saida_MUX => saida);
 
