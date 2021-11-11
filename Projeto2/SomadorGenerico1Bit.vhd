@@ -9,13 +9,14 @@ entity somadorGenerico1Bit is
     );
     port
     (
-        entradaA, entradaB, caryIn: in STD_LOGIC;
+        entradaA, entradaB : in STD_LOGIC;
+		  carryIn: in STD_LOGIC;
         carryOut, saida:  out STD_LOGIC
     );
 end entity;
 
-architecture comportamento of somadorGenerico is
+architecture comportamento1Bit of somadorGenerico is
     begin
-        saida <= caryIn xor (entradaA xor entradaB);
-		  carryOut <= (entradaA and entradaB) or (caryIn and (entradaA xor entradaB));
+        saida <= carryIn xor (entradaA xor entradaB);
+		  carryOut <= (entradaA and entradaB) or (carryIn and (entradaA xor entradaB));
 end architecture;

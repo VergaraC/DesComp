@@ -9,7 +9,7 @@ entity Ula is
 		less:  in STD_LOGIC;
 		carryIn:  in STD_LOGIC;
 		carryOut:  out STD_LOGIC;
-      seletor:  in STD_LOGIC;
+      seletor:  in STD_LOGIC_VECTOR (1 DOWNTO 0);
       saida:    out STD_LOGIC
     );
 end entity;
@@ -19,6 +19,7 @@ architecture comportamento of Ula is
 	signal andOp :    STD_LOGIC;
    signal orOp :     STD_LOGIC;
 	signal SomaOp :   STD_LOGIC;
+	signal ResultadoSomador :   STD_LOGIC;
 	
 begin
 
@@ -33,14 +34,14 @@ begin
 	orOp     <= entradaA or valorB;
 	
 	somador: entity work.SomadorGenerico1Bit
-			port map (entradaA => entradaA, entradaB => valorB, caryIn => carryIn, saida => soma_mux, carryOut => carryOut);
+			port map (entradaA => entradaA, entradaB => valorB, carryIn => carryIn, saida => SomaOp, carryOut => carryOut);
 
 	MuxSaida: entity work.muxGenerico4x1_1Bit generic map(larguraDados => 1)
 			port map (entradaA_MUX => andOp,
 							entradaB_MUX => orOp,
 							entradaC_MUX => ResultadoSomador,
 							entradaD_MUX => less,
-							seletor_MUX => SelinverteB,
+							seletor_MUX => seletor,
 							saida_MUX => saida);
 
 end architecture;
