@@ -7,8 +7,8 @@ entity UnidadeControleUla is
 	 
 	 port
     (
-        Funct: in  STD_LOGIC_VECTOR(6 downto 0);
-		  DecoderIn: in  STD_LOGIC_VECTOR(2 downto 0);
+        Funct: in  STD_LOGIC_VECTOR(5 downto 0);
+		  DecoderIn: in  STD_LOGIC_VECTOR(1 downto 0);
         SeletorUla:   out STD_LOGIC_VECTOR(3 downto 0)
     );
 end entity;

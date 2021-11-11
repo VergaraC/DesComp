@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto2
-Wed Nov 10 22:14:30 2021
+Thu Nov 11 15:09:45 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Nov 10 22:14:30 2021           ;
+; Analysis & Synthesis Status ; Failed - Thu Nov 11 15:09:45 2021           ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; Projeto2                                    ;
 ; Top-level Entity Name       ; Projeto2                                    ;
@@ -161,73 +161,80 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 10 22:14:16 2021
+    Info: Processing started: Thu Nov 11 15:09:38 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2X1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegMem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MemoriaROM.vhd
-    Info (12022): Found design unit 1: MemoriaROM-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: MemoriaROM File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd Line: 6
+    Info (12022): Found design unit 1: MemoriaROM-initFileROM File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 21
+    Info (12023): Found entity 1: MemoriaROM File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd Line: 5
 Warning (12019): Can't analyze file -- file MuxGenerico.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file RegistradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file UlaSomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SomaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Projeto2.vhd
-    Info (12022): Found design unit 1: Projeto2-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 24
-    Info (12023): Found entity 1: Projeto2 File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd Line: 5
+    Info (12022): Found design unit 1: Projeto2-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 24
+    Info (12023): Found entity 1: Projeto2 File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file RAMMIPS.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RAMMIPS.vhd Line: 19
-    Info (12023): Found entity 1: RAMMIPS File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/RAMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RAMMIPS.vhd Line: 19
+    Info (12023): Found entity 1: RAMMIPS File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/RAMMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file extensorSinalGenerico.vhd
-    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 19
-    Info (12023): Found entity 1: estendeSinalGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 19
+    Info (12023): Found entity 1: estendeSinalGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 19
-    Info (12023): Found entity 1: Decoder File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arquitetura File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Decoder.vhd Line: 19
+    Info (12023): Found entity 1: Decoder File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file deslocadorGenerico.vhd
-    Info (12022): Found design unit 1: deslocadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd Line: 18
-    Info (12023): Found entity 1: deslocadorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: deslocadorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd Line: 18
+    Info (12023): Found entity 1: deslocadorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Ula.vhd
-    Info (12022): Found design unit 1: Ula-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula.vhd Line: 17
-    Info (12023): Found entity 1: Ula File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula.vhd Line: 5
+    Info (12022): Found design unit 1: Ula-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 17
+    Info (12023): Found entity 1: Ula File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2X1_1Bit.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1_1Bit-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1_1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1_1Bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1_1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MuxGenerico4X1_1Bit.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1_1Bit-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1_1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1_1Bit-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1_1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file SomadorGenerico1Bit.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 18
-    Info (12023): Found entity 1: somadorGenerico1Bit File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 5
+    Info (12022): Found design unit 1: somadorGenerico1Bit-comportamento1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 14
+    Info (12023): Found entity 1: somadorGenerico1Bit File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file UlaOverFlow.vhd
-    Info (12022): Found design unit 1: UlaOverFlow-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaOverFlow.vhd Line: 16
-    Info (12023): Found entity 1: UlaOverFlow File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaOverFlow.vhd Line: 5
+    Info (12022): Found design unit 1: UlaOverFlow-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaOverFlow.vhd Line: 16
+    Info (12023): Found entity 1: UlaOverFlow File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaOverFlow.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file UnidadeControleUla.vhd
-    Info (12022): Found design unit 1: UnidadeControleUla-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 16
-    Info (12023): Found entity 1: UnidadeControleUla File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 5
+    Info (12022): Found design unit 1: UnidadeControleUla-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUla.vhd Line: 16
+    Info (12023): Found entity 1: UnidadeControleUla File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUla.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file UlaTotal.vhd
-    Info (12022): Found design unit 1: ULA_completa-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaTotal.vhd Line: 16
-    Info (12023): Found entity 1: ULA_completa File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaTotal.vhd Line: 5
-Error (10482): VHDL error at SomadorGenerico1Bit.vhd(20): object "carryIn" is used but not declared File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/SomadorGenerico1Bit.vhd Line: 20
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 466 megabytes
-    Error: Processing ended: Wed Nov 10 22:14:30 2021
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:40
+    Info (12022): Found design unit 1: ULA_completa-comportamento File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaTotal.vhd Line: 16
+    Info (12023): Found entity 1: ULA_completa File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaTotal.vhd Line: 5
+Info (12127): Elaborating entity "Projeto2" for the top level hierarchy
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 60
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaConst" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 64
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MuxSomImediato" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 67
+Info (12128): Elaborating entity "deslocadorGenerico" for hierarchy "deslocadorGenerico:DeslocadorMuxPc" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 71
+Error (10393): VHDL error at deslocadorGenerico.vhd(20): left bound (29) of slice must belong to range (25 downto 0) of corresponding object File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd Line: 20
+Error (10658): VHDL Operator error at deslocadorGenerico.vhd(20): failed to evaluate call to operator ""&"" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd Line: 20
+Error (12152): Can't elaborate user hierarchy "deslocadorGenerico:DeslocadorMuxPc" File: /home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd Line: 71
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
+    Error: Peak virtual memory: 469 megabytes
+    Error: Processing ended: Thu Nov 11 15:09:45 2021
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:18
 
 

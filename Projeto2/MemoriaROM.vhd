@@ -1,4 +1,4 @@
-ibrary ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -14,11 +14,11 @@ entity MemoriaROM is
     port (
           Endereco : in std_logic_vector (addrWidth-1 DOWNTO 0);
           Dado : out std_logic_vector (dataWidth-1 DOWNTO 0);
-			 clk      : IN  std_logic;
+			 clk      : IN  std_logic
     );
 end entity;
 
-architecture initFileROM of romMif is
+architecture initFileROM of MemoriaROM is
 
 type memory_t is array (2**memoryAddrWidth -1 downto 0) of std_logic_vector (dataWidth-1 downto 0);
 signal content: memory_t;

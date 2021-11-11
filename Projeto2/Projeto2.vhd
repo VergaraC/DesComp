@@ -1,4 +1,4 @@
-ft rlibrary ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -68,7 +68,7 @@ MuxSomImediato: entity work.muxGenerico2x1 generic map(larguraDados => larguraDa
 			port map (entradaA_MUX => SomadorConstOut, entradaB_MUX => SomadorOut,
 			seletor_MUX => SelMuxSomImediato, saida_MUX => MuxSomImediatoOut);
 
-DeslocadorMuxPc: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => 25, larguraDadoSaida => 27, deslocamento => 2)
+DeslocadorMuxPc: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => 26, larguraDadoSaida => 28, deslocamento => 2)
             port map (sinalIN => Instruction(25 downto 0), sinalOUT => DeslocadorMuxPcOut);
 
 MuxPC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
@@ -96,7 +96,7 @@ Decoder : entity work.Decoder generic map (FunctWidth => 6,OpCodeWidth => 6,outW
           port map (OpCode => instruction(31 downto 26), Funct=> instruction(5 downto 0), 
 			 Sinais_Controle => Sinais_Controle);	
 
-Deslocador: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => larguraDados, larguraDadoSaida => larguraDados, deslocamento => 2)
+Deslocador: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => 32, larguraDadoSaida => 32, deslocamento => 2)
             port map (sinalIN => extensorOut, sinalOUT => deslocadorOut);
 
 somador:      entity work.somadorGenerico  generic map (larguraDados => larguraDados)
