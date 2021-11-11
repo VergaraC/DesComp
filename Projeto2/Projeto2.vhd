@@ -1,4 +1,4 @@
-library ieee;
+ft rlibrary ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -119,7 +119,7 @@ ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados) --- ADD
 RAM_MIPS: entity work.RAMMIPS  generic map (dataWidth => larguraDados, addrWidth => larguraDados, memoryAddrWidth => 6)
 			port map( clk => CLK, Endereco => ULA_Out,
 			Dado_in => BancoULA_B, Dado_out => Saida_RAM,
-			we => Sinais_Controle(8), re => Sinais_Controle(9));
+			we => Sinais_Controle(9), re => Sinais_Controle(8));
 		
 MuxDadoReg3: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 			port map (entradaA_MUX => ULA_Out, entradaB_MUX => Saida_RAM, seletor_MUX => Sinais_Controle(6) , saida_MUX => DadoReg3);	

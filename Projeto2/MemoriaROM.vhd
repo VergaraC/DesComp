@@ -1,44 +1,34 @@
-
-library IEEE;
-use IEEE.std_logic_1164.all;
+ibrary ieee;
+use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity MemoriaROM IS
-   generic (
-          dataWidth: natural := 32;
-          addrWidth: natural := 32;
-       memoryAddrWidth:  natural := 6 );   -- 64 posicoes de 32 bits cada
-   port ( clk      : IN  STD_LOGIC;
-          Endereco : IN  STD_LOGIC_VECTOR (addrWidth-1 DOWNTO 0);
-          Dado     : OUT STD_LOGIC_VECTOR (dataWidth-1 DOWNTO 0) );
+entity MemoriaROM is
+
+    generic
+    (
+        dataWidth : natural := 32;
+        addrWidth : natural := 32;
+		  memoryAddrWidth:  natural := 6
+    );
+
+    port (
+          Endereco : in std_logic_vector (addrWidth-1 DOWNTO 0);
+          Dado : out std_logic_vector (dataWidth-1 DOWNTO 0);
+			 clk      : IN  std_logic;
+    );
 end entity;
 
-architecture assincrona OF MemoriaROM IS
-  type blocoMemoria IS ARRAY(0 TO 2**memoryAddrWidth - 1) OF std_logic_vector(dataWidth-1 DOWNTO 0);
-  
-  function initMemory
-        return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
-  begin
-		  -- OPCODE Rs    Rt    Rd    shamt funct
-		  -- 000000 01001 01000 01010 00000 100000
-        -- Inicializa os endereços:
-        tmp(0) := "000000" & "01001" & "01000" & "01010" & "00000" & "100000";
-        tmp(1) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        tmp(2) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        tmp(3) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        tmp(4) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        tmp(5) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        tmp(6) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        tmp(7) := "000000" & "00000" & "00000" & "00000" & "00000" & "000000";
-        return tmp;
-    end initMemory;
+architecture initFileROM of romMif is
 
-    signal memROM : blocoMemoria := initMemory;
+type memory_t is array (2**memoryAddrWidth -1 downto 0) of std_logic_vector (dataWidth-1 downto 0);
+signal content: memory_t;
+attribute ram_init_file : string;
+attribute ram_init_file of content:
+signal is "initROM.mif";
 
--- Utiliza uma quantidade menor de endereços locais:
-   signal EnderecoLocal : std_logic_vector(memoryAddrWidth-1 downto 0);
+signal Address : std_logic_vector(memoryAddrWidth-1 downto 0);
 
 begin
-  EnderecoLocal <= Endereco(memoryAddrWidth+1 downto 2);
-  Dado <= memROM (to_integer(unsigned(EnderecoLocal)));
+	Address <= Endereco(memoryAddrWidth+1 downto 2);
+   Dado <= content(to_integer(unsigned(Address)));
 end architecture;
