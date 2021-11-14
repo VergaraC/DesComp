@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "A[28]",
-					"strict" : false
-				},
-				{
 					"name" : "A[29]",
 					"strict" : false
 				},
@@ -20,15 +16,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "B[28]",
+					"strict" : false
+				},
+				{
+					"name" : "B[29]",
+					"strict" : false
+				},
+				{
 					"name" : "B[30]",
 					"strict" : false
 				},
 				{
 					"name" : "B[31]",
-					"strict" : false
-				},
-				{
-					"name" : "OutULA[28]",
 					"strict" : false
 				},
 				{

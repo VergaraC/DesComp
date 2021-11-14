@@ -17,5 +17,12 @@ end entity;
 
 architecture comportamento of deslocadorGenerico is
     begin
-        sinalOUT <= sinalIN(29 downto 0) & "00";
+		process (sinalIN) is
+			begin
+			  if (sinalIN(larguraDadoEntrada-1) = '1') then
+						 sinalOUT <= (larguraDadoSaida-1 downto larguraDadoEntrada => '1') & sinalIN;
+					else
+						 sinalOUT <= (larguraDadoSaida-1 downto larguraDadoEntrada => '0') & sinalIN;
+					end if;
+	end process;
 end architecture;

@@ -105,10 +105,10 @@ somador:      entity work.somadorGenerico  generic map (larguraDados => larguraD
 MuxReg2Ula: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 			port map (entradaA_MUX => BancoULA_B,entradaB_MUX => extensorOut,
 				seletor_MUX =>Sinais_Controle(3) , saida_MUX => MuxULA_B);
-
+-- Mudar Valor
 ControleUla: entity work.UnidadeControleUla generic map(larguraDados => larguraDados)
-			port map (Funct => instruction(5 downto 0), DecoderIn => Sinais_Controle(5 downto 4),
-				SeletorUla =>SeletorUla);
+			port map (Funct => instruction(5 downto 0), OpCode => Sinais_Controle(5 downto 4),
+				SeletorTipoR => instruction(2) ,SeletorUla =>SeletorUla);
 
 				
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados) --- ADD Saida Z
