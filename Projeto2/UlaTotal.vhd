@@ -2,7 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 
-entity ULA_completa is
+entity UlaTotal is
+	generic   (
+		larguraDados  : natural := 6
+	);
+ 
     port
     (
       entradaA:                  in STD_LOGIC_VECTOR(31 downto 0);
@@ -13,7 +17,7 @@ entity ULA_completa is
     );
 end entity;
 
-architecture comportamento of ULA_completa is
+architecture comportamento of UlaTotal is
 	constant zero : std_logic_vector(31 downto 0) := (others => '0');
 	
 	signal CarryIn            : std_logic;

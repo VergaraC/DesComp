@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto2
-Sun Nov 14 19:05:19 2021
+Mon Nov 15 19:17:54 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Nov 14 19:05:19 2021           ;
+; Analysis & Synthesis Status ; Failed - Mon Nov 15 19:17:54 2021           ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; Projeto2                                    ;
 ; Top-level Entity Name       ; Projeto2                                    ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 14 19:04:58 2021
+    Info: Processing started: Mon Nov 15 19:17:36 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto2 -c Projeto2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -198,7 +198,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file extenso
     Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 19
     Info (12023): Found entity 1: estendeSinalGenerico File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 19
+    Info (12022): Found design unit 1: Decoder-arquitetura File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 17
     Info (12023): Found entity 1: Decoder File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file deslocadorGenerico.vhd
     Info (12022): Found design unit 1: deslocadorGenerico-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd Line: 18
@@ -225,22 +225,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file Unidade
     Info (12022): Found design unit 1: UnidadeControleUla-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 20
     Info (12023): Found entity 1: UnidadeControleUla File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file UlaTotal.vhd
-    Info (12022): Found design unit 1: ULA_completa-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaTotal.vhd Line: 16
-    Info (12023): Found entity 1: ULA_completa File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaTotal.vhd Line: 5
+    Info (12022): Found design unit 1: UlaTotal-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaTotal.vhd Line: 20
+    Info (12023): Found entity 1: UlaTotal File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaTotal.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file UnidadeControleUlaFunct.vhd
     Info (12022): Found design unit 1: UnidadeControleUlaFunct-comportamento File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUlaFunct.vhd Line: 16
     Info (12023): Found entity 1: UnidadeControleUlaFunct File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUlaFunct.vhd Line: 5
-Error (10465): VHDL error at UnidadeControleUla.vhd(27): name "ControleFunct" cannot be used because it is already used for a previously declared item File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 27
-Error (10349): VHDL Association List error at UnidadeControleUla.vhd(27): formal "larguraDados" does not exist File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 27
-Error (10349): VHDL Association List error at UnidadeControleUla.vhd(28): formal "Funct" does not exist File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 28
-Error (10346): VHDL error at UnidadeControleUla.vhd(27): formal port or parameter "Funct" must have actual or default value File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 27
-Error (10784): HDL error at UnidadeControleUlaFunct.vhd(11): see declaration for object "Funct" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUlaFunct.vhd Line: 11
-Error (10346): VHDL error at UnidadeControleUla.vhd(27): formal port or parameter "saidaFunct" must have actual or default value File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd Line: 27
-Error (10784): HDL error at UnidadeControleUlaFunct.vhd(12): see declaration for object "saidaFunct" File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUlaFunct.vhd Line: 12
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 2 warnings
+Error (10517): VHDL type mismatch error at Decoder.vhd(31): std_ulogic type does not match integer literal File: /home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd Line: 31
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
     Error: Peak virtual memory: 467 megabytes
-    Error: Processing ended: Sun Nov 14 19:05:19 2021
-    Error: Elapsed time: 00:00:21
-    Error: Total CPU time (on all processors): 00:01:03
+    Error: Processing ended: Mon Nov 15 19:17:54 2021
+    Error: Elapsed time: 00:00:18
+    Error: Total CPU time (on all processors): 00:00:54
 
 
