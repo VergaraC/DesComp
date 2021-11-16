@@ -1,5 +1,5 @@
 Archive Project report for Projeto2
-Wed Nov  3 23:09:55 2021
+Mon Nov 15 23:03:12 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Wed Nov  3 23:09:55 2021 ;
+; Archive Project Status ; Successful - Mon Nov 15 23:03:12 2021 ;
 ; Revision Name          ; Projeto2                              ;
 ; Top-level Entity Name  ; Projeto2                              ;
 ; Family                 ; Cyclone V                             ;
@@ -50,82 +50,55 @@ Info: File Set 'Source control' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
-Critical Warning: Analysis & Elaboration was not run successfully.
-    Critical Warning: The 'Automatically detected source files' file subset will attempt to guess which files are needed. The archive file will likely be larger than required and may still be incomplete.
-Warning (225003): Can't find required hierarchy file MuxGenerico.vhd
-Info: Parsing: muxGenerico2X1.vhd
-Info: Parsing: UlaSomaSub.vhd
-Info: Parsing: Projeto2.vhd
-Info: Parsing: Ula.vhd
-Info: Parsing: Ula1Bit.vhd
-Info: Parsing: muxGenerico2X1_1Bit.vhd
-Info: Parsing: MuxGenerico4X1_1Bit.vhd
-Info: Parsing: SomadorGenerico1Bit.vhd
-Info: Parsing: UlaOverFlow.vhd
-Info: Parsing: UnidadeControleUla.vhd
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory /home/tyr/Desktop/DesComp/DesComp/Projeto2/
+Info (13213): Using common directory /home/deku/Facul/DesignComputadores/DesComp/Projeto2/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qar'
+Info: Generated archive '/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'Projeto2.archive.rpt'
-Error (23031): Evaluation of Tcl script /home/tyr/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
-Error: Quartus Prime Shell was unsuccessful. 5 errors, 7 warnings
-    Error: Peak virtual memory: 578 megabytes
-    Error: Processing ended: Wed Nov  3 23:09:55 2021
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:22
+Info (23030): Evaluation of Tcl script /home/deku/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 583 megabytes
+    Info: Processing ended: Mon Nov 15 23:03:12 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 
-+-----------------------------------------------------------------------+
-; Files Archived                                                        ;
-+-----------------------------------------------------------------------+
-; File Name                                                             ;
-+-----------------------------------------------------------------------+
-; /home/tyr/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf ;
-; bancoRegistradoresArqRegMem.vhd                                       ;
-; c5_pin_model_dump.txt                                                 ;
-; Decoder.vhd                                                           ;
-; deslocadorGenerico.vhd                                                ;
-; extensorSinalGenerico.vhd                                             ;
-; MemoriaROM.vhd                                                        ;
-; muxGenerico2X1.vhd                                                    ;
-; muxGenerico2X1_1Bit.vhd                                               ;
-; MuxGenerico4X1_1Bit.vhd                                               ;
-; output_files/Projeto2.asm.rpt                                         ;
-; output_files/Projeto2.done                                            ;
-; output_files/Projeto2.eda.rpt                                         ;
-; output_files/Projeto2.fit.rpt                                         ;
-; output_files/Projeto2.fit.summary                                     ;
-; output_files/Projeto2.flow.rpt                                        ;
-; output_files/Projeto2.jdi                                             ;
-; output_files/Projeto2.map.rpt                                         ;
-; output_files/Projeto2.map.summary                                     ;
-; output_files/Projeto2.pin                                             ;
-; output_files/Projeto2.sld                                             ;
-; output_files/Projeto2.sof                                             ;
-; output_files/Projeto2.sta.rpt                                         ;
-; output_files/Projeto2.sta.summary                                     ;
-; OverFlow.vhd                                                          ;
-; Projeto2.archive.rpt                                                  ;
-; Projeto2.qarlog                                                       ;
-; Projeto2.qpf                                                          ;
-; Projeto2.qsf                                                          ;
-; Projeto2.vhd                                                          ;
-; RAMMIPS.vhd                                                           ;
-; RegistradorGenerico.vhd                                               ;
-; SomaConstante.vhd                                                     ;
-; somadorGenerico.vhd                                                   ;
-; SomadorGenerico1Bit.vhd                                               ;
-; Ula.vhd                                                               ;
-; Ula1Bit.vhd                                                           ;
-; UlaOverFlow.vhd                                                       ;
-; UlaSomaSub.vhd                                                        ;
-; UnidadeControleUla.vhd                                                ;
-; Waveform.vwf                                                          ;
-; Waveform1.vwf                                                         ;
-+-----------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Files Archived                                                         ;
++------------------------------------------------------------------------+
+; File Name                                                              ;
++------------------------------------------------------------------------+
+; /home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf ;
+; bancoRegistradoresArqRegMem.vhd                                        ;
+; conversorHex7Seg.vhd                                                   ;
+; Decoder.vhd                                                            ;
+; deslocadorGenerico.vhd                                                 ;
+; extensorSinalGenerico.vhd                                              ;
+; MemoriaROM.vhd                                                         ;
+; muxGenerico2X1.vhd                                                     ;
+; muxGenerico2X1_1Bit.vhd                                                ;
+; MuxGenerico4X1_1Bit.vhd                                                ;
+; OverFlow.vhd                                                           ;
+; Projeto2.qpf                                                           ;
+; Projeto2.qsf                                                           ;
+; Projeto2.vhd                                                           ;
+; RAMMIPS.vhd                                                            ;
+; RegistradorGenerico.vhd                                                ;
+; SomaConstante.vhd                                                      ;
+; somadorGenerico.vhd                                                    ;
+; SomadorGenerico1Bit.vhd                                                ;
+; Ula.vhd                                                                ;
+; UlaOverFlow.vhd                                                        ;
+; UlaSomaSub.vhd                                                         ;
+; UlaTotal.vhd                                                           ;
+; UnidadeControleUla.vhd                                                 ;
+; UnidadeControleUlaFunct.vhd                                            ;
+; UnidadeControleUlaOpCode.vhd                                           ;
+; Waveform.vwf                                                           ;
+; Waveform1.vwf                                                          ;
++------------------------------------------------------------------------+
 
 

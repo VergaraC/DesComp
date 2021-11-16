@@ -84,4 +84,5 @@ set_global_assignment -name VHDL_FILE UlaOverFlow.vhd
 set_global_assignment -name VHDL_FILE UnidadeControleUla.vhd
 set_global_assignment -name VHDL_FILE UlaTotal.vhd
 set_global_assignment -name VHDL_FILE UnidadeControleUlaFunct.vhd
+set_global_assignment -name VHDL_FILE conversorHex7Seg.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

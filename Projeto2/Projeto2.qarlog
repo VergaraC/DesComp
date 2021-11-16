@@ -1,53 +1,39 @@
-Quartus Prime Archive log --	/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qarlog
+Quartus Prime Archive log --	/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qarlog
 
-Archive:	/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qar
-Date:		Wed Nov  3 23:09:55 2021
+Archive:	/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qar
+Date:		Mon Nov 15 23:03:12 2021
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Decoder.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/MemoriaROM.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/OverFlow.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.archive.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qarlog
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qpf
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.qsf
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Projeto2.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/RAMMIPS.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/RegistradorGenerico.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/SomaConstante.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/SomadorGenerico1Bit.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Ula1Bit.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaOverFlow.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/UlaSomaSub.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/UnidadeControleUla.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Waveform.vwf
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/Waveform1.vwf
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/c5_pin_model_dump.txt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/deslocadorGenerico.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/extensorSinalGenerico.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.asm.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.done
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.eda.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.fit.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.fit.summary
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.flow.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.jdi
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.map.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.map.summary
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.pin
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.sld
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.sof
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.sta.rpt
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/output_files/Projeto2.sta.summary
-/home/tyr/Desktop/DesComp/DesComp/Projeto2/somadorGenerico.vhd
-/home/tyr/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
-	======= Total: 42 files to archive =======
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Decoder.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/MemoriaROM.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/MuxGenerico4X1_1Bit.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/OverFlow.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qpf
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qsf
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/RAMMIPS.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/RegistradorGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomaConstante.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/SomadorGenerico1Bit.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Ula.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaOverFlow.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaSomaSub.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/UlaTotal.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUla.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUlaFunct.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/UnidadeControleUlaOpCode.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Waveform.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Waveform1.vwf
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/bancoRegistradoresArqRegMem.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/conversorHex7Seg.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/extensorSinalGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd
+/home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 28 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
