@@ -46,7 +46,7 @@ architecture arquitetura of Projeto2 is
 	signal SeletorUla : std_logic_vector(2 downto 0);
 
 	signal DadoReg3 : std_logic_vector(larguraDados-1 downto 0);
-	signal Sinais_Controle : std_logic_vector(11 downto 0);
+	signal Sinais_Controle : std_logic_vector(9 downto 0);
 
 	signal SelMuxSomImediato : std_logic;
 	signal Saida_RAM : std_logic_vector(larguraDados-1 downto 0);
