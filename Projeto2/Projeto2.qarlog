@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qarlog
 
 Archive:	/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qar
-Date:		Mon Nov 15 23:03:12 2021
+Date:		Mon Nov 15 23:49:57 2021
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -29,11 +29,12 @@ Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 /home/deku/Facul/DesignComputadores/DesComp/Projeto2/conversorHex7Seg.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Projeto2/deslocadorGenerico.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Projeto2/extensorSinalGenerico.vhd
+/home/deku/Facul/DesignComputadores/DesComp/Projeto2/initRom.mif
 /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Projeto2/muxGenerico2X1_1Bit.vhd
 /home/deku/Facul/DesignComputadores/DesComp/Projeto2/somadorGenerico.vhd
 /home/deku/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
-	======= Total: 28 files to archive =======
+	======= Total: 29 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

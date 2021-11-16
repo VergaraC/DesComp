@@ -24,7 +24,7 @@ type memory_t is array (2**memoryAddrWidth -1 downto 0) of std_logic_vector (dat
 signal content: memory_t;
 attribute ram_init_file : string;
 attribute ram_init_file of content:
-signal is "initROM.mif";
+signal is "initRom.mif";
 
 signal Address : std_logic_vector(memoryAddrWidth-1 downto 0);
 

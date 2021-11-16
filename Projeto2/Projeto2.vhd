@@ -67,7 +67,7 @@ architecture arquitetura of Projeto2 is
 begin
 
 
-CLK <= CLOCK_50;
+CLK <= KEY(0);
 				
 		  
 PC : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
@@ -181,7 +181,7 @@ CONV_HEX5 :  entity work.conversorHex7Seg
                  negativo => '0',
                  overFlow =>  '0',
                  saida7seg => HEX5);
-					  
+
 LEDR(0) <= Mux_Led_7Seg(24);
 LEDR(1) <= Mux_Led_7Seg(25);
 LEDR(2) <= Mux_Led_7Seg(26);

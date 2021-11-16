@@ -21,7 +21,7 @@ architecture comportamento of UnidadeControleUlaFunct is
 	constant orOp : std_logic_vector(5 downto 0) := "100101";
 	constant sltOp : std_logic_vector(5 downto 0) := "101010";
     begin
-        saidaFunct <= "000" when (Funct = addOp) else 
+        saidaFunct <= "000" when (Funct = andOp) else 
             "001" when (Funct = orOp) else
             "010" when (Funct = addOp) else
             "110" when (Funct = subOp) else
