@@ -1,53 +1,48 @@
 # do Projeto2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:39:42 on Oct 20,2021
+# Start time: 15:21:40 on Nov 25,2021
 # vcom -work work Projeto2.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
-# -- Compiling entity Projeto2
-# -- Compiling architecture structure of Projeto2
-# End time: 16:39:42 on Oct 20,2021, Elapsed time: 0:00:00
+# -- Compiling entity UlaTotal
+# -- Compiling architecture structure of UlaTotal
+# End time: 15:21:40 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:39:42 on Oct 20,2021
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 15:21:40 on Nov 25,2021
+# vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Projeto2_vhd_vec_tst
-# -- Compiling architecture Projeto2_arch of Projeto2_vhd_vec_tst
-# End time: 16:39:42 on Oct 20,2021, Elapsed time: 0:00:00
+# -- Compiling entity UlaTotal_vhd_vec_tst
+# -- Compiling architecture UlaTotal_arch of UlaTotal_vhd_vec_tst
+# End time: 15:21:40 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Projeto2_vhd_vec_tst 
-# Start time: 16:39:42 on Oct 20,2021
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.UlaTotal_vhd_vec_tst 
+# Start time: 15:21:40 on Nov 25,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.projeto2_vhd_vec_tst(projeto2_arch)
+# Loading work.ulatotal_vhd_vec_tst(ulatotal_arch)
+# Loading altera_lnsim.altera_lnsim_components
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
-# Loading altera_lnsim.altera_lnsim_components
 # Loading cyclonev.cyclonev_atom_pack(body)
 # Loading cyclonev.cyclonev_components
-# Loading work.projeto2(structure)
+# Loading work.ulatotal(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 18815 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 34587 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-# after#34
-# End time: 16:39:43 on Oct 20,2021, Elapsed time: 0:00:01
+# after#32
+# End time: 15:21:41 on Nov 25,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1

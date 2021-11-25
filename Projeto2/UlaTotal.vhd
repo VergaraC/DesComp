@@ -12,8 +12,9 @@ entity UlaTotal is
       entradaA:                  in STD_LOGIC_VECTOR(31 downto 0);
 		entradaB:                  in STD_LOGIC_VECTOR(31 downto 0);
       saida:                     out STD_LOGIC_VECTOR(31 downto 0);
-		FlagZ:                  out std_logic;
+		FlagZ:                 		out std_logic;
 		Seletor:                   in std_logic_vector(2 downto 0)
+		
     );
 end entity;
 
@@ -353,5 +354,6 @@ begin
 										
 	saida <= concatSaida;
 	FlagZ <= '1' when unsigned(concatSaida) = unsigned(zero) else '0';
+		
 							
 end architecture;

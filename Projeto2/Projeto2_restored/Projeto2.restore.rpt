@@ -1,0 +1,104 @@
+Restore Archived Project report for Projeto2
+Mon Nov 15 23:59:10 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Nov 15 23:59:10 2021 ;
+; Revision Name                   ; Projeto2                              ;
+; Top-level Entity Name           ; Projeto2                              ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2.qar' into the '/home/deku/Facul/DesignComputadores/DesComp/Projeto2/Projeto2_restored/' directory
+Info: Generated report 'Projeto2.restore.rpt'
+Info (23030): Evaluation of Tcl script /home/deku/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 574 megabytes
+    Info: Processing ended: Mon Nov 15 23:59:10 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++---------------------------------+
+; Files Restored                  ;
++---------------------------------+
+; File Name                       ;
++---------------------------------+
+; qar_info.json                   ;
+; Decoder.vhd                     ;
+; MemoriaROM.vhd                  ;
+; MuxGenerico4X1_1Bit.vhd         ;
+; OverFlow.vhd                    ;
+; Projeto2.qpf                    ;
+; Projeto2.qsf                    ;
+; Projeto2.vhd                    ;
+; RAMMIPS.vhd                     ;
+; RegistradorGenerico.vhd         ;
+; SomaConstante.vhd               ;
+; SomadorGenerico1Bit.vhd         ;
+; Ula.vhd                         ;
+; UlaOverFlow.vhd                 ;
+; UlaSomaSub.vhd                  ;
+; UlaTotal.vhd                    ;
+; UnidadeControleUla.vhd          ;
+; UnidadeControleUlaFunct.vhd     ;
+; UnidadeControleUlaOpCode.vhd    ;
+; Waveform.vwf                    ;
+; Waveform1.vwf                   ;
+; bancoRegistradoresArqRegMem.vhd ;
+; conversorHex7Seg.vhd            ;
+; deslocadorGenerico.vhd          ;
+; extensorSinalGenerico.vhd       ;
+; initRom.mif                     ;
+; muxGenerico2X1.vhd              ;
+; muxGenerico2X1_1Bit.vhd         ;
+; somadorGenerico.vhd             ;
+; assignment_defaults.qdf         ;
++---------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
