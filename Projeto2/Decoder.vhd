@@ -20,7 +20,7 @@ architecture arquitetura of Decoder is
   constant sw  : std_logic_vector(5 downto 0) := "101011";
   constant beq : std_logic_vector(5 downto 0) := "000100";
   constant jmp : std_logic_vector(5 downto 0) := "000010";
-  constant r : std_logic_vector(5 downto 0) := "000000";
+  constant r   : std_logic_vector(5 downto 0) := "000000";
 
 begin
 

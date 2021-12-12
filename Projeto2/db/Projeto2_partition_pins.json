@@ -588,6 +588,134 @@
 					"strict" : false
 				},
 				{
+					"name" : "SaidaMuxReg2ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "SaidaMuxReg2ULA[31]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},

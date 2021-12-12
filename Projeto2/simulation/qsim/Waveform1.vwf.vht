@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/20/2021 16:39:41"
+-- Generated on "12/12/2021 00:31:22"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Projeto2
 -- 
@@ -37,16 +37,34 @@ ARCHITECTURE Projeto2_arch OF Projeto2_vhd_vec_tst IS
 SIGNAL A : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL B : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL OutULA : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL Seletor_ULA : STD_LOGIC;
+SIGNAL SaidaMuxReg2ULA : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL Wr3 : STD_LOGIC;
 COMPONENT Projeto2
 	PORT (
 	A : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	CLOCK_50 : IN STD_LOGIC;
+	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	OutULA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	Seletor_ULA : IN STD_LOGIC;
+	SaidaMuxReg2ULA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 	Wr3 : IN STD_LOGIC
 	);
 END COMPONENT;
@@ -57,8 +75,17 @@ BEGIN
 	A => A,
 	B => B,
 	CLOCK_50 => CLOCK_50,
+	HEX0 => HEX0,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	HEX5 => HEX5,
+	KEY => KEY,
+	LEDR => LEDR,
 	OutULA => OutULA,
-	Seletor_ULA => Seletor_ULA,
+	SaidaMuxReg2ULA => SaidaMuxReg2ULA,
+	SW => SW,
 	Wr3 => Wr3
 	);
 
@@ -66,24 +93,31 @@ BEGIN
 t_prcs_CLOCK_50: PROCESS
 BEGIN
 	CLOCK_50 <= '1';
-	WAIT FOR 10000 ps;
+	WAIT FOR 5000 ps;
+	FOR i IN 1 TO 2
+	LOOP
+		CLOCK_50 <= '0';
+		WAIT FOR 5000 ps;
+		CLOCK_50 <= '1';
+		WAIT FOR 5000 ps;
+	END LOOP;
 	CLOCK_50 <= '0';
-	WAIT FOR 10000 ps;
-	CLOCK_50 <= '1';
 WAIT;
 END PROCESS t_prcs_CLOCK_50;
 
--- Seletor_ULA
-t_prcs_Seletor_ULA: PROCESS
+-- KEY[0]
+t_prcs_KEY_0: PROCESS
 BEGIN
-	Seletor_ULA <= '0';
+	KEY(0) <= '1';
+	WAIT FOR 5000 ps;
+	FOR i IN 1 TO 2
+	LOOP
+		KEY(0) <= '0';
+		WAIT FOR 5000 ps;
+		KEY(0) <= '1';
+		WAIT FOR 5000 ps;
+	END LOOP;
+	KEY(0) <= '0';
 WAIT;
-END PROCESS t_prcs_Seletor_ULA;
-
--- Wr3
-t_prcs_Wr3: PROCESS
-BEGIN
-	Wr3 <= '1';
-WAIT;
-END PROCESS t_prcs_Wr3;
+END PROCESS t_prcs_KEY_0;
 END Projeto2_arch;

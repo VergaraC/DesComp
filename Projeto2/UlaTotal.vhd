@@ -9,22 +9,22 @@ entity UlaTotal is
  
     port
     (
-      entradaA:                  in STD_LOGIC_VECTOR(31 downto 0);
-		entradaB:                  in STD_LOGIC_VECTOR(31 downto 0);
-      saida:                     out STD_LOGIC_VECTOR(31 downto 0);
+      entradaA:               in STD_LOGIC_VECTOR(31 downto 0);
+		entradaB:               in STD_LOGIC_VECTOR(31 downto 0);
+      saida:                  out STD_LOGIC_VECTOR(31 downto 0);
 		FlagZ:                  out std_logic;
-		Seletor:                   in std_logic_vector(2 downto 0)
+		Seletor:                in std_logic_vector(2 downto 0)
     );
 end entity;
 
 architecture comportamento of UlaTotal is
 	constant zero : std_logic_vector(31 downto 0) := (others => '0');
 	
-	signal CarryIn            : std_logic;
+	signal CarryIn         : std_logic;
 	signal carry0, carry1, carry2, carry3, carry4, carry5, carry6, carry7, carry8, carry9, carry10, carry11, carry12, carry13, carry14, carry15: std_logic;
 	signal carry16, carry17, carry18, carry19, carry20, carry21, carry22, carry23, carry24, carry25, carry26, carry27, carry28, carry29, carry30 : std_logic;
-	signal slt            : std_logic;	
-	alias SelinverteB       : std_logic is Seletor(2);
+	signal slt             : std_logic;	
+	alias SelinverteB      : std_logic is Seletor(2);
 	alias seletorS         : std_logic_vector(1 downto 0) is Seletor(1 downto 0);
 	signal concatSaida     : std_logic_vector(31 downto 0);
 	

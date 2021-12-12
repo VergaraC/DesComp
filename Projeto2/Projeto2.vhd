@@ -23,10 +23,10 @@ entity Projeto2 is
 	 LEDR  : out std_logic_vector(9 downto 0);
 	 
 	 Wr3: in std_logic;
-	 Seletor_ULA: in std_logic;
 	 A: out std_logic_vector(larguraDados-1 downto 0);
 	 B: out std_logic_vector(larguraDados-1 downto 0);
-    OutULA: out std_logic_vector(larguraDados-1 downto 0)
+    OutULA: out std_logic_vector(larguraDados-1 downto 0);
+	 SaidaMuxReg2ULA: out std_logic_vector(larguraDados-1 downto 0)
 	 
   );
 end entity;
@@ -102,7 +102,7 @@ Banco_Registradores : entity work.bancoRegistradoresArqRegMem  generic map (larg
 				C => MuxReg3Out, DadosC => DadoReg3,
 				FlagC => Sinais_Controle(2), A_Out => BancoULA_A, B_Out => BancoULA_B);
 		 
-ExtendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
+EstendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
           port map (estendeSinal_IN => Instruction(15 downto 0), estendeSinal_OUT =>  extensorOut);
 
 Decoder : entity work.Decoder generic map (OpCodeWidth => 6,outWidth =>9)
@@ -120,7 +120,7 @@ MuxReg2Ula: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 -- Mudar Valor
 ControleUla: entity work.UnidadeControleUla generic map(larguraDados => larguraDados)
 			port map (Funct => instruction(5 downto 0), OpCode => instruction(31 downto 26),
-				SeletorTipoR => instruction(8) ,SeletorUla =>SeletorUla);
+				SeletorTipoR => Sinais_Controle(8) ,SeletorUla =>SeletorUla);
 
 				
 ULA1 : entity work.UlaTotal  generic map(larguraDados => larguraDados) --- ADD Saida Z
@@ -196,6 +196,7 @@ SelMuxSomImediato <=	(Sinais_Controle(5) and UlaZ);
 A <= BancoULA_A;
 B <= BancoULA_B;
 OutULA <= ULA_Out;
+SaidaMuxReg2ULA <= MuxULA_B;
 
 end architecture;
 
