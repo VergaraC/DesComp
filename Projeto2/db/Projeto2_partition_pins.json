@@ -716,6 +716,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "flagUla",
+					"strict" : false
+				},
+				{
+					"name" : "SinalBEQ",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},

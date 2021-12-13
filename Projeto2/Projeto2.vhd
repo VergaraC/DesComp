@@ -26,7 +26,9 @@ entity Projeto2 is
 	 A: out std_logic_vector(larguraDados-1 downto 0);
 	 B: out std_logic_vector(larguraDados-1 downto 0);
     OutULA: out std_logic_vector(larguraDados-1 downto 0);
-	 SaidaMuxReg2ULA: out std_logic_vector(larguraDados-1 downto 0)
+	 SaidaMuxReg2ULA: out std_logic_vector(larguraDados-1 downto 0);
+	 flagUla: out std_logic;
+	 SinalBEQ: out std_logic
 	 
   );
 end entity;
@@ -101,14 +103,14 @@ Banco_Registradores : entity work.bancoRegistradoresArqRegMem  generic map (larg
 			port map ( clk => CLK, A => Instruction(25 downto 21), B => Instruction(20 downto 16),
 				C => MuxReg3Out, DadosC => DadoReg3,
 				FlagC => Sinais_Controle(2), A_Out => BancoULA_A, B_Out => BancoULA_B);
-		 
+
 EstendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
           port map (estendeSinal_IN => Instruction(15 downto 0), estendeSinal_OUT =>  extensorOut);
 
 Decoder : entity work.Decoder generic map (OpCodeWidth => 6,outWidth =>9)
           port map (OpCode => instruction(31 downto 26), Sinais_Controle => Sinais_Controle);	
 
-Deslocador: entity work.deslocadorGenerico  generic map(larguraDadoEntrada => 32, larguraDadoSaida => 32, deslocamento => 2)
+Deslocador: entity work.deslocadorExt  generic map(larguraDadoEntrada => 32)
             port map (sinalIN => extensorOut, sinalOUT => deslocadorOut);
 
 somador:      entity work.somadorGenerico  generic map (larguraDados => larguraDados)
@@ -197,6 +199,8 @@ A <= BancoULA_A;
 B <= BancoULA_B;
 OutULA <= ULA_Out;
 SaidaMuxReg2ULA <= MuxULA_B;
+flagUla <= UlaZ;
+SinalBEQ <= Sinais_Controle(5);
 
 end architecture;
 

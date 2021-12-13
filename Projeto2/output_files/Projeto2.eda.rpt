@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Projeto2
-Sun Dec 12 01:40:14 2021
+Mon Dec 13 00:04:16 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Dec 12 01:40:14 2021 ;
+; EDA Netlist Writer Status ; Successful - Mon Dec 13 00:04:16 2021 ;
 ; Revision Name             ; Projeto2                              ;
 ; Top-level Entity Name     ; Projeto2                              ;
 ; Family                    ; Cyclone V                             ;
@@ -95,12 +95,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Dec 12 01:40:13 2021
+    Info: Processing started: Mon Dec 13 00:04:15 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim/ Projeto2 -c Projeto2
 Info (204019): Generated file Projeto2.vho in folder "/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 692 megabytes
-    Info: Processing ended: Sun Dec 12 01:40:14 2021
+    Info: Processing ended: Mon Dec 13 00:04:16 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

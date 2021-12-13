@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/deku/Facul/DesignComputadores/DesComp/Projeto2/simulation/qsim
 Eprojeto2
-Z1 w1639284014
+Z1 w1639364656
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 50
+!i122 58
 R0
 Z11 8Projeto2.vho
 Z12 FProjeto2.vho
 l0
 L39 1
-VTXoe_jNa@1MLBKli;Q@Gh1
-!s100 =7SFf>aX5ocM<5iR?7mJV1
+Ve3j=RGXH1ZG1:UzD2QKA71
+!s100 MgLmZGERfziXNQ;VU7b291
 Z13 OV;C;2020.1;71
 32
-!s110 1639284014
+!s110 1639364656
 !i10b 1
-Z14 !s108 1639284014.000000
+Z14 !s108 1639364656.000000
 Z15 !s90 -work|work|Projeto2.vho|
 Z16 !s107 Projeto2.vho|
 !i113 1
@@ -48,15 +48,15 @@ R7
 R8
 R9
 R10
-DEx4 work 8 projeto2 0 22 TXoe_jNa@1MLBKli;Q@Gh1
-!i122 50
-l8513
-L258 94183
-V:JH^kez@EAXhP0Hgj0o>Z1
-!s100 SL;iHD^[7`S:QBkLOFPSE0
+DEx4 work 8 projeto2 0 22 e3j=RGXH1ZG1:UzD2QKA71
+!i122 58
+l8433
+L262 92982
+V;FYJQic0OIG;lC2U4d8zX0
+!s100 P=fEGP2;`=1RUn_Ea8>d72
 R13
 32
-!s110 1639284015
+!s110 1639364657
 !i10b 1
 R14
 R15
@@ -65,10 +65,10 @@ R16
 R17
 R18
 Eprojeto2_vhd_vec_tst
-Z19 w1639284012
+Z19 w1639364654
 R8
 R9
-!i122 51
+!i122 59
 R0
 Z20 8Waveform4.vwf.vht
 Z21 FWaveform4.vwf.vht
@@ -78,9 +78,9 @@ V@c39NbYOD]ebzmTNLUjDF0
 !s100 Bjo0aCEmA``gXQGi?<An90
 R13
 32
-Z23 !s110 1639284016
+Z23 !s110 1639364658
 !i10b 1
-Z24 !s108 1639284015.000000
+Z24 !s108 1639364658.000000
 Z25 !s90 -work|work|Waveform4.vwf.vht|
 Z26 !s107 Waveform4.vwf.vht|
 !i113 1
@@ -90,11 +90,11 @@ Aprojeto2_arch
 R8
 R9
 Z27 DEx4 work 20 projeto2_vhd_vec_tst 0 22 @c39NbYOD]ebzmTNLUjDF0
-!i122 51
-l71
-Z28 L34 74
-VFIa<bGUSY>G]K0dSX:=Wh2
-!s100 [`?3Gz^7Hi<G5_e]z[`aG1
+!i122 59
+l75
+Z28 L34 80
+Z29 V0B:N[4TiY8S:1W<A2[HJF0
+Z30 !s100 f?W743A8;eKRXfmNbDTWl1
 R13
 32
 R23
@@ -106,7 +106,7 @@ R26
 R17
 R18
 Eulatotal
-Z29 w1637936609
+Z31 w1637936609
 R5
 R2
 R7
@@ -124,9 +124,9 @@ VhEVg9kmMVG>DjH1_8=eg@3
 !s100 l=O5MJTm<]27WgOMV^^Yz3
 R13
 32
-Z30 !s110 1637936610
+Z32 !s110 1637936610
 !i10b 1
-Z31 !s108 1637936610.000000
+Z33 !s108 1637936610.000000
 R15
 R16
 !i113 1
@@ -148,33 +148,33 @@ V]JcBcCPV?a4o>g<HlK72`1
 !s100 55]>jn>e]dJ16iMQD<?Jz2
 R13
 32
-R30
+R32
 !i10b 1
-R31
+R33
 R15
 R16
 !i113 1
 R17
 R18
 Eulatotal_vhd_vec_tst
-Z32 w1637936608
+Z34 w1637936608
 R8
 R9
 !i122 35
 R0
-Z33 8Waveform3.vwf.vht
-Z34 FWaveform3.vwf.vht
+Z35 8Waveform3.vwf.vht
+Z36 FWaveform3.vwf.vht
 l0
 R22
 VcMST8NJn<@ZZ4Cb67G31F1
 !s100 LzfI@o7Dz85B@7_Q2ZY3>2
 R13
 32
-R30
+R32
 !i10b 1
-R31
-Z35 !s90 -work|work|Waveform3.vwf.vht|
-Z36 !s107 Waveform3.vwf.vht|
+R33
+Z37 !s90 -work|work|Waveform3.vwf.vht|
+Z38 !s107 Waveform3.vwf.vht|
 !i113 1
 R17
 R18
@@ -189,11 +189,11 @@ VfWk8`V16gal47`OeA@]oZ2
 !s100 UUam]nb^[1olk?F8fKo7Q1
 R13
 32
-R30
+R32
 !i10b 1
-R31
-R35
-R36
+R33
+R37
+R38
 !i113 1
 R17
 R18
