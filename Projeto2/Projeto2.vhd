@@ -107,8 +107,8 @@ Banco_Registradores : entity work.bancoRegistradoresArqRegMem  generic map (larg
 EstendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
           port map (estendeSinal_IN => Instruction(15 downto 0), estendeSinal_OUT =>  extensorOut);
 
-Decoder : entity work.Decoder generic map (OpCodeWidth => 6,outWidth =>9)
-          port map (OpCode => instruction(31 downto 26), Sinais_Controle => Sinais_Controle);	
+Decoder : entity work.Decoder generic map (OpCodeWidth => 6, FunctWidth => 6, outWidth =>14)
+          port map (OpCode => instruction(31 downto 26), Funct => instruction(5 downto 0), Sinais_Controle => Sinais_Controle);	
 
 Deslocador: entity work.deslocadorExt  generic map(larguraDadoEntrada => 32)
             port map (sinalIN => extensorOut, sinalOUT => deslocadorOut);
