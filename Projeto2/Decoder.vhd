@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity Decoder is
   generic   (
 	 OpCodeWidth  : natural := 6;
-	 FunctWidth : natural := 6
+	 FunctWidth : natural := 6;
     outWidth: natural := 14
   );
 
@@ -59,7 +59,7 @@ begin
 											else "10" when (OpCode = jal)
  											else "01";											--mux(ULA/mem)
   
-  Sinais_Controle(7)<= '1' when (OpCode = r) else '0'; 							--Tipo R
+  Sinais_Controle(7)<= '1' when (OpCode = r) else '0';							--Tipo R
   
   Sinais_Controle(6)<= '1' when (OpCode = lw 
 											or OpCode = sw 

@@ -29,7 +29,7 @@ UlaControleFunct : entity work.UnidadeControleUlaFunct  generic map(larguraDados
 
 UlaControleOpCode : entity work.UnidadeControleUlaOpCode generic map(larguraDados => 32) 
 			port map (OpCode => OpCode, saidaOpCode => ControleOpCOde);
-				
+
 Mux: entity work.muxGenerico2x1 generic map(larguraDados => 3)
 			port map (entradaA_MUX => ControleOpCOde, entradaB_MUX => ControleFunct,
 			seletor_MUX => SeletorTipoR, saida_MUX => SeletorUla);
